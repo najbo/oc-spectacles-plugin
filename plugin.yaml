@@ -1,0 +1,83 @@
+plugin:
+    name: 'digart.spectacles::lang.plugin.name'
+    description: 'digart.spectacles::lang.plugin.description'
+    author: digart
+    icon: oc-icon-music
+    homepage: ''
+permissions:
+    digart.spectacles.saisons:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les saisons'
+    digart.spectacles.spectacles:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les spectacles'
+    digart.spectacles.institutions:
+        tab: 'TDR - Gestion des paramètres'
+        label: 'Gère les institutions'
+    digart.spectacles.genres:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les genres de spectacles'
+    digart.spectacles.lieux:
+        tab: 'TDR - Gestion des paramètres'
+        label: 'Gère les lieux des spectacles'
+    digart.spectacles.statuts:
+        tab: 'TDR - Gestion des paramètres'
+        label: 'Gère les statuts des spectacles'
+    digart.spectacles.artistes:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les artistes'
+    digart.spectacles.agents:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les agents des artistes'
+    digart.spectacles.categories:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les catégories de spectacles'
+navigation:
+    spectacles:
+        label: Spectacles
+        url: digart/spectacles/spectacles
+        icon: icon-microphone
+        sideMenu:
+            spectacles:
+                label: Spectacles
+                url: digart/spectacles/spectacles
+                icon: icon-music
+            side-menu-item:
+                label: Saisons
+                url: digart/spectacles/saisons
+                icon: icon-calendar-o
+                permissions:
+                    - digart.spectacles.saisons
+            categories:
+                label: Catégories
+                url: digart/spectacles/categories
+                icon: icon-tag
+            genres:
+                label: Genres
+                url: digart/spectacles/genres
+                icon: icon-wechat
+            artistes:
+                label: Artistes
+                url: digart/spectacles/artistes
+                icon: icon-user
+            agents:
+                label: Agents
+                url: digart/spectacles/agents
+                icon: icon-dollar
+    main-menu-item:
+        label: 'Paramètres TDR'
+        url: digart/spectacles/institutions
+        icon: icon-wrench
+        sideMenu:
+            institutions:
+                label: Institutions
+                url: digart/spectacles/institutions
+                icon: icon-institution
+            lieux:
+                label: Lieux
+                url: digart/spectacles/lieux
+                icon: icon-map-marker
+            statuts:
+                label: Statuts
+                url: digart/spectacles/statuts
+                icon: icon-dashboard

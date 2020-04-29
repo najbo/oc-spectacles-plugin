@@ -1,0 +1,11 @@
+name: Statuts
+modelClass: Digart\spectacles\Models\Statut
+form: $/digart/spectacles/models/statut/fields.yaml
+defaultRedirect: digart/spectacles/statuts
+create:
+    redirect: 'digart/spectacles/statuts/update/:id'
+    redirectClose: digart/spectacles/statuts
+update:
+    redirect: digart/spectacles/statuts
+    redirectClose: digart/spectacles/statuts
+preview: {  }

@@ -1,0 +1,10 @@
+name: Agents
+form: $/digart/spectacles/models/agent/fields.yaml
+modelClass: Digart\spectacles\Models\Agent
+defaultRedirect: digart/spectacles/agents
+create:
+    redirect: 'digart/spectacles/agents/update/:id'
+    redirectClose: digart/spectacles/agents
+update:
+    redirect: digart/spectacles/agents
+    redirectClose: digart/spectacles/agents

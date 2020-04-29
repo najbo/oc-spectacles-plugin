@@ -1,0 +1,13 @@
+fields:
+    designation:
+        label: Description
+        span: auto
+        type: text
+    npa:
+        label: NPA
+        span: left
+        type: text
+    localite:
+        label: Localité
+        span: auto
+        type: text

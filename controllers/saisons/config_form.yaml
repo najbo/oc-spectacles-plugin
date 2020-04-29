@@ -1,0 +1,11 @@
+name: Saisons
+modelClass: Digart\spectacles\Models\Saison
+form: $/digart/spectacles/models/saison/fields.yaml
+defaultRedirect: digart/spectacles/saisons
+create:
+    redirect: 'digart/spectacles/saisons/update/:id'
+    redirectClose: digart/spectacles/saisons
+update:
+    redirect: digart/spectacles/saisons
+    redirectClose: digart/spectacles/saisons
+preview: {  }

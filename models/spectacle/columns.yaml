@@ -1,0 +1,47 @@
+columns:
+    titre_principal:
+        label: 'Titre principal'
+        type: text
+        searchable: true
+        sortable: true
+    titre_secondaire:
+        label: 'Titre secondaire'
+        type: text
+        searchable: true
+        sortable: true
+    statut:
+        label: 'Statut spectacle'
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: statut
+    artistes:
+        label: Artistes
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: artistes
+    categories:
+        label: Catégories
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: categories
+    genres:
+        label: Genres
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: genres
+    representations:
+        label: Représentations
+        type: text
+        searchable: true
+        sortable: true
+        relation: representations
+        useRelationCount: 'yes'
+

@@ -1,0 +1,19 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: designation
+            type: slug
+        type: text
+    agent:
+        label: Agent
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
+        emptyOption: '-- Non défini --'

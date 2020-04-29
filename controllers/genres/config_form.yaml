@@ -1,0 +1,10 @@
+name: Genres
+form: $/digart/spectacles/models/genre/fields.yaml
+modelClass: Digart\spectacles\Models\Genre
+defaultRedirect: digart/spectacles/genres
+create:
+    redirect: 'digart/spectacles/genres/update/:id'
+    redirectClose: digart/spectacles/genres
+update:
+    redirect: digart/spectacles/genres
+    redirectClose: digart/spectacles/genres

@@ -1,0 +1,18 @@
+columns:
+    debut:
+        label: 'Date et heure'
+        type: datetime
+        searchable: true
+        sortable: true
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    statut:
+        label: 'Statut représentation'
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: statut

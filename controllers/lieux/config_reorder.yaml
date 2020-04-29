@@ -1,0 +1,5 @@
+title: Lieux
+modelClass: Digart\spectacles\Models\Lieu
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

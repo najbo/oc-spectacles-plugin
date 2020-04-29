@@ -1,0 +1,26 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    developpement:
+        label: Développement
+        size: small
+        span: full
+        type: textarea
+    debut:
+        label: 'Date de début'
+        mode: date
+        format: d.m.Y
+        span: auto
+        type: datepicker
+    fin:
+        label: 'Date de fin'
+        mode: date
+        format: d.m.Y
+        span: auto
+        type: datepicker
+    is_actuel:
+        label: 'Saison actuelle'
+        span: auto
+        type: checkbox

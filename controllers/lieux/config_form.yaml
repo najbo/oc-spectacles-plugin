@@ -1,0 +1,11 @@
+name: Lieux
+modelClass: Digart\spectacles\Models\Lieu
+form: $/digart/spectacles/models/lieu/fields.yaml
+defaultRedirect: digart/spectacles/lieux
+create:
+    redirect: 'digart/spectacles/lieux/update/:id'
+    redirectClose: digart/spectacles/lieux
+update:
+    redirect: digart/spectacles/lieux
+    redirectClose: digart/spectacles/lieux
+preview: {  }

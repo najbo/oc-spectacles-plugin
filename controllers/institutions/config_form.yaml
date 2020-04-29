@@ -1,0 +1,11 @@
+name: Institutions
+modelClass: Digart\spectacles\Models\Institution
+form: $/digart/spectacles/models/institution/fields.yaml
+defaultRedirect: digart/spectacles/institutions
+create:
+    redirect: 'digart/spectacles/institutions/update/:id'
+    redirectClose: digart/spectacles/institutions
+update:
+    redirect: digart/spectacles/institutions
+    redirectClose: digart/spectacles/institutions
+preview: {  }

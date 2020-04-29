@@ -1,0 +1,21 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    abreviation:
+        label: Abréviation
+        span: auto
+        type: text
+    adresse:
+        label: Adresse
+        span: auto
+        type: text
+    npa:
+        label: NPA
+        span: auto
+        type: text
+    localite:
+        label: Localité
+        span: auto
+        type: text

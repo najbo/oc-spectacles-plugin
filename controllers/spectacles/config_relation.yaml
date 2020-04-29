@@ -1,0 +1,11 @@
+representations:
+    label: Représentations
+    emptyMessage: Aucune représentation pour le moment
+    view:
+        list: $/digart/spectacles/models/representation/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/representation/fields.yaml
+        title : Gestion des représentations
+        showSearch: true   

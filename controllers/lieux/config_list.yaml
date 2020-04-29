@@ -1,0 +1,12 @@
+title: Lieux
+modelClass: Digart\spectacles\Models\Lieu
+list: $/digart/spectacles/models/lieu/columns.yaml
+recordUrl: 'digart/spectacles/lieux/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,21 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    is_actuel:
+        label: 'Saison actuelle'
+        type: switch
+        searchable: true
+        sortable: true
+    debut:
+        label: Début
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: Fin
+        type: date
+        searchable: true
+        sortable: true

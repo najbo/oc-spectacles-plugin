@@ -1,0 +1,11 @@
+columns:
+    designation:
+        label: Description
+        type: text
+        searchable: true
+        sortable: true
+    localite:
+        label: Localité
+        type: text
+        searchable: true
+        sortable: true

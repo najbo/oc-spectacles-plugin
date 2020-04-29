@@ -1,0 +1,10 @@
+name: Categories
+form: $/digart/spectacles/models/categorie/fields.yaml
+modelClass: Digart\spectacles\Models\Categorie
+defaultRedirect: digart/spectacles/categories
+create:
+    redirect: 'digart/spectacles/categories/update/:id'
+    redirectClose: digart/spectacles/categories
+update:
+    redirect: digart/spectacles/categories
+    redirectClose: digart/spectacles/categories

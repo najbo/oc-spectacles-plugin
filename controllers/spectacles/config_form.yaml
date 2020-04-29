@@ -1,0 +1,10 @@
+name: Spectacles
+form: $/digart/spectacles/models/spectacle/fields.yaml
+modelClass: Digart\spectacles\Models\Spectacle
+defaultRedirect: digart/spectacles/spectacles
+create:
+    redirect: 'digart/spectacles/spectacles/update/:id'
+    redirectClose: digart/spectacles/spectacles
+update:
+    redirect: digart/spectacles/spectacles
+    redirectClose: digart/spectacles/spectacles

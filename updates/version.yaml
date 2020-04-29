@@ -1,0 +1,68 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table digart_spectacles_spect'
+    - builder_table_create_digart_spectacles_spect.php
+1.0.3:
+    - 'Created table digart_spectacles_saisons'
+    - builder_table_create_digart_spectacles_saisons.php
+1.0.4:
+    - 'Created table digart_spectacles_instit'
+    - builder_table_create_digart_spectacles_instit.php
+1.0.5:
+    - 'Created table digart_spectacles_genres'
+    - builder_table_create_digart_spectacles_genres.php
+1.0.6:
+    - 'Created table digart_spectacles_spect_genr'
+    - builder_table_create_digart_spectacles_spect_genr.php
+1.0.7:
+    - 'Created table digart_spectacles_repres'
+    - builder_table_create_digart_spectacles_repres.php
+1.0.8:
+    - 'Created table digart_spectacles_lieux'
+    - builder_table_create_digart_spectacles_lieux.php
+1.0.9:
+    - 'Created table digart_spectacles_statuts'
+    - builder_table_create_digart_spectacles_statuts.php
+1.0.10:
+    - 'Seed statuts'
+    - seeder1010.php
+1.0.11:
+    - 'Seed saisons'
+    - seeder1011.php
+1.0.12:
+    - 'Seed institutions'
+    - seeder1012.php
+1.0.13:
+    - 'Seed lieux'
+    - seeder1013.php
+1.0.14:
+    - 'Seed genres'
+    - seeder1014.php
+1.0.15:
+    - 'Created table digart_spectacles_artistes'
+    - builder_table_create_digart_spectacles_artistes.php
+1.0.16:
+    - 'Created table digart_spectacles_agents'
+    - builder_table_create_digart_spectacles_agents.php
+1.0.17:
+    - 'Created table digart_spectacles_spect_art'
+    - builder_table_create_digart_spectacles_spect_art.php
+1.0.18:
+    - 'Seed Artistes'
+    - seeder1018.php
+1.0.19:
+    - 'Seed Agents'
+    - seeder1019.php
+1.0.20:
+    - 'Created table digart_spectacles_cat'
+    - builder_table_create_digart_spectacles_cat.php
+1.0.21:
+    - 'Seed Categories'
+    - seeder1021.php
+1.0.22:
+    - 'Created table digart_spectacles_spect_cat'
+    - builder_table_create_digart_spectacles_spect_cat.php
+1.0.23:
+    - 'Seed Spectacles'
+    - seeder1023.php

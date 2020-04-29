@@ -1,0 +1,133 @@
+fields:
+    titre_principal:
+        label: 'Titre princicipal (artiste)'
+        span: auto
+        type: text
+    titre_secondaire:
+        label: 'Titre secondaire (titre spectacle)'
+        span: auto
+        type: text
+    saison:
+        label: Saison
+        nameFrom: designation
+        descriptionFrom: debut
+        span: auto
+        type: relation
+    institution:
+        label: Institution
+        nameFrom: designation
+        descriptionFrom: debut
+        span: auto
+        type: relation
+    artistes:
+        label: Artistes
+        span: auto
+        mode: relation
+        separator: comma
+        customTags: false
+        nameFrom: designation
+        type: taglist
+    statut:
+        label: 'Statut du spectacle'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+        emptyOption: '-- Selon statut représentations --'
+    categories:
+        label: Catégories
+        span: auto
+        mode: relation
+        separator: comma
+        customTags: false
+        nameFrom: designation
+        type: taglist
+    genres:
+        label: Genres
+        span: auto
+        mode: relation
+        separator: comma
+        customTags: true
+        nameFrom: designation
+        type: taglist
+    is_public:
+        label: Public
+        span: auto
+        type: checkbox
+tabs:
+    fields:
+        hint_representations:
+            span: full
+            path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Représentations
+        representations:
+            span: full
+            path: field_representations
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Représentations
+        accroche:
+            label: Accroche
+            size: large
+            span: full
+            type: richeditor
+            tab: Accroche            
+        developpement:
+            label: Développement
+            size: large
+            span: full
+            type: richeditor
+            tab: Détail
+        affiche:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Affiche et images'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Affiche et images'
+        documents:
+            label: 'Documents généraux'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Documents généraux'
+        parties:
+            label: Parties
+            prompt: 'Ajouter une partie de spectacle'
+            span: auto
+            type: repeater
+            tab: 'Parties de spectacle'
+            form:
+                fields:
+                    heure:
+                        label: 'Heure de début'
+                        span: auto
+                        mode: time
+                        format: 'H:i'
+                        type: datepicker
+                    description:
+                        label: Description
+                        span: auto
+                        type: text

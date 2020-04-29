@@ -1,0 +1,22 @@
+fields:
+    debut:
+        label: 'Date et heure'
+        mode: datetime
+        span: auto
+        type: datepicker
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    lieu:
+        label: 'Lieu de la représentation'
+        nameFrom: designation
+        descriptionFrom: localite
+        span: auto
+        type: relation
+    statut:
+        label: 'Statut de la représentation'
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
