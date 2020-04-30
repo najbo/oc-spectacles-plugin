@@ -32,6 +32,8 @@ class Representation extends Model
                    'order' => 'sort_order'],                 
         'statut' => ['DigArt\Spectacles\Models\Statut',
                    'key' => 'statut_id',
-                   'order' => 'sort_order'],                       
+                   'order' => 'sort_order'],  
+        'spectacle' => ['DigArt\Spectacles\Models\Spectacle',
+                   'key' => 'spectacle_id'],                      
     ];    
 }
