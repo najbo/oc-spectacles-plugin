@@ -17,7 +17,9 @@ class Spectacle extends Model
 
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => false],
-        'documents' => ['System\Models\File', 'public' => false]
+        'technique_images' => ['System\Models\File', 'public' => false],
+        'documents' => ['System\Models\File', 'public' => false],
+        'technique_documents' => ['System\Models\File', 'public' => false],
     ];
 
     public $attachOne = [

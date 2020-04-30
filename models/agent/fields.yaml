@@ -3,6 +3,10 @@ fields:
         label: Description
         span: auto
         type: text
+    adresse:
+        label: Adresse
+        span: auto
+        type: text
     npa:
         label: NPA
         span: left

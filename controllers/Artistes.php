@@ -11,7 +11,7 @@ class Artistes extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digart.spectacles.artiste' 
+        'digart.spectacles.artistes' 
     ];
 
     public function __construct()

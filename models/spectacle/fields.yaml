@@ -76,7 +76,7 @@ tabs:
             size: large
             span: full
             type: richeditor
-            tab: Accroche            
+            tab: Accroche
         developpement:
             label: Développement
             size: large
@@ -131,3 +131,80 @@ tabs:
                         label: Description
                         span: auto
                         type: text
+        lien_web:
+            label: 'Site web principal de l''artiste'
+            span: auto
+            type: text
+            tab: 'Réseaux sociaux'
+        lien_youtube:
+            label: 'Lien Youtube'
+            span: auto
+            type: text
+            tab: 'Réseaux sociaux'
+        lien_facebook:
+            label: 'Lien Facebook'
+            span: auto
+            type: text
+            tab: 'Réseaux sociaux'
+        lien_instagram:
+            label: 'Lien Instagram'
+            span: auto
+            type: text
+            tab: 'Réseaux sociaux'
+        lien_twitter:
+            label: 'Lien Twitter'
+            span: auto
+            type: text
+            tab: 'Réseaux sociaux'
+        technique_images:
+            label: 'Images pour la technique / scène'
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Scène et technique'
+        technique_documents:
+            label: 'Documents pour la technique / scène'
+            mode: file
+            useCaption: true
+            span: auto
+            type: fileupload
+            tab: 'Scène et technique'
+        section1:
+            label: 'Places disponibles'
+            span: full
+            type: section
+            tab: 'Autres données'
+        places_assises:
+            label: 'Places assises'
+            span: auto
+            type: number
+            tab: 'Autres données'
+        places_debout:
+            label: 'Places debout'
+            span: auto
+            type: number
+            tab: 'Autres données'
+        section2:
+            label: 'Statistiques / entrées'
+            span: full
+            type: section
+            tab: 'Autres données'
+        entrees_reduit:
+            label: 'Entrées réduites'
+            span: auto
+            type: number
+            tab: 'Autres données'
+        entrees_adulte:
+            label: 'Entrées adultes'
+            span: auto
+            type: number
+            tab: 'Autres données'
+        entrees_abo:
+            label: 'Entrées abonnement'
+            span: auto
+            type: number
+            tab: 'Autres données'
