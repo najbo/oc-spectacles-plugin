@@ -13,6 +13,8 @@ class Spectacle extends Model
 
     protected $dates = ['deleted_at'];
 
+    protected $appends = ['periode_spectacle'];
+
     protected $jsonable = ['parties'];
 
     public $attachMany = [
@@ -82,6 +84,13 @@ class Spectacle extends Model
             'order' => 'debut',
             'softDelete' => true],
     ];     
+
+
+    public function getPeriodeSpectacleAttribute() {
+        #return $this->representations->last(); 
+        #$this->nom. ' (' .$this->procherole->designation .' de ' . $this->eleve->prenom . ' ' .$this->eleve->nom.')' ;
+    } 
+
 
 }
 

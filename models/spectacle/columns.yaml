@@ -44,4 +44,15 @@ columns:
         sortable: true
         relation: representations
         useRelationCount: 'yes'
-
+    saison:
+        label: Saison
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: saison
+    periode_spectacle:
+        label: Période
+        type: text
+        searchable: false
+        sortable: false

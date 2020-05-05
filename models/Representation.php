@@ -36,4 +36,6 @@ class Representation extends Model
         'spectacle' => ['DigArt\Spectacles\Models\Spectacle',
                    'key' => 'spectacle_id'],                      
     ];    
+
+
 }

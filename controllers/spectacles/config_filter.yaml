@@ -1,0 +1,31 @@
+scopes:
+    statut:
+        label: Statuts spectacles
+        modelClass: DigArt\Spectacles\Models\Statut
+        conditions: statut_id in (:filtered)
+        nameFrom: designation
+    saison:
+        label: Saisons
+        modelClass: DigArt\Spectacles\Models\Saison
+        conditions: saison_id in (:filtered)
+        nameFrom: designation
+    artistes:
+        label: Artistes
+        modelClass: DigArt\Spectacles\Models\Artiste
+        conditions: id in (select spectacle_id from digart_spectacles_spect_art where artiste_id in (:filtered))
+        nameFrom: designation
+    categories:
+        label: Catégories
+        modelClass: DigArt\Spectacles\Models\Categorie
+        conditions: id in (select spectacle_id from digart_spectacles_spect_cat where categorie_id in (:filtered))
+        nameFrom: designation
+    genres:
+        label: Genres
+        modelClass: DigArt\Spectacles\Models\Genre
+        conditions: id in (select spectacle_id from digart_spectacles_spect_genr where genre_id in (:filtered))
+        nameFrom: designation        
+    statut_representation:
+        label: Statuts représentations
+        modelClass: DigArt\Spectacles\Models\Statut
+        conditions: id in (select spectacle_id from digart_spectacles_repres where statut_id in (:filtered))
+        nameFrom: designation             
