@@ -83,10 +83,39 @@ class Spectacle extends Model
             'key' => 'spectacle_id', 
             'order' => 'debut',
             'softDelete' => true],
+         'souvenirs' => ['DigArt\Spectacles\Models\Souvenir', 
+            'key' => 'spectacle_id', 
+            'order' => '',
+            'softDelete' => true],
     ];     
 
 
     public function getPeriodeSpectacleAttribute() {
+        $debut = '';
+        $fin = '';
+
+        $periode = $this->representations;
+
+        if ($periode->count() > 1) {
+            $debut = $periode->min('debut')->format('d.m.y');
+            $fin = $periode->max('debut')->format('d.m.y');
+
+            return $debut .' au '.$fin;
+
+        }
+
+        if ($periode->count() == 1) {
+            $debut = $periode->max('debut')->format('d.m.y');
+
+            return $debut;
+        }
+
+        if ($periode->count() == 0) {
+        
+            return 'Aucune représentation';
+        }
+
+        
         #return $this->representations->last(); 
         #$this->nom. ' (' .$this->procherole->designation .' de ' . $this->eleve->prenom . ' ' .$this->eleve->nom.')' ;
     } 

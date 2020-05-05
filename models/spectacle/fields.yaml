@@ -208,3 +208,18 @@ tabs:
             span: auto
             type: number
             tab: 'Autres données'
+        hint_souvenirs:
+            span: full
+            path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Souvenirs
+        souvenirs:
+            span: full
+            path: field_souvenirs
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Souvenirs

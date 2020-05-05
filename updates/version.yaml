@@ -66,3 +66,6 @@
 1.0.23:
     - 'Seed Spectacles'
     - seeder1023.php
+1.0.24:
+    - 'Created table digart_spectacles_souvenirs'
+    - builder_table_create_digart_spectacles_souvenirs.php

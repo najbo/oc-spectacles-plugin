@@ -32,6 +32,9 @@ permissions:
     digart.spectacles.categories:
         tab: 'TDR - Gestion des spectacles'
         label: 'Gère les catégories de spectacles'
+    digart.spectacles.souvenirs:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les souvenirs (photos) des spectacles'
 navigation:
     spectacles:
         label: Spectacles

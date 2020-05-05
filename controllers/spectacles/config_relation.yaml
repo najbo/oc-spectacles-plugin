@@ -9,3 +9,15 @@ representations:
         form: $/digart/spectacles/models/representation/fields.yaml
         title : Gestion des représentations
         showSearch: true   
+
+souvenirs:
+    label: Souvenirs
+    emptyMessage: Aucun souvenir pour le moment
+    view:
+        list: $/digart/spectacles/models/souvenir/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/souvenir/fields.yaml
+        title : Gestion des souvenirs
+        showSearch: true           

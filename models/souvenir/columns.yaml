@@ -1,0 +1,25 @@
+columns:
+    photographe:
+        label: 'Nom du photographe'
+        type: text
+        searchable: true
+        sortable: true
+    designation:
+        label: 'Désignation'
+        type: text
+        searchable: true
+        sortable: true
+    representation:
+        label: 'Lié à'
+        type: text
+        searchable: true
+        sortable: true
+        select: debut
+        relation: representation
+    photos:
+        label: 'Photos'
+        type: text
+        searchable: true
+        sortable: true
+        useRelationCount: true
+        relation: photos

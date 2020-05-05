@@ -29,3 +29,8 @@ scopes:
         modelClass: DigArt\Spectacles\Models\Statut
         conditions: id in (select spectacle_id from digart_spectacles_repres where statut_id in (:filtered))
         nameFrom: designation             
+    debut:
+        label: Période représentations
+        type: daterange
+        #conditions: fin >= ':after' AND fin <= ':before'         
+        conditions: id in (select spectacle_id from digart_spectacles_repres where debut >= CONVERT(':afterDate', DATETIME) AND debut <= CONVERT(':beforeDate', DATETIME) )       

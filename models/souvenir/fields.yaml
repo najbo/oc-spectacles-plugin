@@ -1,0 +1,48 @@
+fields:
+    photographe:
+        label: 'Nom du photographe'
+        span: auto
+        type: text
+    website:
+        label: 'Site web du photographe'
+        span: auto
+        type: text
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    representation:
+        label: 'Représentation liée'
+        nameFrom: debut_texte
+        descriptionFrom: description
+        span: auto
+        type: relation
+        emptyOption: '-- Lié au spectacle --'
+tabs:
+    fields:
+        photo_principale:
+            label: 'Photo principale'
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: Photos
+        photos:
+            label: Photos
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: Photos
+        complement:
+            label: Complément
+            size: large
+            span: full
+            type: richeditor
+            tab: 'Texte complémentaire'

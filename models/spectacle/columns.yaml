@@ -37,6 +37,13 @@ columns:
         sortable: true
         select: designation
         relation: genres
+    saison:
+        label: Saison
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: saison    
     representations:
         label: Représentations
         type: text
@@ -44,15 +51,9 @@ columns:
         sortable: true
         relation: representations
         useRelationCount: 'yes'
-    saison:
-        label: Saison
-        type: text
-        searchable: true
-        sortable: true
-        select: designation
-        relation: saison
     periode_spectacle:
-        label: Période
+        label: Périodes des représentations
         type: text
         searchable: false
         sortable: false
+       

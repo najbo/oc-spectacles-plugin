@@ -13,6 +13,7 @@ class Representation extends Model
 
     protected $dates = ['deleted_at','debut'];
 
+    #protected $jsonable = ['souvenirs'];
 
     /**
      * @var string The database table used by the model.
@@ -38,4 +39,7 @@ class Representation extends Model
     ];    
 
 
+    public function getDebutTexteAttribute() {
+        return $this->debut->format('d.m.y H:i');
+    }
 }
