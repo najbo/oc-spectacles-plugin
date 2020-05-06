@@ -13,6 +13,7 @@ class BuilderTableCreateDigartSpectaclesRepres extends Migration
             $table->increments('id')->unsigned();
             $table->integer('spectacle_id')->nullable();
             $table->dateTime('debut');
+            $table->dateTime('fin')->nullable();
             $table->string('designation', 255)->nullable();
             $table->text('developpement')->nullable();
             $table->integer('duree_specifique')->nullable();

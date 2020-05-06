@@ -18,6 +18,8 @@ class BuilderTableCreateDigartSpectaclesStatuts extends Migration
             $table->boolean('is_frontend')->nullable()->default(1);
             $table->boolean('is_complet')->nullable();
             $table->boolean('is_annule')->nullable();
+            $table->boolean('is_prog_souhait')->nullable();
+            $table->boolean('is_prog_confirme')->nullable();
             $table->boolean('is_reservable')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

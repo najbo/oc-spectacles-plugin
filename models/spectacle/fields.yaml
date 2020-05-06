@@ -1,6 +1,6 @@
 fields:
     titre_principal:
-        label: 'Titre princicipal (artiste)'
+        label: 'Titre principal (artiste)'
         span: auto
         type: text
     titre_secondaire:
@@ -84,7 +84,7 @@ tabs:
             type: richeditor
             tab: Détail
         affiche:
-            label: Images
+            label: 'Affiche principale'
             span: auto
             mode: image
             useCaption: true

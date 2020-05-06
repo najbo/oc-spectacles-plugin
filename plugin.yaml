@@ -3,7 +3,7 @@ plugin:
     description: 'digart.spectacles::lang.plugin.description'
     author: digart
     icon: oc-icon-music
-    homepage: ''
+    homepage: 'https://www.digital-artisan.ch'
 permissions:
     digart.spectacles.saisons:
         tab: 'TDR - Gestion des spectacles'

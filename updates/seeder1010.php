@@ -34,5 +34,17 @@ class Seeder1010 extends Seeder
             'is_annule' => true,
             'is_reservable' => false,
         ]);                            
+
+        Statut::create([
+            'designation' => 'Prog. - Souhait',
+            'is_frontend' => false,
+            'is_prog_souhait' => true,
+        ]);                                  
+
+        Statut::create([
+            'designation' => 'Prog. - Confirmé',
+            'is_frontend' => false,
+            'is_prog_confirme' => true,
+        ]);          
     }
 }
