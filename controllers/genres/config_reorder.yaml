@@ -1,0 +1,5 @@
+title: Genres
+modelClass: Digart\spectacles\Models\Genre
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

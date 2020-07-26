@@ -35,6 +35,9 @@ permissions:
     digart.spectacles.souvenirs:
         tab: 'TDR - Gestion des spectacles'
         label: 'Gère les souvenirs (photos) des spectacles'
+    digart.spectacles.spectacles.preview:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Peut voir les spectacles "brouillon" dans le frontend'
 navigation:
     spectacles:
         label: Spectacles

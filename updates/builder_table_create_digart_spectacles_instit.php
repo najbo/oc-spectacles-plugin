@@ -14,6 +14,9 @@ class BuilderTableCreateDigartSpectaclesInstit extends Migration
             $table->string('designation', 255);
             $table->string('abreviation', 50)->nullable();
             $table->text('developpement')->nullable();
+            $table->text('entete')->nullable();
+            $table->text('mission')->nullable();
+            $table->text('reservation')->nullable();
             $table->string('adresse', 255)->nullable();
             $table->string('npa', 255)->nullable();
             $table->string('localite', 255)->nullable();

@@ -23,13 +23,13 @@ columns:
         sortable: true
         select: designation
         relation: artistes
-    categories:
-        label: Catégories
+    categorie:
+        label: Catégorie
         type: text
         searchable: true
         sortable: true
         select: designation
-        relation: categories
+        relation: categorie
     genres:
         label: Genres
         type: text
@@ -43,17 +43,16 @@ columns:
         searchable: true
         sortable: true
         select: designation
-        relation: saison    
+        relation: saison
     representations:
-        label: Représentations
+        label: Représ.
         type: text
         searchable: true
         sortable: true
         relation: representations
         useRelationCount: 'yes'
     periode_spectacle:
-        label: Périodes des représentations
+        label: 'Périodes des représentations'
         type: text
         searchable: false
         sortable: false
-       

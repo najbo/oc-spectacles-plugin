@@ -69,3 +69,6 @@
 1.0.24:
     - 'Created table digart_spectacles_souvenirs'
     - builder_table_create_digart_spectacles_souvenirs.php
+1.0.25:
+    - 'Seed représentations'
+    - seeder1025.php

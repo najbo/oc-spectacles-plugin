@@ -3,3 +3,10 @@ fields:
         label: Désignation
         span: auto
         type: text
+    slug:
+        label: 'Lien de la catégorie'
+        span: auto
+        preset:
+            field: designation
+            type: slug
+        type: text

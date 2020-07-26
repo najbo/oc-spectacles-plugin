@@ -13,6 +13,7 @@ class BuilderTableCreateDigartSpectaclesCategories extends Migration
             $table->increments('id')->unsigned();
             $table->string('designation', 255);
             $table->string('symbole', 255)->nullable();
+            $table->string('slug', 255);
             $table->string('color_txt', 10)->nullable();
             $table->string('color_bg', 10)->nullable();
             $table->boolean('is_actif')->nullable()->default(true);

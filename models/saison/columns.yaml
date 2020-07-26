@@ -18,4 +18,12 @@ columns:
         label: Fin
         type: date
         searchable: true
+        sortable: true    
+    statut:
+        label: Statut
+        type: text
+        searchable: true
+        select: designation
+        relation: statut
         sortable: true
+

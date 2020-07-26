@@ -15,6 +15,8 @@ class Seeder1013 extends Seeder
             'adresse' => 'Place de la Liberté',
             'npa' => '2520',
             'localite' => 'La Neuveville',
+            'slug' => 'tour-de-rive',
+            'is_display' => 0,
         ]);
         
         Lieu::create([
@@ -22,6 +24,8 @@ class Seeder1013 extends Seeder
             'adresse' => 'Place de la Liberté',
             'npa' => '2520',
             'localite' => 'La Neuveville',
+            'slug' => 'zone-pietone',
+            'is_display' => 1,
         ]);        
 
         Lieu::create([
@@ -29,6 +33,8 @@ class Seeder1013 extends Seeder
             'adresse' => 'Rue du Port 14',
             'npa' => '2520',
             'localite' => 'La Neuveville',
+            'slug' => 'cours-de-berne',
+            'is_display' => 1,
         ]);  
 
     }

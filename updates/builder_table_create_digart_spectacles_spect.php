@@ -13,22 +13,29 @@ class BuilderTableCreateDigartSpectaclesSpect extends Migration
             $table->increments('id')->unsigned();
             $table->string('titre_principal', 255);
             $table->string('titre_secondaire', 255)->nullable();
+            $table->string('slug', 255);
             $table->text('accroche')->nullable();
             $table->text('developpement')->nullable();
-            $table->text('remarques')->nullable();
+            $table->text('remarques_publiques')->nullable();
+            $table->text('remarques_internes')->nullable();
             $table->text('parties')->nullable();
             $table->integer('saison_id')->nullable()->unsigned();
             $table->integer('statut_id')->nullable()->unsigned();
             $table->integer('institution_id')->nullable()->unsigned();
             $table->integer('emplacement_id')->nullable()->unsigned();
-            $table->boolean('is_reservation')->nullable();
+            $table->integer('categorie_id')->nullable()->unsigned();
+            $table->boolean('is_reservation')->default(1);
+            $table->string('url_reservation',255)->nullable();
             $table->boolean('is_public')->nullable();
             $table->integer('agent_id')->nullable()->unsigned();
             $table->integer('artiste_id')->nullable()->unsigned();
-            $table->integer('duree')->nullable()->unsigned();
+            $table->string('duree',255)->nullable();
+            $table->string('prix',255)->nullable();
+            $table->boolean('is_horsabo')->nullable();
             
             $table->integer('capacite_num')->nullable()->unsigned();
             $table->string('capacite_txt', 255)->nullable();
+            $table->integer('places_tables')->nullable()->unsigned();
             $table->integer('places_assises')->nullable()->unsigned();
             $table->integer('places_debout')->nullable()->unsigned();
 
@@ -43,6 +50,7 @@ class BuilderTableCreateDigartSpectaclesSpect extends Migration
             $table->string('lien_instagram', 255)->nullable();
             $table->string('lien_twitter', 255)->nullable();
             $table->string('lien_youtube', 255)->nullable();
+            $table->string('lien_vimeo', 255)->nullable();
 
 
             $table->timestamp('created_at')->nullable();

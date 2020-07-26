@@ -14,10 +14,10 @@ scopes:
         modelClass: DigArt\Spectacles\Models\Artiste
         conditions: id in (select spectacle_id from digart_spectacles_spect_art where artiste_id in (:filtered))
         nameFrom: designation
-    categories:
-        label: Catégories
+    categorie:
+        label: Catégorie
         modelClass: DigArt\Spectacles\Models\Categorie
-        conditions: id in (select spectacle_id from digart_spectacles_spect_cat where categorie_id in (:filtered))
+        conditions: categorie_id in (:filtered)
         nameFrom: designation
     genres:
         label: Genres

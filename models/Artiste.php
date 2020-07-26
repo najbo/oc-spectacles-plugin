@@ -23,6 +23,8 @@ class Artiste extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required',
+        'slug' => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:digart_spectacles_artistes'],        
     ];
 
     public $belongsTo = [

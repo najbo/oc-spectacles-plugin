@@ -27,12 +27,12 @@ class Souvenir extends Model
 
 
     public $attachMany = [
-        'photos' => ['System\Models\File', 'public' => false],
+        'photos' => ['System\Models\File', 'public' => true],
 
     ];
 
     public $attachOne = [
-        'photo_principale' => ['System\Models\File', 'public' => false]
+        'photo_principale' => ['System\Models\File', 'public' => true]
     ];
 
 

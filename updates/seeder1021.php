@@ -11,21 +11,47 @@ class Seeder1021 extends Seeder
         Categorie::truncate();
 
         Categorie::create([
-            'designation' => 'Concert',
+            'designation' => 'Théâtre',
+            'slug' => 'theatre',
+            'sort_order' => 1,
         ]);
              
         Categorie::create([
-            'designation' => 'Spectacle',
+            'designation' => 'Humour',
+            'slug' => 'humour',
+            'sort_order' => 2,
         ]);      
         
         Categorie::create([
-            'designation' => 'Théâtre',
+            'designation' => 'Musique',
+            'slug' => 'musique',
+            'sort_order' => 3,
         ]);              
 
         Categorie::create([
-            'designation' => 'Enfants',
+            'designation' => 'Danse',
+            'slug' => 'danse',
+            'sort_order' => 4,
         ]);
- 
+
+        Categorie::create([
+            'designation' => 'Contes',
+            'slug' => 'contes',
+            'sort_order' => 5,
+        ]);
+  
+        Categorie::create([
+            'designation' => 'Marionnettes',
+            'slug' => 'marionnettes',
+            'sort_order' => 6,
+        ]);
+   
+        Categorie::create([
+            'designation' => 'Evénement',
+            'slug' => 'evenement',
+            'sort_order' => 7,
+        ]);
+   
 
     }
 }

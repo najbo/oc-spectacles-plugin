@@ -3,16 +3,25 @@ fields:
         label: Désignation
         span: auto
         type: text
-    developpement:
-        label: Développement
-        size: small
-        span: full
-        type: textarea
+    slug:
+        label: 'URL de la saison'
+        span: auto
+        preset:
+            field: designation
+            type: slug
+        type: text
+    statut:
+        label: 'Statut de la saison'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+        scope: saison
     debut:
         label: 'Date de début'
         mode: date
         format: d.m.Y
-        span: auto
+        span: left
         type: datepicker
     fin:
         label: 'Date de fin'
@@ -24,3 +33,21 @@ fields:
         label: 'Saison actuelle'
         span: auto
         type: checkbox
+tabs:
+    fields:
+        developpement:
+            label: Développement
+            size: large
+            span: full
+            type: richeditor
+            tab: Textes
+        programmes:
+            label: 'Programmes au format PDF'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Documents

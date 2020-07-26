@@ -15,6 +15,10 @@ class BuilderTableCreateDigartSpectaclesStatuts extends Migration
             $table->text('developpement')->nullable();
             $table->integer('sort_order')->nullable()->unsigned();
             $table->boolean('is_actif')->nullable()->default(1);
+            $table->boolean('is_spectacle')->nullable()->default(1);
+            $table->boolean('is_saison')->nullable()->default(0);
+            
+            $table->boolean('is_brouillon')->nullable()->default(0);
             $table->boolean('is_frontend')->nullable()->default(1);
             $table->boolean('is_complet')->nullable();
             $table->boolean('is_annule')->nullable();

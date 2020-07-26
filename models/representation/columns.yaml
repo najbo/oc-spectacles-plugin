@@ -3,16 +3,16 @@ columns:
         label: 'Date et heure'
         type: datetime
         searchable: true
-        sortable: true
+        sortable: false
     designation:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     statut:
         label: 'Statut représentation'
         type: text
         searchable: true
-        sortable: true
+        sortable: false
         select: designation
         relation: statut

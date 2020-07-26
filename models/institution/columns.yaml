@@ -3,9 +3,9 @@ columns:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     localite:
         label: Localité
         type: text
         searchable: true
-        sortable: true
+        sortable: false

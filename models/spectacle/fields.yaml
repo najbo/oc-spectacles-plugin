@@ -13,12 +13,16 @@ fields:
         descriptionFrom: debut
         span: auto
         type: relation
-    institution:
-        label: Institution
-        nameFrom: designation
-        descriptionFrom: debut
+        scope: sorted
+    slug:
+        label: 'Lien du spectacle (URL)'
         span: auto
-        type: relation
+        preset:
+            field: titre_secondaire
+            type: slug
+        required: 1
+        type: text
+        tab: Accroche
     artistes:
         label: Artistes
         span: auto
@@ -33,27 +37,8 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-        emptyOption: '-- Selon statut représentations --'
-    categories:
-        label: Catégories
-        span: auto
-        mode: relation
-        separator: comma
-        customTags: false
-        nameFrom: designation
-        type: taglist
-    genres:
-        label: Genres
-        span: auto
-        mode: relation
-        separator: comma
-        customTags: true
-        nameFrom: designation
-        type: taglist
-    is_public:
-        label: Public
-        span: auto
-        type: checkbox
+        scope: spectacle
+        #emptyOption: '-- Selon statut représentations --'
 tabs:
     fields:
         hint_representations:
@@ -73,16 +58,96 @@ tabs:
             tab: Représentations
         accroche:
             label: Accroche
-            size: large
+            size: small
             span: full
             type: richeditor
+            tab: Accroche
+        remarques_publiques:
+            label: 'Remarque publique ou phrase choc'
+            size: small
+            span: auto
+            type: textarea
+            tab: Accroche
+        remarques_internes:
+            label: 'Remarques internes'
+            span: auto
+            size: small
+            type: textarea
             tab: Accroche
         developpement:
             label: Développement
             size: large
             span: full
             type: richeditor
-            tab: Détail
+            tab: Développement
+        institution:
+            label: Institution
+            nameFrom: designation
+            descriptionFrom: debut
+            span: auto
+            type: relation
+            tab: Configuration
+        url_reservation:
+            label: 'Lien pour la réservation'
+            span: auto
+            type: text
+            tab: Configuration
+        categorie:
+            label: Catégorie
+            nameFrom: designation
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: Configuration
+        genres:
+            label: Genres
+            span: auto
+            mode: relation
+            separator: comma
+            customTags: true
+            nameFrom: designation
+            type: taglist
+            tab: Configuration
+        prix:
+            label: 'Prix des places'
+            size: tiny
+            span: auto
+            type: textarea
+            tab: Configuration
+        capacite_txt:
+            label: 'Capacité totale / disposition'
+            size: tiny
+            span: auto
+            type: textarea
+            tab: Configuration
+        section1:
+            label: 'Places disponibles'
+            span: full
+            hidden: 1
+            type: section
+            tab: Configuration
+        places_assises:
+            label: 'Places assises'
+            span: auto
+            type: number
+            tab: Configuration
+        places_tables:
+            label: 'Places assises autour de tables'
+            span: auto
+            type: number
+            tab: Configuration
+        places_debout:
+            label: 'Places debout'
+            span: auto
+            type: number
+            tab: Configuration
+        is_reservation:
+            label: 'Le spectacle est réservable'
+            span: auto
+            default: 1
+            type: switch
+            comment: 'Si activé, reprend le texte de réservation standard de l''institution'
+            tab: Configuration
         affiche:
             label: 'Affiche principale'
             span: auto
@@ -173,41 +238,21 @@ tabs:
             span: auto
             type: fileupload
             tab: 'Scène et technique'
-        section1:
-            label: 'Places disponibles'
-            span: full
-            type: section
-            tab: 'Autres données'
-        places_assises:
-            label: 'Places assises'
-            span: auto
-            type: number
-            tab: 'Autres données'
-        places_debout:
-            label: 'Places debout'
-            span: auto
-            type: number
-            tab: 'Autres données'
-        section2:
-            label: 'Statistiques / entrées'
-            span: full
-            type: section
-            tab: 'Autres données'
         entrees_reduit:
             label: 'Entrées réduites'
             span: auto
             type: number
-            tab: 'Autres données'
+            tab: Statistiques
         entrees_adulte:
             label: 'Entrées adultes'
             span: auto
             type: number
-            tab: 'Autres données'
+            tab: Statistiques
         entrees_abo:
             label: 'Entrées abonnement'
             span: auto
             type: number
-            tab: 'Autres données'
+            tab: Statistiques
         hint_souvenirs:
             span: full
             path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
