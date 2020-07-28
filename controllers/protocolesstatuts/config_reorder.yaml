@@ -1,0 +1,5 @@
+title: 'Statuts des protocoles'
+modelClass: Digart\spectacles\Models\ProtocoleStatut
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

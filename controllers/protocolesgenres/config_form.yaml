@@ -1,0 +1,11 @@
+name: 'Genre de protocoles'
+modelClass: Digart\spectacles\Models\ProtocoleGenre
+form: $/digart/spectacles/models/protocolegenre/fields.yaml
+defaultRedirect: digart/spectacles/protocolesgenres
+create:
+    redirect: 'digart/spectacles/protocolesgenres/update/:id'
+    redirectClose: digart/spectacles/protocolesgenres
+update:
+    redirect: digart/spectacles/protocolesgenres
+    redirectClose: digart/spectacles/protocolesgenres
+preview: {  }

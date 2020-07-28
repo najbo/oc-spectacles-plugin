@@ -19,6 +19,7 @@ class BuilderTableCreateDigartSpectaclesRepres extends Migration
             $table->integer('duree_specifique')->nullable();
             $table->string('prix_spectifique', 255)->nullable();
             $table->integer('capacite_specifique')->nullable()->unsigned();
+            $table->integer('admin_id')->unsigned()->nullable();
             $table->integer('lieu_id')->nullable()->unsigned();
             $table->integer('statut_id')->nullable()->unsigned();
             $table->boolean('is_canceled')->nullable();

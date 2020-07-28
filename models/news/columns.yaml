@@ -1,0 +1,16 @@
+columns:
+    debut:
+        label: Du
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: Au
+        type: date
+        searchable: true
+        sortable: true
+    designation:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: true

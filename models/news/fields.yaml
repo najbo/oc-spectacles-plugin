@@ -1,0 +1,20 @@
+fields:
+    debut:
+        label: 'Publié depuis'
+        mode: date
+        span: auto
+        type: datepicker
+    fin:
+        label: 'Publié jusqu''au'
+        mode: date
+        span: auto
+        type: datepicker
+    designation:
+        label: Titre
+        span: auto
+        type: text
+    developpement:
+        label: Développement
+        size: large
+        span: full
+        type: richeditor

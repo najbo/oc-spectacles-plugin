@@ -1,0 +1,5 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true

@@ -1,0 +1,11 @@
+name: Actualités
+modelClass: Digart\spectacles\Models\News
+form: $/digart/spectacles/models/news/fields.yaml
+defaultRedirect: digart/spectacles/news
+create:
+    redirect: 'digart/spectacles/news/update/:id'
+    redirectClose: digart/spectacles/news
+update:
+    redirect: digart/spectacles/news
+    redirectClose: digart/spectacles/news
+preview: {  }

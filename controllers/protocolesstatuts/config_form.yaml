@@ -1,0 +1,10 @@
+name: 'Statut des protocoles'
+modelClass: Digart\spectacles\Models\ProtocoleStatut
+form: $/digart/spectacles/models/protocolestatut/fields.yaml
+defaultRedirect: digart/spectacles/protocolesstatuts
+create:
+    redirect: 'digart/spectacles/protocolesstatuts/update/:id'
+    redirectClose: digart/spectacles/protocolesstatuts
+update:
+    redirect: digart/spectacles/protocolesstatuts
+    redirectClose: digart/spectacles/protocolesstatuts

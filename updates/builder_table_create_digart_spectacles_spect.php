@@ -19,6 +19,7 @@ class BuilderTableCreateDigartSpectaclesSpect extends Migration
             $table->text('remarques_publiques')->nullable();
             $table->text('remarques_internes')->nullable();
             $table->text('parties')->nullable();
+            $table->integer('admin_id')->nullable()->unsigned();
             $table->integer('saison_id')->nullable()->unsigned();
             $table->integer('statut_id')->nullable()->unsigned();
             $table->integer('institution_id')->nullable()->unsigned();

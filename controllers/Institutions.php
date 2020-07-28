@@ -18,6 +18,6 @@ class Institutions extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'main-menu-item', 'institutions');
+        BackendMenu::setContext('Digart.spectacles', 'parametres-cttr', 'institutions');
     }
 }

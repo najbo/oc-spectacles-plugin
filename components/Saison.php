@@ -111,11 +111,7 @@ class Saison extends \Cms\Classes\ComponentBase
                     }])
                 ->first();
 
-
-
-            
-            */
-
+            // Si on veut filtrer aussi par représentations
             $query = $record->where('slug', $slug)->
                 with(['spectacles' => function ($query) {
                     $query->
@@ -131,9 +127,8 @@ class Saison extends \Cms\Classes\ComponentBase
                 });
                     }])
                 ->first();
-
-
-
+            
+            */
 
 
 

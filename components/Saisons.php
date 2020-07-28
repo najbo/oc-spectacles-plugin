@@ -45,6 +45,8 @@ class Saisons extends \Cms\Classes\ComponentBase
     public function posts()
     {
 
+        // seuls les spectacles qui sont affichés en frontend sont affichés. Aucun tri par représentations !
+
         $user = BackendAuth::getUser();
 
         if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
@@ -52,7 +54,14 @@ class Saisons extends \Cms\Classes\ComponentBase
             $query = Saison::orderBy('debut', 'desc')->
                 whereHas('statut', function ($query) {
                     $query->where('is_frontend',1)->orWhere('is_brouillon',1);            
-                })
+                })->
+                with(['spectacles' => function ($query) {
+                    $query->
+
+                    whereHas('statut', function ($query) {
+                        $query->where('is_frontend',1)->orWhere('is_brouillon', 1);
+                });
+                    }])
                 ->get();
 
         } else {
@@ -60,7 +69,14 @@ class Saisons extends \Cms\Classes\ComponentBase
             $query = Saison::orderBy('debut', 'desc')->
                 whereHas('statut', function ($query) {
                     $query->where('is_frontend',1);            
-                })
+                })->
+                with(['spectacles' => function ($query) {
+                    $query->
+
+                    whereHas('statut', function ($query) {
+                        $query->where('is_frontend',1);
+                });
+                    }])
                 ->get();
 
         }

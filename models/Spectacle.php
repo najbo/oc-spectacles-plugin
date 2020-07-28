@@ -1,6 +1,7 @@
 <?php namespace Digart\spectacles\Models;
 
 use Model;
+use BackendAuth;
 use DigArt\Spectacles\Models\Representation;
 /**
  * Model
@@ -48,6 +49,8 @@ class Spectacle extends Model
      *  Relations
      */
     public $belongsTo = [
+        'administrateur' => ['DigArt\Spectacles\Models\Administrateur',
+                   'key' => 'admin_id'],
         'saison' => ['DigArt\Spectacles\Models\Saison',
                    'key' => 'saison_id'],               
         'institution' => ['DigArt\Spectacles\Models\Institution',
@@ -95,6 +98,10 @@ class Spectacle extends Model
             'key' => 'spectacle_id', 
             'order' => '',
             'softDelete' => true],
+         'protocoles' => ['DigArt\Spectacles\Models\Protocole', 
+            'key' => 'spectacle_id', 
+            'order' => 'date',
+            'softDelete' => true],            
     ];     
 
 
@@ -152,10 +159,18 @@ class Spectacle extends Model
     // Renvoie l'URL complète pour accéder à une page de spectacle par le slug
     public function getFullUrlAttribute() {
 
-        $base = 'spectacle';
-        return $base .'/'. $this->slug;
+        $contexte = 'spectacle';
+        return '/'.$contexte .'/'. $this->slug;
     }
 
+    // Permet de mettre l'attribut admin_id par défaut à la valeur de l'administrateur connecté
+/*    public function __construct(array $attributes = array()) {
+        if (BackendAuth::check()) {
+            $this->setRawAttributes(['admin_id' => BackendAuth::getUser()->id], true);
+            parent::__construct($attributes);
+        }
+
+    }*/
 }
 
 

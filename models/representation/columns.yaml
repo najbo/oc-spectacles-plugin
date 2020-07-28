@@ -16,3 +16,9 @@ columns:
         sortable: false
         select: designation
         relation: statut
+    lieu:
+        label: Lieu
+        type: text
+        searchable: true
+        select: designation
+        relation: lieu

@@ -1,0 +1,46 @@
+fields:
+    date:
+        label: Date
+        mode: date
+        span: auto
+        type: datepicker
+    statut:
+        label: Statut
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    genre:
+        label: Genre
+        nameFrom: designation
+        descriptionFrom: description
+        span: left
+        type: relation
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    administrateur:
+        label: Auteur
+        span: auto
+        nameFrom: full_name
+        descriptionFrom: description
+        type: relation
+tabs:
+    fields:
+        developpement:
+            label: Développement
+            size: large
+            span: full
+            type: textarea
+            tab: Développement
+        documents:
+            label: Documents
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Documents

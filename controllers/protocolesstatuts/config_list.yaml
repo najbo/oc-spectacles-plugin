@@ -1,0 +1,15 @@
+title: 'Statuts des protocoles'
+modelClass: Digart\spectacles\Models\ProtocoleStatut
+list: $/digart/spectacles/models/protocolestatut/columns.yaml
+recordUrl: 'digart/spectacles/protocolesstatuts/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

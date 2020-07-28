@@ -38,6 +38,18 @@ permissions:
     digart.spectacles.spectacles.preview:
         tab: 'TDR - Gestion des spectacles'
         label: 'Peut voir les spectacles "brouillon" dans le frontend'
+    digart.spectacles.protocoles:
+        tab: 'TDR - Gestion des spectacles'
+        label: 'Gère les protocoles des spectacles'
+    digart.spectacles.pstatuts:
+        tab: 'TDR - Gestion des paramètres'
+        label: 'Gère les statuts des protocoles'
+    digart.spectacles.pgenres:
+        tab: 'TDR - Gestion des paramètres'
+        label: 'Gère les genres de protocoles'
+    digart.spectacles.news:
+        tab: 'TDR - Gestion des news'
+        label: 'Gère les actualités'
 navigation:
     spectacles:
         label: Spectacles
@@ -70,8 +82,8 @@ navigation:
                 label: Agents
                 url: digart/spectacles/agents
                 icon: icon-dollar
-    main-menu-item:
-        label: 'Paramètres TDR'
+    parametres-cttr:
+        label: 'Paramètres CTTR'
         url: digart/spectacles/institutions
         icon: icon-wrench
         sideMenu:
@@ -84,6 +96,25 @@ navigation:
                 url: digart/spectacles/lieux
                 icon: icon-map-marker
             statuts:
-                label: Statuts
+                label: 'Statuts spectacles'
                 url: digart/spectacles/statuts
                 icon: icon-dashboard
+            statuts-protocoles:
+                label: 'Statuts de protocoles'
+                url: digart/spectacles/protocolesstatuts
+                icon: icon-dashboard
+                permissions:
+                    - pro
+            genres-protocoles:
+                label: 'Genres des protocoles'
+                url: digart/spectacles/protocolesgenres
+                icon: icon-puzzle-piece
+    news-cttr:
+        label: Actualités
+        url: digart/spectacles/news
+        icon: icon-newspaper-o
+        sideMenu:
+            actualites:
+                label: Actualités
+                url: digart/spectacles/news
+                icon: icon-newspaper-o

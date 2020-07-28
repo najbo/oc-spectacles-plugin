@@ -24,4 +24,8 @@ class Institution extends Model
      */
     public $rules = [
     ];
+
+    public $attachOne = [
+        'image_communication' => ['System\Models\File', 'public' => true]
+    ];    
 }

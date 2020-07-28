@@ -11,6 +11,9 @@ use BackendAuth;
 
 class Spectacle extends \Cms\Classes\ComponentBase
 {
+
+    public $record;
+
     public function componentDetails()
     {
         return [
@@ -38,13 +41,20 @@ class Spectacle extends \Cms\Classes\ComponentBase
     public function post()
     {
 
+        # Contexte : (https://xyz.td/programme/spectacle/slug)
+        # Programme = on n'affiche pas les représentations passées
+        # Saison = on affiche les représentations passées
+        #$contexte = $this->param('contexte');
+        if (isset($_GET['archive']))  {
+            $contexte = $_GET['archive'];
+        }
+
         $user = BackendAuth::getUser();
 
         $slug = $this->property('slug');
 
-        $post = new detailSpectacle;
+        $record = new detailSpectacle;
 
-        try {
             # $query = $post->where('slug', $slug)->firstOrFail();
             
 
@@ -52,30 +62,27 @@ class Spectacle extends \Cms\Classes\ComponentBase
 
             if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
 
-            $query = $post->
+            $query = $record->
                 whereHas('represActives')
                     ->where(function($query) {
                         $query->whereHas('statut', function ($query) {
                                     $query->where('is_frontend','1')->orWhere('is_brouillon', 1);            
                         });
-                    })->where('slug', $slug)->firstOrFail();
+                    })->where('slug', $slug)->first();
 
             } else {
 
-            $query = $post->
+            $query = $record->
                 whereHas('represActives')
                     ->where(function($query) {
                         $query->whereHas('statut', function ($query) {
                                     $query->where('is_frontend','1');            
                         });
-                    })->where('slug', $slug)->firstOrFail();
+                    })->where('slug', $slug)->first();
 
 
             }
-        } catch (ModelNotFoundException $ex) {
-            $this->setStatusCode(404);
-            return $this->controller->run('404');
-        }            
+           
 
         return $query;
     }

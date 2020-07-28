@@ -1,0 +1,5 @@
+title: 'Genres de protocoles'
+modelClass: Digart\spectacles\Models\ProtocoleGenre
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

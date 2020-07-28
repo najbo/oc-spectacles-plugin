@@ -1,0 +1,15 @@
+title: Actualités
+modelClass: Digart\spectacles\Models\News
+list: $/digart/spectacles/models/news/columns.yaml
+recordUrl: 'digart/spectacles/news/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: debut
+    direction: desc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

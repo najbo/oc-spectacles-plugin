@@ -20,4 +20,17 @@ souvenirs:
     manage:
         form: $/digart/spectacles/models/souvenir/fields.yaml
         title : Gestion des souvenirs
+        showSearch: true
+
+
+protocoles:
+    label: Protocoles
+    emptyMessage: Aucune protocole pour le moment
+    view:
+        list: $/digart/spectacles/models/protocole/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/protocole/fields.yaml
+        title : Gestion des protocoles
         showSearch: true           

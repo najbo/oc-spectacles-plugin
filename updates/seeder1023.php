@@ -18,6 +18,7 @@ class Seeder1023 extends Seeder
             'lien_facebook' => 'thomaswieselcomedy',
             'lien_twitter' => 'wieselt',
             'categorie_id' => 2,
+            'admin_id' => 1,
             'statut_id' => 1,
             'saison_id' => 2,
             'accroche' =>
@@ -38,7 +39,8 @@ class Seeder1023 extends Seeder
             'categorie_id' => 3,
             'slug' => 'the-best-tour',
             'lien_youtube' => '30jLN22-eZg',
-            'statut_id' => 2,
+            'admin_id' => 1,
+            'statut_id' => 1,
             'saison_id' => 2,
             'accroche' =>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur mauris leo, vitae fringilla justo finibus eget. Phasellus mattis fringilla sagittis. Nulla eu est mollis, tempus orci eget, venenatis enim. Fusce vel egestas eros. Donec sollicitudin a tellus at ultrices. Cras pulvinar sem vitae nulla fermentum consequat. Integer consequat lacus ac orci euismod tempus. Sed ornare nibh ut justo semper sodales. Nullam egestas purus in sodales convallis. In consectetur sem eros, eget semper augue facilisis nec. Mauris at sem non arcu pharetra gravida. In hac habitasse platea dictumst. Phasellus tempor dignissim lorem, ut dignissim libero mollis ultricies. Mauris ac egestas tortor. Morbi vel vehicula elit, a fermentum libero. Ut ultrices euismod posuere.",
@@ -51,6 +53,7 @@ class Seeder1023 extends Seeder
             'titre_principal' => 'Les 3 petits cochons',
             'titre_secondaire' => 'Par le théâtre Couleurs d\'ombres',
             'slug' => 'trois-petits-cochons',
+            'admin_id' => 1,
             'categorie_id' => 1,
             'statut_id' => 1,
             'saison_id' => 2,
@@ -66,6 +69,7 @@ class Seeder1023 extends Seeder
             'titre_secondaire' => 'Création théatrâle',
             'slug' => 'mortel',
             'categorie_id' => 1,
+            'admin_id' => 1,
             'statut_id' => 1,
             'saison_id' => 2,
             'accroche' =>

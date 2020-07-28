@@ -1,0 +1,39 @@
+columns:
+    date:
+        label: Date
+        type: date
+        searchable: true
+        sortable: true
+    genre:
+        label: Genre
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: genre
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    statut:
+        label: Statut
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: statut
+    administrateur:
+        label: Auteur
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(first_name,'' '', last_name)'
+        relation: administrateur
+    documents_count:
+        label: Documents
+        type: text
+        searchable: true
+        sortable: true
+        relation: documents
+        useRelationCount: true

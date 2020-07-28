@@ -72,3 +72,21 @@
 1.0.25:
     - 'Seed représentations'
     - seeder1025.php
+1.0.26:
+    - 'Created table digart_spectacles_prot'
+    - builder_table_create_digart_spectacles_prot.php
+1.0.27:
+    - 'Created table digart_spectacles_pstatuts'
+    - builder_table_create_digart_spectacles_pstatuts.php
+1.0.28:
+    - 'Seed Statuts des protocoles'
+    - seeder1028.php
+1.0.29:
+    - 'Created table digart_spectacles_pgenres'
+    - builder_table_create_digart_spectacles_pgenres.php
+1.0.30:
+    - 'Seed genres de protocoles'
+    - seeder1030.php
+1.0.31:
+    - 'Created table digart_spectacles_news'
+    - builder_table_create_digart_spectacles_news.php

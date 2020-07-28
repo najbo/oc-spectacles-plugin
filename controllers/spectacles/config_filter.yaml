@@ -23,7 +23,12 @@ scopes:
         label: Genres
         modelClass: DigArt\Spectacles\Models\Genre
         conditions: id in (select spectacle_id from digart_spectacles_spect_genr where genre_id in (:filtered))
-        nameFrom: designation        
+        nameFrom: designation
+    administrateur:
+        label: Programmateur
+        modelClass: DigArt\Spectacles\Models\Administrateur
+        conditions: admin_id in (:filtered)
+        nameFrom: full_name   
     statut_representation:
         label: Statuts représentations
         modelClass: DigArt\Spectacles\Models\Statut

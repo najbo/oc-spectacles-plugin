@@ -38,7 +38,6 @@ fields:
         span: auto
         type: relation
         scope: spectacle
-        #emptyOption: '-- Selon statut représentations --'
 tabs:
     fields:
         hint_representations:
@@ -56,6 +55,85 @@ tabs:
                 - preview
             type: partial
             tab: Représentations
+        institution:
+            label: Institution
+            nameFrom: designation
+            descriptionFrom: debut
+            span: auto
+            type: relation
+            tab: Paramètres
+        administrateur:
+            label: Programmateur
+            span: auto
+            nameFrom: full_name
+            descriptionFrom: description
+            type: relation
+            emptyOption: '-- Non relevant ou autre --'
+            tab: Paramètres
+        categorie:
+            label: Catégorie
+            nameFrom: designation
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: Paramètres
+        genres:
+            label: Genres
+            span: auto
+            mode: relation
+            separator: comma
+            customTags: true
+            nameFrom: designation
+            type: taglist
+            tab: Paramètres
+        prix:
+            label: 'Prix des places'
+            size: tiny
+            span: auto
+            type: textarea
+            tab: Paramètres
+        capacite_txt:
+            label: 'Capacité totale / disposition'
+            size: tiny
+            span: auto
+            type: textarea
+            tab: Paramètres
+        url_reservation:
+            label: 'Lien pour la réservation'
+            span: auto
+            type: text
+            tab: Paramètres
+        is_reservation:
+            label: 'Le spectacle est réservable'
+            span: auto
+            default: 1
+            type: switch
+            comment: 'Si activé, reprend le texte de réservation standard de l''institution'
+            tab: Paramètres
+        section1:
+            label: 'Places disponibles'
+            span: full
+            hidden: 1
+            type: section
+            tab: Paramètres
+        places_assises:
+            label: 'Places assises'
+            span: auto
+            hidden: 1
+            type: number
+            tab: Paramètres
+        places_tables:
+            label: 'Places assises autour de tables'
+            span: auto
+            hidden: 1
+            type: number
+            tab: Paramètres
+        places_debout:
+            label: 'Places debout'
+            span: auto
+            hidden: 1
+            type: number
+            tab: Paramètres            
         accroche:
             label: Accroche
             size: small
@@ -80,74 +158,6 @@ tabs:
             span: full
             type: richeditor
             tab: Développement
-        institution:
-            label: Institution
-            nameFrom: designation
-            descriptionFrom: debut
-            span: auto
-            type: relation
-            tab: Configuration
-        url_reservation:
-            label: 'Lien pour la réservation'
-            span: auto
-            type: text
-            tab: Configuration
-        categorie:
-            label: Catégorie
-            nameFrom: designation
-            descriptionFrom: description
-            span: auto
-            type: relation
-            tab: Configuration
-        genres:
-            label: Genres
-            span: auto
-            mode: relation
-            separator: comma
-            customTags: true
-            nameFrom: designation
-            type: taglist
-            tab: Configuration
-        prix:
-            label: 'Prix des places'
-            size: tiny
-            span: auto
-            type: textarea
-            tab: Configuration
-        capacite_txt:
-            label: 'Capacité totale / disposition'
-            size: tiny
-            span: auto
-            type: textarea
-            tab: Configuration
-        section1:
-            label: 'Places disponibles'
-            span: full
-            hidden: 1
-            type: section
-            tab: Configuration
-        places_assises:
-            label: 'Places assises'
-            span: auto
-            type: number
-            tab: Configuration
-        places_tables:
-            label: 'Places assises autour de tables'
-            span: auto
-            type: number
-            tab: Configuration
-        places_debout:
-            label: 'Places debout'
-            span: auto
-            type: number
-            tab: Configuration
-        is_reservation:
-            label: 'Le spectacle est réservable'
-            span: auto
-            default: 1
-            type: switch
-            comment: 'Si activé, reprend le texte de réservation standard de l''institution'
-            tab: Configuration
         affiche:
             label: 'Affiche principale'
             span: auto
@@ -268,3 +278,18 @@ tabs:
                 - preview
             type: partial
             tab: Souvenirs
+        hint_protocoles:
+            span: full
+            path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Protocoles
+        protocoles:
+            span: full
+            path: field_protocoles
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Protocoles

@@ -18,6 +18,6 @@ class Lieux extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'main-menu-item', 'lieux');
+        BackendMenu::setContext('Digart.spectacles', 'parametres-cttr', 'lieux');
     }
 }
