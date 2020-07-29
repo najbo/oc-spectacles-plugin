@@ -1,0 +1,15 @@
+title: 'Etendues du blog'
+modelClass: Digart\spectacles\Models\BlogEtendue
+list: $/digart/spectacles/models/blogetendue/columns.yaml
+recordUrl: 'digart/spectacles/blogetendues/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

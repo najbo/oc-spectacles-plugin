@@ -1,0 +1,10 @@
+name: Blog
+modelClass: Digart\spectacles\Models\Blog
+form: $/digart/spectacles/models/blog/fields.yaml
+defaultRedirect: digart/spectacles/blogs
+create:
+    redirect: 'digart/spectacles/blogs/update/:id'
+    redirectClose: digart/spectacles/blogs
+update:
+    redirect: digart/spectacles/blogs
+    redirectClose: digart/spectacles/blogs

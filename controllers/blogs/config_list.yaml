@@ -1,7 +1,7 @@
-title: Actualités
-modelClass: Digart\spectacles\Models\News
-list: $/digart/spectacles/models/news/columns.yaml
-recordUrl: 'digart/spectacles/news/update/:id'
+title: Blog
+modelClass: Digart\spectacles\Models\Blog
+list: $/digart/spectacles/models/blog/columns.yaml
+recordUrl: 'digart/spectacles/blogs/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

@@ -1,0 +1,5 @@
+title: BlogEtendues
+modelClass: Digart\spectacles\Models\BlogEtendue
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

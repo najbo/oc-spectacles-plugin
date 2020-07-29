@@ -88,5 +88,14 @@
     - 'Seed genres de protocoles'
     - seeder1030.php
 1.0.31:
-    - 'Created table digart_spectacles_news'
-    - builder_table_create_digart_spectacles_news.php
+    - 'Created table digart_spectacles_blog'
+    - builder_table_create_digart_spectacles_blog.php
+1.0.32:
+    - 'Created table digart_spectacles_blog_etendue'
+    - builder_table_create_digart_spectacles_blog_etendue.php
+1.0.33:
+    - 'Seed étendues du blog'
+    - seeder1033.php
+1.0.34:
+    - 'Seed blog posts'
+    - seeder1034.php

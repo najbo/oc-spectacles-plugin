@@ -1,0 +1,10 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    developpement:
+        label: Développement
+        span: full
+        size: large
+        type: textarea

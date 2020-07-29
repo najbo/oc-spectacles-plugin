@@ -1,0 +1,25 @@
+columns:
+    debut:
+        label: Du
+        type: date
+        searchable: true
+        sortable: true
+    designation:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: true
+    etendue:
+        label: Etendue
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: etendue
+    administrateur:
+        label: Auteur
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(first_name, '' '', last_name)'
+        relation: administrateur

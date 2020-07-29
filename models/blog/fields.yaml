@@ -1,0 +1,101 @@
+fields:
+    designation:
+        label: Titre
+        span: auto
+        type: text
+    slug:
+        label: 'URL de la publication'
+        span: auto
+        preset:
+            field: designation
+            type: slug
+        type: text
+    etendue:
+        label: 'Étendue de la publication'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    debut:
+        label: 'Publié depuis'
+        mode: date
+        span: auto
+        type: datepicker
+    administrateur:
+        label: Auteur
+        nameFrom: full_name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch
+tabs:
+    fields:
+        accroche:
+            label: Accroche
+            size: large
+            span: left
+            type: richeditor
+            tab: Accroche
+        image:
+            label: 'Image de présentation'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Accroche
+        fin:
+            label: 'Publié jusqu''au'
+            mode: date
+            span: left
+            hidden: 1
+            type: datepicker
+            tab: Accroche
+        developpement:
+            label: Développement
+            size: large
+            span: full
+            type: richeditor
+            tab: Développement
+        url:
+            label: 'Adresse URL interne ou externe'
+            span: auto
+            type: text
+            tab: Lien
+        url_texte:
+            label: 'Texte du bouton'
+            span: auto
+            type: text
+            comment: 'Si vide, le texte "En savoir plus" est automatiquement inséré'
+            tab: Lien
+        is_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: auto
+            type: switch
+            tab: Lien
+        images:
+            label: Images
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Médias
+        documents:
+            label: Documents
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Médias

@@ -43,23 +43,7 @@ tabs:
             span: full
             path: $/digart/spectacles/models/institution/_hint_conseil.htm
             type: hint
-            tab: Communication
-        communication_titre:
-            label: 'Titre de la communication'
-            span: auto
-            type: text
-            tab: Communication
-        is_communication:
-            label: 'Afficher la communication'
-            span: auto
-            type: switch
-            tab: Communication
-        communication:
-            label: 'Communication sur la première page'
-            size: large
-            span: left
-            type: richeditor
-            tab: Communication
+            tab: Médias
         image_communication:
             label: 'Image liée'
             mode: image
@@ -69,14 +53,4 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: Communication
-        communication_url:
-            label: URL
-            span: auto
-            type: text
-            tab: Communication
-        is_url_externe:
-            label: 'Ouvrir une nouvelle fenêtre ?'
-            span: left
-            type: switch
-            tab: Communication
+            tab: Médias
