@@ -18,6 +18,6 @@ class BlogEtendues extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'news-cttr', 'blog-etendue');
+        BackendMenu::setContext('Digart.spectacles', 'communication', 'blog-etendue');
     }
 }

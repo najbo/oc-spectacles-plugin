@@ -23,3 +23,8 @@ columns:
         sortable: true
         select: 'concat(first_name, '' '', last_name)'
         relation: administrateur
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: true

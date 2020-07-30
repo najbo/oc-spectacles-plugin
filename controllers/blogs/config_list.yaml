@@ -1,4 +1,4 @@
-title: Blog
+title: Publications
 modelClass: Digart\spectacles\Models\Blog
 list: $/digart/spectacles/models/blog/columns.yaml
 recordUrl: 'digart/spectacles/blogs/update/:id'
@@ -13,3 +13,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+filter: config_filter.yaml

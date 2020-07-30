@@ -37,7 +37,7 @@ class Protocole extends Model
 
 
     public $belongsTo = [
-        'administrateur' => ['DigArt\Spectacles\Models\Administrateur',
+        'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
         'statut' => ['DigArt\Spectacles\Models\ProtocoleStatut',
                    'key' => 'pstatut_id',

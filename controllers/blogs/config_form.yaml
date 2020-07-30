@@ -1,4 +1,4 @@
-name: Blog
+name: Publication
 modelClass: Digart\spectacles\Models\Blog
 form: $/digart/spectacles/models/blog/fields.yaml
 defaultRedirect: digart/spectacles/blogs
@@ -8,3 +8,4 @@ create:
 update:
     redirect: digart/spectacles/blogs
     redirectClose: digart/spectacles/blogs
+preview: {  }

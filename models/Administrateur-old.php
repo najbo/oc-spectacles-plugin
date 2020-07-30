@@ -6,11 +6,10 @@ use \Backend\Models\User;
 /**
  * Model
  */
-class Administrateur extends User
+class AdministrateurOld extends User
 {
 
     protected $appends = ['full_name'];
-
 
 
     public function getFullNameAttribute() {

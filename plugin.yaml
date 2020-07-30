@@ -112,19 +112,19 @@ navigation:
                 label: 'Genres des protocoles'
                 url: digart/spectacles/protocolesgenres
                 icon: icon-puzzle-piece
-    news-cttr:
+    communication:
         label: 'Communication CTTR'
         url: digart/spectacles/blogs
         icon: icon-newspaper-o
         sideMenu:
-            actualites:
-                label: Blog
+            publications:
+                label: Publications
                 url: digart/spectacles/blogs
                 icon: icon-newspaper-o
                 permissions:
                     - digart.spectacles.blog
             blog-etendue:
-                label: 'Etendue du blog'
+                label: 'Etendues de publications'
                 url: digart/spectacles/blogetendues
                 icon: icon-road
                 permissions:

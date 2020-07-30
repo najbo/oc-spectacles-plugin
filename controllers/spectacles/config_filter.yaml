@@ -26,7 +26,7 @@ scopes:
         nameFrom: designation
     administrateur:
         label: Programmateur
-        modelClass: DigArt\Spectacles\Models\Administrateur
+        modelClass: \Backend\Models\User
         conditions: admin_id in (:filtered)
         nameFrom: full_name   
     statut_representation:

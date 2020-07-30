@@ -17,7 +17,7 @@ class Blogs extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'news-cttr', 'actualites');
+        BackendMenu::setContext('Digart.spectacles', 'communication', 'actualites');
     }
 
     public function listExtendQuery($query)

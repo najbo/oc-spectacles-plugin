@@ -49,7 +49,7 @@ class Spectacle extends Model
      *  Relations
      */
     public $belongsTo = [
-        'administrateur' => ['DigArt\Spectacles\Models\Administrateur',
+        'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
         'saison' => ['DigArt\Spectacles\Models\Saison',
                    'key' => 'saison_id'],               

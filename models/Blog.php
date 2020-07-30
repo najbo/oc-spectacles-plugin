@@ -44,7 +44,7 @@ class Blog extends Model
 
 
     public $belongsTo = [
-        'administrateur' => ['DigArt\Spectacles\Models\Administrateur',
+        'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
         'etendue' => ['DigArt\Spectacles\Models\BlogEtendue',
                    'key' => 'etendue_id',
@@ -62,7 +62,9 @@ class Blog extends Model
 
 
     public function scopeIsActif($query) {
+        $role = '2020-07-27';
         return $query->where('is_actif', 1)->whereDate('debut', '<=', Carbon::today()->toDateString());
+
     }
 
 
@@ -81,7 +83,7 @@ class Blog extends Model
     public function scopeLatestBlog($query) {
         
         # return $query->isActif()->whereDate('fin', '>=', Carbon::today()->toDateString())->isCommunication()->orderByDate();
-        return $query->isActif()->isFrontend()->orderByDate()->take(5)->get();
+        return $query->isActif()->isFrontend()->orderByDate();
     }
     public function scopeIsFrontend($query) {
         return $query->whereHas('etendue', function ($query) {

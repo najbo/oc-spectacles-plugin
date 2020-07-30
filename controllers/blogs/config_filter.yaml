@@ -1,0 +1,11 @@
+scopes:
+    statut:
+        label: Etendue
+        modelClass: DigArt\Spectacles\Models\BlogEtendue
+        conditions: etendue_id in (:filtered)
+        nameFrom: designation
+    saison:
+        label: Auteur
+        modelClass: \Backend\Models\User
+        conditions: admin_id in (:filtered)
+        nameFrom: full_name
