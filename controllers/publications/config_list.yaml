@@ -1,7 +1,7 @@
 title: Publications
-modelClass: Digart\spectacles\Models\Blog
-list: $/digart/spectacles/models/blog/columns.yaml
-recordUrl: 'digart/spectacles/blogs/update/:id'
+modelClass: Digart\spectacles\Models\Publication
+list: $/digart/spectacles/models/publication/columns.yaml
+recordUrl: 'digart/spectacles/publications/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

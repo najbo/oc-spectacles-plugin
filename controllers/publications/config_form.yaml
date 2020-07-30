@@ -1,0 +1,11 @@
+name: Publication
+modelClass: Digart\spectacles\Models\Publication
+form: $/digart/spectacles/models/publication/fields.yaml
+defaultRedirect: digart/spectacles/publications
+create:
+    redirect: 'digart/spectacles/publications/update/:id'
+    redirectClose: digart/spectacles/publications
+update:
+    redirect: digart/spectacles/publications
+    redirectClose: digart/spectacles/publications
+preview: {  }

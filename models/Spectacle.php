@@ -125,6 +125,26 @@ class Spectacle extends Model
     }
 
 
+
+
+
+    public function scopeprochainsSpectacles($query) {
+
+        return $query->whereHas('represActives')
+                        ->where(function($query) {
+                            $query->whereHas('statut', function ($query) {
+                                        $query->where('is_frontend','1');            
+                            })->orWhere('statut_id', null);
+                        })->with('latestSpectacle')->get()->sortBy('latestSpectacle.debut');
+
+        } 
+
+
+
+
+
+
+
     public function getPeriodeSpectacleAttribute() {
         $debut = '';
         $fin = '';

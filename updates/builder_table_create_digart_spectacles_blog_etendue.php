@@ -15,7 +15,7 @@ class BuilderTableCreateDigartSpectaclesBlogEtendue extends Migration
             $table->text('developpement')->nullable();
             $table->integer('sort_order')->nullable()->unsigned();
             $table->boolean('is_actif')->nullable()->default(1);
-            $table->boolean('is_frontend')->nullable();
+            $table->boolean('is_blog')->nullable();
             $table->boolean('is_intranet')->nullable();
             $table->boolean('is_communication')->nullable();
             $table->timestamp('created_at')->nullable();

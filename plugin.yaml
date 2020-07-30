@@ -47,12 +47,12 @@ permissions:
     digart.spectacles.pgenres:
         tab: 'TDR - Gestion des paramètres'
         label: 'Gère les genres de protocoles'
-    digart.spectacles.blog:
+    digart.spectacles.publications:
         tab: 'TDR - Gestion de la communication'
-        label: 'Gère les entrées du blog'
-    digart.spectacles.blog.etendue:
+        label: 'Gère les entrées des publications'
+    digart.spectacles.publications.etendue:
         tab: 'TDR - Gestion de la communication'
-        label: 'Gère l''étendue des publications du blog'
+        label: 'Gère l''étendue des publications des publications'
 navigation:
     spectacles:
         label: Spectacles
@@ -114,18 +114,18 @@ navigation:
                 icon: icon-puzzle-piece
     communication:
         label: 'Communication CTTR'
-        url: digart/spectacles/blogs
+        url: digart/spectacles/publications
         icon: icon-newspaper-o
         sideMenu:
             publications:
                 label: Publications
-                url: digart/spectacles/blogs
+                url: digart/spectacles/publications
                 icon: icon-newspaper-o
                 permissions:
-                    - digart.spectacles.blog
-            blog-etendue:
+                    - digart.spectacles.publications
+            etendue-publication:
                 label: 'Etendues de publications'
-                url: digart/spectacles/blogetendues
+                url: digart/spectacles/publicationsetendues
                 icon: icon-road
                 permissions:
-                    - digart.spectacles.blog.etendue
+                    - digart.spectacles.publications.etendue

@@ -1,7 +1,7 @@
 scopes:
     statut:
         label: Etendue
-        modelClass: DigArt\Spectacles\Models\BlogEtendue
+        modelClass: DigArt\Spectacles\Models\PublicationEtendue
         conditions: etendue_id in (:filtered)
         nameFrom: designation
     saison:
@@ -9,3 +9,10 @@ scopes:
         modelClass: \Backend\Models\User
         conditions: admin_id in (:filtered)
         nameFrom: full_name
+    is_actif:
+        label: ACtif
+        type: switch
+        default: 0
+        conditions:
+            - is_actif <> true
+            - is_actif = true

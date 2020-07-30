@@ -1,7 +1,5 @@
 <?php namespace Digart\Spectacles\Components;
 
-
-
 use Cms\Classes\Page;
 use Digart\Spectacles\Models\Saison as uneSaison;
 use BackendAuth;

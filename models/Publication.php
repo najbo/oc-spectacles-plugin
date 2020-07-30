@@ -7,7 +7,7 @@ use Carbon\Carbon;
 /**
  * Model
  */
-class Blog extends Model
+class Publication extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -46,7 +46,7 @@ class Blog extends Model
     public $belongsTo = [
         'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
-        'etendue' => ['DigArt\Spectacles\Models\BlogEtendue',
+        'etendue' => ['DigArt\Spectacles\Models\PublicationEtendue',
                    'key' => 'etendue_id',
                    'order' => 'sort_order'],                                  
     ];  
@@ -62,7 +62,6 @@ class Blog extends Model
 
 
     public function scopeIsActif($query) {
-        $role = '2020-07-27';
         return $query->where('is_actif', 1)->whereDate('debut', '<=', Carbon::today()->toDateString());
 
     }
@@ -83,11 +82,13 @@ class Blog extends Model
     public function scopeLatestBlog($query) {
         
         # return $query->isActif()->whereDate('fin', '>=', Carbon::today()->toDateString())->isCommunication()->orderByDate();
-        return $query->isActif()->isFrontend()->orderByDate();
+        return $query->isActif()->isBlog()->orderByDate();
     }
-    public function scopeIsFrontend($query) {
+
+
+    public function scopeIsBlog($query) {
         return $query->whereHas('etendue', function ($query) {
-                    $query->where('is_frontend',1);
+                    $query->where('is_blog',1);
                 });
     } 
 

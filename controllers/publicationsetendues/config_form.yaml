@@ -1,0 +1,11 @@
+name: 'Etendues du blog'
+modelClass: Digart\spectacles\Models\PublicationEtendue
+form: $/digart/spectacles/models/publicationetendue/fields.yaml
+defaultRedirect: digart/spectacles/publicationsetendues
+create:
+    redirect: 'digart/spectacles/publicationsetendues/update/:id'
+    redirectClose: digart/spectacles/publicationsetendues
+update:
+    redirect: digart/spectacles/publicationsetendues
+    redirectClose: digart/spectacles/publicationsetendues
+preview: {  }

@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class BlogEtendue extends Model
+class PublicationEtendue extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
