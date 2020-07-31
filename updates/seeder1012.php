@@ -12,6 +12,7 @@ class Seeder1012 extends Seeder
 
         Institution::create([
             'designation' => 'Café Théâtre de la Tour de Rive',
+            'slug' => 'tour-de-rive',
             'abreviation' => 'La Tour de Rive',
             'adresse' => 'Place de la Liberté ',
             'npa' => '2520',
@@ -21,8 +22,19 @@ class Seeder1012 extends Seeder
             'mission' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam est ligula, hendrerit quis feugiat at, placerat sit amet ipsum. Sed varius rhoncus sagittis. Pellentesque sodales blandit augue sed consectetur. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc tempus iaculis magna, vitae hendrerit enim pharetra quis.',
             'reservation' => 'Réservation en ligne, par courrier électronique ou sur le répondeur : 032 751 29 84',
             'is_defaut' => 1,
+            'sort_order' => 1,
         ]);
 
-
+        Institution::create([
+            'designation' => 'Festival de Boogie-Woogie',
+            'slug' => 'boogie-woogie',
+            'abreviation' => 'Boogie-Woogie',
+            'adresse' => 'Place de la Liberté ',
+            'npa' => '2520',
+            'localite' => 'La Neuveville',
+            'tel_principal' => '032 751 29 84',
+            'reservation' => 'Réservation en ligne, par courrier électronique ou sur le répondeur : 032 751 29 84',
+            'sort_order' => 2,
+        ]);
     }
 }

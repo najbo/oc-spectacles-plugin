@@ -39,11 +39,6 @@ tabs:
             size: small
             type: textarea
             tab: Textes
-        conseil:
-            span: full
-            path: $/digart/spectacles/models/institution/_hint_conseil.htm
-            type: hint
-            tab: Médias
         image_communication:
             label: 'Image liée'
             mode: image

@@ -11,6 +11,8 @@ class BuilderTableCreateDigartSpectaclesInstit extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
+            $table->string('slug', 255);
+            
             $table->string('designation', 255);
             $table->string('abreviation', 50)->nullable();
             $table->text('developpement')->nullable();

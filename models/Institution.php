@@ -23,9 +23,18 @@ class Institution extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required'
+
     ];
 
     public $attachOne = [
         'image_communication' => ['System\Models\File', 'public' => true]
-    ];    
+    ];  
+
+    public function getInstitutionActiveAttribute(){
+        if (! $this->is_defaut) {
+            return $this->designation;
+        }
+    }
+
 }

@@ -51,5 +51,26 @@ class Seeder1025 extends Seeder
             'lieu_id' => 1,
             'statut_id' => 1,
         ]);
+
+        Representation::create([
+            'spectacle_id' => 5,
+            'debut' => '2020-11-13 20:30:00',
+            'lieu_id' => 1,
+            'statut_id' => 1,
+        ]);
+
+        Representation::create([
+            'spectacle_id' => 5,
+            'debut' => '2020-11-14 17:30:00',
+            'lieu_id' => 2,
+            'statut_id' => 1,
+        ]); 
+
+        Representation::create([
+            'spectacle_id' => 5,
+            'debut' => '2020-11-15 17:30:00',
+            'lieu_id' => 3,
+            'statut_id' => 1,
+        ]);                           
     }
 }
