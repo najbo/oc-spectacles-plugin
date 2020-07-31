@@ -27,6 +27,9 @@ class Protocole extends Model
         'date' => 'required'
     ];
 
+    public $attachOne = [
+        'image' => ['System\Models\File', 'public' => false],
+    ];
 
     public $attachMany = [
         'documents' => ['System\Models\File', 'public' => false],

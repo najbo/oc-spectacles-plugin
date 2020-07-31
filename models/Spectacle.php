@@ -142,9 +142,6 @@ class Spectacle extends Model
 
 
 
-
-
-
     public function getPeriodeSpectacleAttribute() {
         $debut = '';
         $fin = '';
@@ -191,6 +188,6 @@ class Spectacle extends Model
         }
 
     }*/
+
+
 }
-
-

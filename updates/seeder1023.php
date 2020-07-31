@@ -30,7 +30,7 @@ class Seeder1023 extends Seeder
             'duree' => '90 minutes (sans entracte)',
             'capacite_txt' => '150 places assises (dont 20 autour de tables)',
             'url_reservation' => 'https://www.booking4show.ch/latourderive/',
-            'remarques_publiques' => 'Un spectacle qui va vous couper le souffle !',
+            'remarques_manchette' => 'Un spectacle qui va vous couper le souffle !',
         ]);
 
         Spectacle::create([
@@ -47,6 +47,8 @@ class Seeder1023 extends Seeder
             'developpement' =>
                 "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis urna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam vitae mi et orci imperdiet aliquam. Praesent cursus enim in felis euismod, quis pretium mauris lacinia. Sed vel imperdiet turpis. Donec et orci nisi. Vivamus maximus sapien justo, a lacinia enim bibendum eget. Aliquam erat volutpat. Nulla aliquet, felis nec egestas ultricies, erat arcu luctus velit, in mattis lacus turpis ac nisl. Maecenas mollis fringilla faucibus. Maecenas augue sem, interdum sit amet leo at, tempor gravida turpis. Maecenas sit amet lectus laoreet lacus bibendum porttitor sit amet ut justo.</p><p>Mauris bibendum quam eget ex dapibus commodo. Etiam sit amet bibendum nunc. Fusce at libero ut massa aliquet gravida. Fusce ultrices libero vitae nulla semper, ac consectetur velit vestibulum. Sed non erat at nulla pretium ornare. Vestibulum sit amet nisi tincidunt massa lacinia suscipit. Donec vel hendrerit diam. Fusce interdum nec ex non hendrerit. In tempus metus quis vulputate iaculis.</p><p>Cras tincidunt, orci in sagittis finibus, leo odio efficitur odio, eget semper enim turpis at felis. Vestibulum ac pretium est. Aenean porttitor arcu ante, vitae efficitur lorem viverra ac. Mauris lectus felis, accumsan eget imperdiet a, molestie ac magna. Sed sit amet sem vitae erat posuere vulputate. Ut eu rutrum nisi. Phasellus convallis mattis libero vitae facilisis. Sed nec ullamcorper purus.</p>",
             'institution_id' => 1,
+            'remarques_annonce' => 'En première Suisse',
+
         ]);
 
         Spectacle::create([

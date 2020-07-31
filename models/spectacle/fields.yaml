@@ -133,24 +133,27 @@ tabs:
             span: auto
             hidden: 1
             type: number
-            tab: Paramètres            
+            tab: Paramètres
         accroche:
             label: Accroche
             size: small
             span: full
             type: richeditor
             tab: Accroche
-        remarques_publiques:
-            label: 'Remarque publique ou phrase choc'
+        remarques_manchette:
+            label: 'Manchette ou phrase choc'
             size: small
             span: auto
             type: textarea
+            commentAbove: 'Est affiché sur la page de détail du spectacle'
             tab: Accroche
-        remarques_internes:
-            label: 'Remarques internes'
-            span: auto
+        remarques_annonce:
+            label: 'Annonce ou information'
             size: small
+            span: auto
+            placeholder: ''
             type: textarea
+            commentAbove: 'Est affiché sur la liste des spectacles et sur la page de détail du spectacle'
             tab: Accroche
         developpement:
             label: Développement
@@ -206,6 +209,11 @@ tabs:
                         label: Description
                         span: auto
                         type: text
+                    remarque:
+                        label: Remarque
+                        span: full
+                        size: small
+                        type: textarea
         lien_web:
             label: 'Site web principal de l''artiste'
             span: auto
