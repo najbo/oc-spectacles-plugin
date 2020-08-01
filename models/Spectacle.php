@@ -141,7 +141,6 @@ class Spectacle extends Model
 
 
 
-
     public function getPeriodeSpectacleAttribute() {
         $debut = '';
         $fin = '';

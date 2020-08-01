@@ -1,0 +1,5 @@
+title: Abonnements
+modelClass: Digart\spectacles\Models\Abonnement
+nameFrom: clean_titre
+toolbar:
+    buttons: reorder_toolbar

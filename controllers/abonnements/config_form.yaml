@@ -1,0 +1,11 @@
+name: Abonnements
+modelClass: Digart\spectacles\Models\Abonnement
+form: $/digart/spectacles/models/abonnement/fields.yaml
+defaultRedirect: digart/spectacles/abonnements
+create:
+    redirect: 'digart/spectacles/abonnements/update/:id'
+    redirectClose: digart/spectacles/abonnements
+update:
+    redirect: digart/spectacles/abonnements
+    redirectClose: digart/spectacles/abonnements
+preview: {  }

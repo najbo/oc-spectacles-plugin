@@ -1,0 +1,31 @@
+fields:
+    titre:
+        label: Titre
+        size: ''
+        type: richeditor
+        toolbarButtons: bold|italic|html
+    developpement:
+        label: Développement
+        span: full
+        size: large
+        type: richeditor
+    prix:
+        label: Prix
+        span: full
+        type: text
+    sort_order:
+        label: 'Ordre de tri'
+        span: auto
+        type: number
+    is_actif:
+        label: Actif
+        span: auto
+        cssClass: col-xs-4
+        default: 1
+        type: switch
+    debut:
+        label: 'Affiché dès le'
+        mode: date
+        span: auto
+        default: now
+        type: datepicker

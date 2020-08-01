@@ -82,7 +82,7 @@ class Seeder1023 extends Seeder
         ]); 
 
         Spectacle::create([
-            'titre_principal' => 'Festival de Boogie-Woogie',
+            'titre_principal' => 'Boogie-Woogie on Tour',
             'titre_secondaire' => '2e édition',
             'slug' => 'boogie-woogie-2020',
             'categorie_id' => 3,

@@ -99,3 +99,21 @@
 1.0.34:
     - 'Seed blog posts'
     - seeder1034.php
+1.0.35:
+    - 'Created table digart_spectacles_web'
+    - builder_table_create_digart_spectacles_web.php
+1.0.36:
+    - 'Seed contenu statique web'
+    - seeder1036.php
+1.0.37:
+    - 'Created table digart_spectacles_abo'
+    - builder_table_create_digart_spectacles_abo.php
+1.0.38:
+    - 'Seed Abonnements'
+    - seeder1038.php
+1.0.39:
+    - 'Created table digart_spectacles_abogrp'
+    - builder_table_create_digart_spectacles_abogrp.php
+1.0.40:
+    - 'Seed groupes d''abonnements'
+    - seeder1040.php

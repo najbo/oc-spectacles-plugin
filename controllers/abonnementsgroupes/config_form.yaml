@@ -1,0 +1,10 @@
+name: 'Groupes d''abonnements'
+modelClass: Digart\spectacles\Models\AbonnementGroupe
+form: $/digart/spectacles/models/abonnementgroupe/fields.yaml
+defaultRedirect: digart/spectacles/abonnementsgroupes
+create:
+    redirect: 'digart/spectacles/abonnementsgroupes/update/:id'
+    redirectClose: digart/spectacles/abonnementsgroupes
+update:
+    redirect: digart/spectacles/abonnementsgroupes
+    redirectClose: digart/spectacles/abonnementsgroupes

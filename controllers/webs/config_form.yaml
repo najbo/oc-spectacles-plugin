@@ -1,0 +1,11 @@
+name: 'Contenu web'
+modelClass: Digart\spectacles\Models\Web
+form: $/digart/spectacles/models/web/fields.yaml
+defaultRedirect: digart/spectacles/webs
+create:
+    redirect: 'digart/spectacles/webs/update/:id'
+    redirectClose: digart/spectacles/webs
+update:
+    redirect: digart/spectacles/webs
+    redirectClose: digart/spectacles/webs
+preview: {  }

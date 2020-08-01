@@ -1,0 +1,11 @@
+abonnements:
+    label: Abonnements
+    emptyMessage: Aucun abonnement pour le moment
+    view:
+        list: $/digart/spectacles/models/abonnement/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/abonnement/fields.yaml
+        title : Gestion des abonnements
+        showSearch: true

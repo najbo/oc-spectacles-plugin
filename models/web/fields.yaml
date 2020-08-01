@@ -1,0 +1,43 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        disabled: 0
+        readOnly: 0
+        type: text
+tabs:
+    fields:
+        title_programe_header:
+            label: 'Titre HEADER'
+            span: auto
+            disabled: 1
+            type: text
+            tab: Programme
+        title_programme_mission:
+            label: 'Titre MISSION'
+            span: auto
+            type: text
+            tab: Programme
+        txt_programme_header:
+            label: 'Texte HEADER'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Programme
+        txt_programme_mission:
+            label: 'Texte MISSION'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Programme
+        title_abonnement:
+            label: 'Titre ABONNEMENTS'
+            span: auto
+            type: text
+            tab: Abonnements
+        txt_abonnement:
+            label: 'Texte ABONNEMENTS'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Abonnements

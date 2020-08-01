@@ -53,6 +53,12 @@ permissions:
     digart.spectacles.publications.etendue:
         tab: 'TDR - Gestion de la communication'
         label: 'Gère l''étendue des publications des publications'
+    digart.spectacles.web:
+        tab: 'TDR - Gestion de la communication'
+        label: 'Gère les textes statiques du site web'
+    digart.spectacles.abonnements:
+        tab: 'TDR - Gestion des paramètres'
+        label: 'Gère les billets et les abonnements de l''institution'
 navigation:
     spectacles:
         label: Spectacles
@@ -112,6 +118,12 @@ navigation:
                 label: 'Genres des protocoles'
                 url: digart/spectacles/protocolesgenres
                 icon: icon-puzzle-piece
+            abonnements:
+                label: 'Abonnements et groupes'
+                url: digart/spectacles/abonnementsgroupes
+                icon: icon-ticket
+                permissions:
+                    - digart.spectacles.abonnements
     communication:
         label: 'Communication CTTR'
         url: digart/spectacles/publications
@@ -129,3 +141,9 @@ navigation:
                 icon: icon-road
                 permissions:
                     - digart.spectacles.publications.etendue
+            webcontent:
+                label: 'Contenu web'
+                url: digart/spectacles/webs
+                icon: icon-sitemap
+                permissions:
+                    - digart.spectacles.web

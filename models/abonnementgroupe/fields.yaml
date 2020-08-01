@@ -1,0 +1,55 @@
+fields:
+    titre:
+        label: 'Titre du groupe d''abonnement'
+        span: auto
+        type: text
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch
+    debut:
+        label: 'Groupe affiché dès le'
+        mode: date
+        span: auto
+        default: ''
+        type: datepicker
+tabs:
+    fields:
+        hint_abonnements:
+            span: full
+            path: $/digart/spectacles/models/abonnementgroupe/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Abonnements
+        abonnements:
+            span: full
+            path: field_abonnements
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Abonnements
+        texte_avant:
+            label: 'Texte avant les abonnements'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Textes
+        texte_apres:
+            label: 'Texte après les abonnements'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Textes
+        url:
+            label: 'Adresse URL'
+            span: auto
+            type: text
+            tab: Lien
+        url_texte:
+            label: 'Texte du bouton'
+            span: auto
+            type: text
+            tab: Lien

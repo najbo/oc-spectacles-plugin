@@ -1,0 +1,21 @@
+columns:
+    clean_titre:
+        label: Titre
+        type: text
+        searchable: false
+        sortable: false
+    clean_prix:
+        label: Prix
+        type: text
+        searchable: false
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: true
+    sort_order:
+        label: 'Ordre de tri'
+        type: number
+        searchable: true
+        sortable: true

@@ -1,0 +1,16 @@
+columns:
+    titre:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false
+    nbre_abos:
+        label: Abonnements
+        type: text
+        searchable: false
+        sortable: false
