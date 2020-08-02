@@ -14,6 +14,9 @@ class Web extends Model
     protected $dates = ['deleted_at'];
 
     protected $appends = [''];
+
+    protected $jsonable = ['timeline', 'content'];
+
     /**
      * @var string The database table used by the model.
      */
@@ -28,10 +31,14 @@ class Web extends Model
     public $attachMany = [
         'location_images' => ['System\Models\File', 'public' => true],
         'location_documents' => ['System\Models\File', 'public' => true],
+
+        'historique_images' => ['System\Models\File', 'public' => true],
+        'historique_documents' => ['System\Models\File', 'public' => true],
     ];
 
     public $attachOne = [
-        'location_image' => ['System\Models\File', 'public' => true]
+        'location_image' => ['System\Models\File', 'public' => true],
+        'historique_image' => ['System\Models\File', 'public' => true]
     ];
 
 
@@ -43,12 +50,23 @@ class Web extends Model
     */
 
 
-    public function getWebsAttribute() {
-        return 'hello';
-    }
-
     public function scopeFindWebContent($query, $page) 
     {
         return $query->where('page', $page);
     }
+
+    public function getWebsAttribute() {
+        return 'hello';
+    }
+
+    public function getIconeOptions($value, $formData) 
+    {
+        return [
+            '' => 'Aucune icône',
+            '1' => 'Naissance',
+            '3' => 'Coeur',
+            '4' => 'Construction',
+        ];
+
+    }    
 }

@@ -41,8 +41,19 @@ class BuilderTableCreateDigartSpectaclesWeb extends Migration
             $table->text('txt_location_right')->nullable();
             $table->string('url_location', 255)->nullable();
             $table->string('url_location_texte', 255)->nullable();
-            $table->string('doc_location', 255)->nullable();
             $table->boolean('is_location_url_externe')->nullable();
+            $table->boolean('is_show_locations')->nullable()->default(1);
+            $table->string('doc_location', 255)->nullable();
+
+            $table->string('title_historique', 255)->nullable();
+            $table->text('txt_historique')->nullable();
+            $table->text('txt_historique_left')->nullable();
+            $table->text('txt_historique_right')->nullable();
+            $table->text('timeline')->nullable();
+            # $table->text('content')->nullable();
+            $table->string('url_historique', 255)->nullable();
+            $table->string('url_historique_texte', 255)->nullable();
+            $table->boolean('is_historique_url_externe')->nullable();
 
             $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();

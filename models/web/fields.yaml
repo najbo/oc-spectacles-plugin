@@ -3,7 +3,7 @@ fields:
         label: Désignation
         span: auto
         disabled: 0
-        readOnly: 0
+        readOnly: 1
         type: text
 tabs:
     fields:
@@ -41,6 +41,125 @@ tabs:
             span: left
             type: richeditor
             tab: Abonnements
+        title_historique:
+            label: 'Titre HISTORIQUE'
+            span: auto
+            type: text
+            tab: Historique
+        section5:
+            label: Textes
+            span: full
+            type: section
+            tab: Historique
+        txt_historique:
+            label: 'Texte d''introduction'
+            size: small
+            span: auto
+            type: richeditor
+            tab: Historique
+        txt_historique_left:
+            label: 'Texte principal'
+            size: small
+            span: left
+            type: richeditor
+            tab: Historique
+        txt_historique_right:
+            label: 'Texte colonne de droite'
+            span: auto
+            size: small
+            type: richeditor
+            tab: Historique
+        section3:
+            label: Bouton
+            span: full
+            type: section
+            comment: 'Ce bouton apparaît dans la colonne de droit'
+            tab: Historique
+        url_historique:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            comment: 'Le bouton s''affiche dans la partie de droite'
+            tab: Historique
+        url_historique_texte:
+            label: 'Texte du bouton'
+            span: auto
+            type: text
+            tab: Historique
+        is_historique_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: auto
+            type: switch
+            tab: Historique
+        section2:
+            label: Médias
+            span: full
+            type: section
+            tab: Historique
+        historique_image:
+            label: 'Image principale de la page'
+            mode: image
+            imageHeight: '250'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Historique
+        historique_images:
+            label: 'Images secondaires'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Historique
+        historique_documents:
+            label: 'Documents liés'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: right
+            type: fileupload
+            tab: Historique
+        section4:
+            label: Timeline
+            span: full
+            type: section
+            tab: Historique
+        timeline:
+            label: 'Timeline / historique'
+            prompt: 'Ajouter un nouvel élément'
+            span: full
+            type: repeater
+            tab: Historique
+            form:
+                fields:
+                    date:
+                        label: Date
+                        span: auto
+                        type: text
+                    titre:
+                        label: Titre
+                        span: auto
+                        type: text
+                    developpement:
+                        label: Développement
+                        size: small
+                        span: left
+                        type: richeditor
+                    image:
+                        label: Image
+                        mode: image
+                        imageWidth: '250'
+                        imageHeight: '250'
+                        span: auto
+                        type: mediafinder
         title_equipe:
             label: 'Titre EQUIPES'
             span: auto
@@ -57,15 +176,38 @@ tabs:
             span: auto
             type: text
             tab: 'Location salle'
-secondaryTabs:
-    fields:
+        is_show_locations:
+            label: 'Afficher les prochaines locations'
+            span: auto
+            type: switch
+            comment: 'Affiche une liste des prochaines locations dans la page de location de la salle'
+            tab: 'Location salle'
+        section1:
+            label: Textes
+            span: full
+            type: section
+            tab: 'Location salle'
         txt_location:
-            label: 'Texte LOCATION SALLE'
+            label: 'Texte d''introduction'
             size: large
             span: auto
             type: richeditor
-            comment: 'Texte d''introduction'
-            tab: Textes
+            commentAbove: 'Ce texte est inséré après le titre principal'
+            tab: 'Location salle'
+        txt_location_left:
+            label: 'Texte principal'
+            size: large
+            span: left
+            type: richeditor
+            commentAbove: 'Ce texte est inséré dans la partie principale à gauche'
+            tab: 'Location salle'
+        txt_location_right:
+            label: 'Texte informations et prix'
+            size: large
+            span: auto
+            type: richeditor
+            commentAbove: 'Ce texte est inséré dans la partie de droite'
+            tab: 'Location salle'
         location_image:
             label: 'Image principale de la page'
             mode: image
@@ -76,7 +218,7 @@ secondaryTabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: Médias
+            tab: 'Location salle'
         location_images:
             label: 'Images secondaires'
             mode: image
@@ -86,7 +228,7 @@ secondaryTabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: Médias
+            tab: 'Location salle'
         location_documents:
             label: 'Documents liés'
             mode: file
@@ -96,20 +238,20 @@ secondaryTabs:
                 extension: auto
             span: right
             type: fileupload
-            tab: Médias
+            tab: 'Location salle'
         url_location:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             comment: 'Le bouton s''affiche dans la partie de droite'
-            tab: Bouton
+            tab: 'Location salle'
         url_location_texte:
             label: 'Texte du bouton'
             span: auto
             type: text
-            tab: Bouton
+            tab: 'Location salle'
         is_location_url_externe:
             label: 'Ouvrir un nouvel onglet'
-            span: auto
+            span: left
             type: switch
-            tab: Bouton
+            tab: 'Location salle'
