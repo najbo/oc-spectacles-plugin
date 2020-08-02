@@ -1,0 +1,18 @@
+columns:
+    titre:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: false
+    institution:
+        label: Institution
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: institution
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false        

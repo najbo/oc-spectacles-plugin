@@ -1,0 +1,119 @@
+fields:
+    titre:
+        label: 'Titre de l''équipe'
+        span: auto
+        type: text
+    institution:
+        label: Institution
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    type_id:
+        label: 'Type de mise en page'
+        showSearch: true
+        span: auto
+        type: dropdown
+        commentAbove: 'Détermine comment les membres sont affichés'
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch
+tabs:
+    fields:
+        membres:
+            label: Composition
+            prompt: 'Ajouter un nouveau membre'
+            span: full
+            type: repeater
+            tab: Membres
+            form:
+                fields:
+                    nom:
+                        label: Nom
+                        span: auto
+                        required: 1
+                        type: text
+                    prenom:
+                        label: Prénom
+                        span: auto
+                        type: text
+                    fonction:
+                        label: Fonction
+                        span: auto
+                        type: text
+                    email:
+                        label: 'Adresse e-mail'
+                        span: auto
+                        type: text
+                    telephone:
+                        label: 'Numéro de téléphone'
+                        span: auto
+                        type: text
+                    linkedin:
+                        label: LinkedIn
+                        span: auto
+                        type: text
+                    complement:
+                        label: 'Complément d''informations'
+                        size: small
+                        span: auto
+                        type: richeditor
+                    profil:
+                        label: 'Image profil'
+                        mode: image
+                        imageWidth: '150'
+                        imageHeight: '150'
+                        span: auto
+                        type: mediafinder
+        texte_avant:
+            label: 'Texte avant'
+            size: small
+            span: full
+            type: richeditor
+            tab: Textes
+        texte_apres:
+            label: 'Texte après'
+            size: small
+            span: full
+            type: richeditor
+            tab: Textes
+        url:
+            label: 'Adresse URL'
+            span: auto
+            type: text
+            tab: Lien
+        url_texte:
+            label: 'Texte du bouton'
+            span: auto
+            type: text
+            tab: Lien
+        is_photo:
+            label: 'Afficher la photo'
+            span: auto
+            type: switch
+            tab: 'Options d''affichage'
+        is_fonction:
+            label: 'Affiche la fonction'
+            span: auto
+            default: 1
+            type: switch
+            tab: 'Options d''affichage'
+        is_telephone:
+            label: 'Affiche le téléphone'
+            span: auto
+            default: 0
+            type: switch
+            tab: 'Options d''affichage'
+        is_email:
+            label: 'Affiche l''adresse e-mail'
+            span: auto
+            type: switch
+            tab: 'Options d''affichage'
+        is_complement:
+            label: 'Affiche le complément'
+            span: auto
+            default: 0
+            type: switch
+            tab: 'Options d''affichage'

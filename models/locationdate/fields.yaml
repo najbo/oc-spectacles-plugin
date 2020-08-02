@@ -1,0 +1,19 @@
+fields:
+    debut:
+        label: Début
+        mode: datetime
+        span: auto
+        type: datepicker
+    fin:
+        label: Fin
+        mode: datetime
+        span: auto
+        type: datepicker
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    is_actif:
+        label: Actif
+        span: auto
+        type: switch

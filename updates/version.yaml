@@ -117,3 +117,21 @@
 1.0.40:
     - 'Seed groupes d''abonnements'
     - seeder1040.php
+1.0.41:
+    - 'Created table digart_spectacles_team'
+    - builder_table_create_digart_spectacles_team.php
+1.0.42:
+    - 'Seed teams'
+    - seeder1042.php
+1.0.43:
+    - 'Created table digart_spectacles_loc'
+    - builder_table_create_digart_spectacles_loc.php
+1.0.44:
+    - 'Seed locations'
+    - seeder1044.php
+1.0.45:
+    - 'Created table digart_spectacles_locdates'
+    - builder_table_create_digart_spectacles_locdates.php
+1.0.46:
+    - 'Seed dates de locations'
+    - seeder1046.php

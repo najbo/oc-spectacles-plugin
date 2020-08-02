@@ -38,6 +38,78 @@ tabs:
         txt_abonnement:
             label: 'Texte ABONNEMENTS'
             size: large
-            span: auto
+            span: left
             type: richeditor
             tab: Abonnements
+        title_equipe:
+            label: 'Titre EQUIPES'
+            span: auto
+            type: text
+            tab: Equipes
+        txt_equipe:
+            label: 'Texte EQUIPES'
+            size: large
+            span: left
+            type: richeditor
+            tab: Equipes
+        title_location:
+            label: 'Titre LOCATION SALLE'
+            span: auto
+            type: text
+            tab: 'Location salle'
+secondaryTabs:
+    fields:
+        txt_location:
+            label: 'Texte LOCATION SALLE'
+            size: large
+            span: auto
+            type: richeditor
+            comment: 'Texte d''introduction'
+            tab: Textes
+        location_image:
+            label: 'Image principale de la page'
+            mode: image
+            imageHeight: '250'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Médias
+        location_images:
+            label: 'Images secondaires'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Médias
+        location_documents:
+            label: 'Documents liés'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: right
+            type: fileupload
+            tab: Médias
+        url_location:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            comment: 'Le bouton s''affiche dans la partie de droite'
+            tab: Bouton
+        url_location_texte:
+            label: 'Texte du bouton'
+            span: auto
+            type: text
+            tab: Bouton
+        is_location_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: auto
+            type: switch
+            tab: Bouton

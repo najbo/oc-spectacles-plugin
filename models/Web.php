@@ -25,12 +25,23 @@ class Web extends Model
     public $rules = [
     ];
 
+    public $attachMany = [
+        'location_images' => ['System\Models\File', 'public' => true],
+        'location_documents' => ['System\Models\File', 'public' => true],
+    ];
+
+    public $attachOne = [
+        'location_image' => ['System\Models\File', 'public' => true]
+    ];
+
+
     /*
     public $belongsTo = [
          'page' => ['DigArt\Spectacles\Models\WebPage'  ,
                    'key' => 'page_id'],
     ];
     */
+
 
     public function getWebsAttribute() {
         return 'hello';

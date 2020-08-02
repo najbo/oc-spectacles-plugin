@@ -6,59 +6,68 @@ plugin:
     homepage: 'https://www.digital-artisan.ch'
 permissions:
     digart.spectacles.saisons:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les saisons'
     digart.spectacles.spectacles:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les spectacles'
     digart.spectacles.institutions:
-        tab: 'TDR - Gestion des paramètres'
+        tab: 'CTTR - Gestion des paramètres'
         label: 'Gère les institutions'
     digart.spectacles.genres:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les genres de spectacles'
     digart.spectacles.lieux:
-        tab: 'TDR - Gestion des paramètres'
+        tab: 'CTTR - Gestion des paramètres'
         label: 'Gère les lieux des spectacles'
     digart.spectacles.statuts:
-        tab: 'TDR - Gestion des paramètres'
+        tab: 'CTTR - Gestion des paramètres'
         label: 'Gère les statuts des spectacles'
     digart.spectacles.artistes:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les artistes'
     digart.spectacles.agents:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les agents des artistes'
     digart.spectacles.categories:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les catégories de spectacles'
     digart.spectacles.souvenirs:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les souvenirs (photos) des spectacles'
     digart.spectacles.spectacles.preview:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Peut voir les spectacles "brouillon" dans le frontend'
     digart.spectacles.protocoles:
-        tab: 'TDR - Gestion des spectacles'
+        tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les protocoles des spectacles'
     digart.spectacles.pstatuts:
-        tab: 'TDR - Gestion des paramètres'
+        tab: 'CTTR - Gestion des paramètres'
         label: 'Gère les statuts des protocoles'
     digart.spectacles.pgenres:
-        tab: 'TDR - Gestion des paramètres'
+        tab: 'CTTR - Gestion des paramètres'
         label: 'Gère les genres de protocoles'
     digart.spectacles.publications:
-        tab: 'TDR - Gestion de la communication'
+        tab: 'CTTR - Gestion de la communication'
         label: 'Gère les entrées des publications'
     digart.spectacles.publications.etendue:
-        tab: 'TDR - Gestion de la communication'
+        tab: 'CTTR - Gestion de la communication'
         label: 'Gère l''étendue des publications des publications'
     digart.spectacles.web:
-        tab: 'TDR - Gestion de la communication'
+        tab: 'CTTR - Gestion de la communication'
         label: 'Gère les textes statiques du site web'
     digart.spectacles.abonnements:
-        tab: 'TDR - Gestion des paramètres'
+        tab: 'CTTR - Gestion des paramètres'
         label: 'Gère les billets et les abonnements de l''institution'
+    digart.spectacles.team:
+        tab: 'CTTR - Gestion des paramètres'
+        label: 'Gère l''équipe pour la partie publique du site'
+    digart.spectacles.locations:
+        tab: 'CTTR  - Gestion'
+        label: 'Gère les locations de la salle'
+    digart.spectacles.locations.dates:
+        tab: 'CTTR - Gestion'
+        label: 'Gère les dates des locations'
 navigation:
     spectacles:
         label: Spectacles
@@ -124,6 +133,12 @@ navigation:
                 icon: icon-ticket
                 permissions:
                     - digart.spectacles.abonnements
+            team:
+                label: Team
+                url: digart/spectacles/teams
+                icon: icon-group
+                permissions:
+                    - digart.spectacles.team
     communication:
         label: 'Communication CTTR'
         url: digart/spectacles/publications
@@ -147,3 +162,14 @@ navigation:
                 icon: icon-sitemap
                 permissions:
                     - digart.spectacles.web
+    gestion:
+        label: 'Gestion CTTR'
+        url: digart/spectacles/locations
+        icon: icon-dot-circle-o
+        sideMenu:
+            locations:
+                label: 'Location salle'
+                url: digart/spectacles/locations
+                icon: icon-building-o
+                permissions:
+                    - digart.spectacles.locations

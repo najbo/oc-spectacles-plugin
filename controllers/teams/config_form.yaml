@@ -1,0 +1,10 @@
+name: Team
+modelClass: Digart\spectacles\Models\Team
+form: $/digart/spectacles/models/team/fields.yaml
+defaultRedirect: digart/spectacles/teams
+create:
+    redirect: 'digart/spectacles/teams/update/:id'
+    redirectClose: digart/spectacles/teams
+update:
+    redirect: digart/spectacles/teams
+    redirectClose: digart/spectacles/teams

@@ -1,0 +1,5 @@
+title: Team
+modelClass: Digart\spectacles\Models\Team
+nameFrom: titre
+toolbar:
+    buttons: reorder_toolbar

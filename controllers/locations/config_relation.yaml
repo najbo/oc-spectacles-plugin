@@ -1,0 +1,11 @@
+locationsDate:
+    label: Dates de locations
+    emptyMessage: Aucune réservation pour le moment
+    view:
+        list: $/digart/spectacles/models/locationdate/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/locationdate/fields.yaml
+        title : Gestion des dates de locations
+        showSearch: true   

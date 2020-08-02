@@ -7,7 +7,6 @@ class Seeder1038 extends Seeder
 {
     public function run()
     {
-
         Abonnement::truncate();
 
         Abonnement::create([

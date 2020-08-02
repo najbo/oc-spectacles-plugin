@@ -1,0 +1,21 @@
+columns:
+    debut:
+        label: Début
+        type: datetime
+        searchable: true
+        sortable: false
+    fin:
+        label: Fin
+        type: datetime
+        searchable: true
+        sortable: false
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false

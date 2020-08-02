@@ -11,6 +11,7 @@ class BuilderTableCreateDigartSpectaclesAbogrp extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
+
             $table->string('titre', 255)->nullable();
             $table->text('texte_avant')->nullable();
             $table->text('texte_apres')->nullable();
@@ -18,7 +19,7 @@ class BuilderTableCreateDigartSpectaclesAbogrp extends Migration
             $table->date('fin')->nullable();
             $table->string('url', 255)->nullable();
             $table->string('url_texte', 255)->nullable();
-
+            $table->integer('institution_id')->nullable()->unsigned();
             $table->integer('sort_order')->nullable()->unsigned();
             $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();

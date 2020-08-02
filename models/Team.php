@@ -1,26 +1,25 @@
 <?php namespace Digart\spectacles\Models;
 
 use Model;
-use Carbon\Carbon;
 
 /**
  * Model
  */
-class AbonnementGroupe extends Model
+class Team extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at', 'debut', 'fin'];
+    protected $dates = ['deleted_at'];
 
+    protected $jsonable = ['membres'];
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_spectacles_abogrp';
+    public $table = 'digart_spectacles_team';
 
-    protected $appends = ['nbre_abos'];
     /**
      * @var array Validation rules
      */
@@ -28,11 +27,10 @@ class AbonnementGroupe extends Model
         'titre' => 'required',
     ];
 
-    public $hasMany = [
-         'abonnements' => ['DigArt\Spectacles\Models\Abonnement', 
-            'order' => 'debut',
-            'softDelete' => true],          
-    ];     
+
+    public $attachOne = [
+        'portrait' => ['System\Models\File', 'public' => true],
+    ];
 
 
     public $belongsTo = [
@@ -40,13 +38,18 @@ class AbonnementGroupe extends Model
                    'order' => 'sort_order'],
     ]; 
 
-    
-    public function getNbreAbosAttribute()
-    {
-        return $this->abonnements->count();
-    }
+
     public function scopeIsActif($query) 
     {
-        return $query->where('is_actif', 1)->whereDate('debut', '<=', Carbon::today()->toDateString());
+        return $query->where('is_actif',1);
+    }
+
+
+    public function getTypeIdOptions() {
+        return array(
+            1 => 'Détaillé (tuiles)',
+            2 => 'En tableau',
+            3 => 'Simple (que le nom du membre)'
+        );
     }    
 }

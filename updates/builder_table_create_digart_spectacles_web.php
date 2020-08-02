@@ -19,9 +19,30 @@ class BuilderTableCreateDigartSpectaclesWeb extends Migration
 
             $table->string('title_programme_mission', 255)->nullable();
             $table->text('txt_programme_mission')->nullable();
+            $table->text('txt_programme_mission_after')->nullable();
 
             $table->string('title_abonnement', 255)->nullable();
             $table->text('txt_abonnement')->nullable();
+            $table->text('txt_abonnement_after')->nullable();
+            $table->string('url_abonnement', 255)->nullable();
+            $table->string('url_abonnement_texte', 255)->nullable();
+            $table->boolean('is_abonnement_url_externe')->nullable();
+
+            $table->string('title_equipe', 255)->nullable();
+            $table->text('txt_equipe')->nullable();
+            $table->text('txt_equipe_after')->nullable();
+            $table->string('url_equipe', 255)->nullable();
+            $table->string('url_equipe_texte', 255)->nullable();
+            $table->boolean('is_equipe_url_externe')->nullable();
+
+            $table->string('title_location', 255)->nullable();
+            $table->text('txt_location')->nullable();
+            $table->text('txt_location_left')->nullable();
+            $table->text('txt_location_right')->nullable();
+            $table->string('url_location', 255)->nullable();
+            $table->string('url_location_texte', 255)->nullable();
+            $table->string('doc_location', 255)->nullable();
+            $table->boolean('is_location_url_externe')->nullable();
 
             $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();

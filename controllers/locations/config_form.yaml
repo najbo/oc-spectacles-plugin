@@ -1,0 +1,10 @@
+name: Locations
+form: $/digart/spectacles/models/location/fields.yaml
+modelClass: Digart\spectacles\Models\Location
+defaultRedirect: digart/spectacles/locations
+create:
+    redirect: 'digart/spectacles/locations/update/:id'
+    redirectClose: digart/spectacles/locations
+update:
+    redirect: digart/spectacles/locations
+    redirectClose: digart/spectacles/locations

@@ -1,0 +1,54 @@
+fields:
+    loueur:
+        label: 'Contact / tiers'
+        span: auto
+        type: text
+    designation:
+        label: 'Désignation de l''événement'
+        span: auto
+        type: text
+tabs:
+    fields:
+        hint_locations:
+            span: full
+            path: $/digart/spectacles/models/location/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Dates de réservation'
+        locationsDate:
+            span: full
+            path: field_locationsDate
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Dates de réservation        
+        interlocuteur:
+            label: Interlocuteur
+            span: auto
+            type: text
+            tab: 'Adresse loueur'
+        adresse:
+            label: Adresse
+            size: small
+            span: auto
+            type: textarea
+            tab: 'Adresse loueur'
+        telephone:
+            label: 'Numéro de téléphone'
+            span: auto
+            type: text
+            tab: 'Adresse loueur'
+        email:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Adresse loueur'
+        auteur:
+            label: Auteur
+            span: auto
+            nameFrom: full_name
+            descriptionFrom: description
+            type: relation
+            tab: Paramètres

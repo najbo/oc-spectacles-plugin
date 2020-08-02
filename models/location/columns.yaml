@@ -1,0 +1,26 @@
+columns:
+    loueur:
+        label: Loueur
+        type: text
+        searchable: true
+        sortable: false
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    nbre_dates:
+        label: Réservations
+        type: number
+        searchable: false
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false
+    periodes:
+        label: Périodes réservation
+        type: text
+        searchable: false
+        sortable: false
