@@ -11,7 +11,7 @@ class Webs extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digart.spectacles.pages' 
+        'digart.spectacles.web' 
     ];
 
     public function __construct()
