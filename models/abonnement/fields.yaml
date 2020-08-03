@@ -13,6 +13,10 @@ fields:
         label: Prix
         span: full
         type: text
+    nbre_personnes:
+        label: 'Nombre de personnes'
+        span: auto
+        type: number
     sort_order:
         label: 'Ordre de tri'
         span: auto

@@ -15,6 +15,7 @@ class Seeder1038 extends Seeder
             'prix' => 'CHF 30.- / saison',
             'sort_order' => 1,
             'abonnement_groupe_id' => 1,
+            'nbre_personnes' => 1,
         ]);
 
         Abonnement::create([
@@ -23,6 +24,7 @@ class Seeder1038 extends Seeder
             'prix' => 'CHF 50.- / saison',
             'sort_order' => 2,
             'abonnement_groupe_id' => 1,
+            'nbre_personnes' => 2,
         ]);
 
         Abonnement::create([
@@ -31,6 +33,7 @@ class Seeder1038 extends Seeder
             'prix' => 'CHF 100.- / saison',
             'sort_order' => 3,
             'abonnement_groupe_id' => 1,
+            'nbre_personnes' => 2,
         ]);
 
         Abonnement::create([
@@ -39,6 +42,7 @@ class Seeder1038 extends Seeder
             'prix' => 'Dès CHF 320.- / saison',
             'sort_order' => 4,
             'abonnement_groupe_id' => 1,
+            'nbre_personnes' => 2,
         ]);
 
         Abonnement::create([
@@ -47,6 +51,7 @@ class Seeder1038 extends Seeder
             'prix' => 'Dès CHF 500.- / saison',
             'sort_order' => 5,
             'abonnement_groupe_id' => 1,
+            'nbre_personnes' => 1,
         ]);                                     
     }
 }

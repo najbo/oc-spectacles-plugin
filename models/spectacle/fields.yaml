@@ -18,7 +18,7 @@ fields:
         label: 'Lien du spectacle (URL)'
         span: auto
         preset:
-            field: titre_secondaire
+            field: titre_principal
             type: slug
         required: 1
         type: text

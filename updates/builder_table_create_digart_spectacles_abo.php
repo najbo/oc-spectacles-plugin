@@ -21,6 +21,7 @@ class BuilderTableCreateDigartSpectaclesAbo extends Migration
             $table->integer('sort_order')->nullable()->unsigned();
             $table->integer('institution_id')->nullable()->unsigned();
             $table->integer('abonnement_groupe_id')->nullable()->unsigned();
+            $table->integer('nbre_personnes')->nullable()->default(1);
             $table->date('debut')->nullable()->default(now());
             $table->date('fin')->nullable();
             $table->timestamp('created_at')->nullable();

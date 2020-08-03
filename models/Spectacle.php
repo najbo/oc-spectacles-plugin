@@ -18,7 +18,7 @@ class Spectacle extends Model
 
     protected $jsonable = ['parties'];
 
-    protected $slugs = ['slug' => 'titre_secondaire'];
+    protected $slugs = ['slug' => 'titre_pincipal'];
 
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => true],

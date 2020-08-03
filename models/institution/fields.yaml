@@ -21,22 +21,24 @@ fields:
         type: text
 tabs:
     fields:
-        entete:
-            label: 'Entête du site web'
-            size: small
-            span: auto
-            type: textarea
-            tab: Textes
         reservation:
             label: 'Texte pour les réservations'
             span: auto
             size: small
             type: textarea
             tab: Textes
+        entete:
+            label: 'Entête du site web'
+            size: small
+            span: left
+            hidden: 1
+            type: textarea
+            tab: Textes
         mission:
             label: 'Notre mission'
-            span: auto
             size: small
+            span: auto
+            hidden: 1
             type: textarea
             tab: Textes
         image_communication:

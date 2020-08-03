@@ -16,9 +16,9 @@ tabs:
                 - create
             type: hint
             tab: 'Dates de réservation'
-        locationsDate:
+        reservation:
             span: full
-            path: field_locationsDate
+            path: field_locations_date
             context:
                 - update
                 - preview
