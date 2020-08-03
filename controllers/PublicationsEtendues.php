@@ -12,7 +12,7 @@ class PublicationsEtendues extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'digart.spectacles.blog.etendue' 
+        'digart.spectacles.publications.etendues' 
     ];
 
     public function __construct()

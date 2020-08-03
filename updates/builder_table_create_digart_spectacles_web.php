@@ -55,6 +55,15 @@ class BuilderTableCreateDigartSpectaclesWeb extends Migration
             $table->string('url_historique_texte', 255)->nullable();
             $table->boolean('is_historique_url_externe')->nullable();
 
+            $table->string('title_sponsor', 255)->nullable();
+            $table->string('title_sponsor_after', 255)->nullable();
+            $table->text('txt_sponsor')->nullable();
+            $table->text('txt_sponsor_after')->nullable();
+            $table->string('url_sponsor', 255)->nullable();
+            $table->string('url_sponsor_texte', 255)->nullable();
+            $table->boolean('is_sponsor_url_externe')->nullable();  
+            $table->text('sponsors')->nullable();
+                      
             $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

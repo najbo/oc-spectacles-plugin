@@ -12,16 +12,16 @@ permissions:
         tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les spectacles'
     digart.spectacles.institutions:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère les institutions'
     digart.spectacles.genres:
         tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les genres de spectacles'
     digart.spectacles.lieux:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère les lieux des spectacles'
     digart.spectacles.statuts:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère les statuts des spectacles'
     digart.spectacles.artistes:
         tab: 'CTTR - Gestion des spectacles'
@@ -42,33 +42,44 @@ permissions:
         tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les protocoles des spectacles'
     digart.spectacles.pstatuts:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère les statuts des protocoles'
     digart.spectacles.pgenres:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère les genres de protocoles'
     digart.spectacles.publications:
         tab: 'CTTR - Gestion de la communication'
         label: 'Gère les entrées des publications'
-    digart.spectacles.publications.etendue:
+    digart.spectacles.publications.etendues:
         tab: 'CTTR - Gestion de la communication'
         label: 'Gère l''étendue des publications des publications'
     digart.spectacles.web:
         tab: 'CTTR - Gestion de la communication'
         label: 'Gère les textes statiques du site web'
     digart.spectacles.abonnements:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère les billets et les abonnements de l''institution'
     digart.spectacles.team:
-        tab: 'CTTR - Gestion des paramètres'
+        tab: 'CTTR - Paramètres'
         label: 'Gère l''équipe pour la partie publique du site'
     digart.spectacles.locations:
-        tab: 'CTTR  - Gestion'
+        tab: 'CTTR - Gestion'
         label: 'Gère les locations de la salle'
     digart.spectacles.locations.dates:
         tab: 'CTTR - Gestion'
         label: 'Gère les dates des locations'
 navigation:
+    gestion:
+        label: 'Gestion CTTR'
+        url: digart/spectacles/locations
+        icon: icon-dot-circle-o
+        sideMenu:
+            locations:
+                label: 'Location salle'
+                url: digart/spectacles/locations
+                icon: icon-building-o
+                permissions:
+                    - digart.spectacles.locations
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles
@@ -100,6 +111,33 @@ navigation:
                 label: Agents
                 url: digart/spectacles/agents
                 icon: icon-dollar
+    communication:
+        label: 'Communication CTTR'
+        url: digart/spectacles/publications
+        icon: icon-newspaper-o
+        permissions:
+            - digart.spectacles.publications.etendues
+            - digart.spectacles.publications
+            - digart.spectacles.web
+        sideMenu:
+            publications:
+                label: Publications
+                url: digart/spectacles/publications
+                icon: icon-newspaper-o
+                permissions:
+                    - digart.spectacles.publications
+            etendue-publication:
+                label: 'Etendues de publications'
+                url: digart/spectacles/publicationsetendues
+                icon: icon-road
+                permissions:
+                    - digart.spectacles.publications.etendues
+            frontend:
+                label: 'Contenu web'
+                url: digart/spectacles/webs
+                icon: icon-sitemap
+                permissions:
+                    - digart.spectacles.web
     parametres-cttr:
         label: 'Paramètres CTTR'
         url: digart/spectacles/institutions
@@ -134,42 +172,8 @@ navigation:
                 permissions:
                     - digart.spectacles.abonnements
             team:
-                label: Team
+                label: Equipe
                 url: digart/spectacles/teams
                 icon: icon-group
                 permissions:
                     - digart.spectacles.team
-    communication:
-        label: 'Communication CTTR'
-        url: digart/spectacles/publications
-        icon: icon-newspaper-o
-        sideMenu:
-            publications:
-                label: Publications
-                url: digart/spectacles/publications
-                icon: icon-newspaper-o
-                permissions:
-                    - digart.spectacles.publications
-            etendue-publication:
-                label: 'Etendues de publications'
-                url: digart/spectacles/publicationsetendues
-                icon: icon-road
-                permissions:
-                    - digart.spectacles.publications.etendue
-            webcontent:
-                label: 'Contenu web'
-                url: digart/spectacles/webs
-                icon: icon-sitemap
-                permissions:
-                    - digart.spectacles.web
-    gestion:
-        label: 'Gestion CTTR'
-        url: digart/spectacles/locations
-        icon: icon-dot-circle-o
-        sideMenu:
-            locations:
-                label: 'Location salle'
-                url: digart/spectacles/locations
-                icon: icon-building-o
-                permissions:
-                    - digart.spectacles.locations

@@ -1,6 +1,7 @@
 <?php namespace Digart\spectacles\Models;
 
 use Model;
+use BackendAuth;
 use Carbon\Carbon;
 
 /**
@@ -26,6 +27,10 @@ class LocationDate extends Model
         'debut' => 'required',
         'fin' => 'required'
     ]; 
+
+    public $belongsTo = [
+        'location' => ['DigArt\Spectacles\Models\location'],                  
+    ];
 
 
     public function scopeIsActif($query) {
@@ -67,4 +72,16 @@ class LocationDate extends Model
     }
 
 
+
+    public function afterUpdate()
+        {
+
+        #$user = BackendAuth::getUser();
+
+        if($this->user)
+        {
+            \Log::info("Mise à jour de la réservation ".$this->id. ' ' .$this->debut .' par ' .$this->user->first_name); 
+        }
+         
+    }
 }

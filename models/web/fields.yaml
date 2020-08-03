@@ -164,13 +164,35 @@ tabs:
             label: 'Titre EQUIPES'
             span: auto
             type: text
-            tab: Equipes
+            tab: Equipe
         txt_equipe:
             label: 'Texte EQUIPES'
             size: large
             span: left
             type: richeditor
-            tab: Equipes
+            tab: Equipe
+        txt_equipe_after:
+            label: 'Texte après'
+            span: auto
+            size: large
+            type: richeditor
+            tab: Equipe
+        url_equipe:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            tab: Equipe
+        url_equipe_texte:
+            label: Equipe
+            comment: 'Le texte s''affiche après le texte d''introduction'
+            span: auto
+            type: text
+            tab: Equipe
+        is_equipe_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: left
+            type: switch
+            tab: Equipe
         title_location:
             label: 'Titre LOCATION SALLE'
             span: auto
@@ -255,3 +277,74 @@ tabs:
             span: left
             type: switch
             tab: 'Location salle'
+        title_sponsor:
+            label: 'Titre de la page'
+            span: auto
+            type: text
+            tab: Sponsors
+        title_sponsor_after:
+            label: 'Titre en fin de page'
+            span: auto
+            type: text
+            tab: Sponsors
+        txt_sponsor:
+            label: 'Texte d''introduction'
+            size: large
+            span: left
+            type: richeditor
+            tab: Sponsors
+        txt_sponsor_after:
+            label: 'Texte en fin de page'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Sponsors
+        url_sponsor:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            tab: Sponsors
+        url_sponsor_texte:
+            label: Sponsors
+            comment: 'Le texte s''affiche après le texte d''introduction'
+            span: auto
+            type: text
+            tab: Sponsors
+        is_sponsor_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: left
+            type: switch
+            tab: Sponsors
+        section6:
+            label: 'Sponsors principaux'
+            span: full
+            type: section
+            tab: Sponsors
+        sponsors:
+            label: Sponsors
+            prompt: 'Ajouter un sponsor'
+            span: full
+            type: repeater
+            tab: Sponsors
+            form:
+                fields:
+                    titre:
+                        label: 'Nom du sponsor'
+                        span: auto
+                        type: text
+                    logo:
+                        label: 'Logo ou image'
+                        mode: image
+                        imageWidth: '250'
+                        imageHeight: '250'
+                        span: auto
+                        type: mediafinder
+                    developpement:
+                        label: 'Rich editor'
+                        size: small
+                        span: left
+                        type: richeditor
+                    url:
+                        label: 'Adresse URL du sponsor'
+                        span: left
+                        type: text

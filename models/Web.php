@@ -15,7 +15,7 @@ class Web extends Model
 
     protected $appends = [''];
 
-    protected $jsonable = ['timeline', 'content'];
+    protected $jsonable = ['timeline', 'sponsors'];
 
     /**
      * @var string The database table used by the model.

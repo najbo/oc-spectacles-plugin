@@ -80,4 +80,12 @@ class Location extends Model
     }
 
 
+    public function afterUpdate()
+        {
+
+        $debut = $this->locationsDate->sortBy('debut')->first()->debut;
+        $fin = $this->locationsDate->sortBy('fin')->last()->fin;
+        \Log::info("$debut. ' / '. Mise à jour de la réservation ".$this->id. ' - ' .$this->designation .' par ' .$this->auteur->first_name); 
+        
+    }
 }

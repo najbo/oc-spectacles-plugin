@@ -11,7 +11,7 @@ class Publications extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digart.spectacles.blog' 
+        'digart.spectacles.publications' 
     ];
 
     public function __construct()
