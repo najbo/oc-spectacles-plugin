@@ -1,4 +1,4 @@
-columns:
+columns:  
     clean_titre:
         label: Titre
         type: text
@@ -9,13 +9,23 @@ columns:
         type: text
         searchable: false
         sortable: false
+    nbre_personnes:
+        label: Personnes
+        type: number
+        searchable: false
+        sortable: false        
+    debut:
+        label: 'Affiché dès'
+        type: date
+        searchable: true
+        sortable: false
     is_actif:
         label: Actif
         type: switch
         searchable: true
-        sortable: true
+        sortable: false
     sort_order:
         label: 'Ordre de tri'
         type: number
         searchable: true
-        sortable: true
+        sortable: false

@@ -1,6 +1,7 @@
 <?php namespace Digart\spectacles\Models;
 
 use Model;
+use Carbon\Carbon;
 
 /**
  * Model

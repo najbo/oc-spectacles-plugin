@@ -16,6 +16,7 @@ class Seeder1038 extends Seeder
             'sort_order' => 1,
             'abonnement_groupe_id' => 1,
             'nbre_personnes' => 1,
+            'is_nbre_personnes' => true,
         ]);
 
         Abonnement::create([
@@ -25,6 +26,7 @@ class Seeder1038 extends Seeder
             'sort_order' => 2,
             'abonnement_groupe_id' => 1,
             'nbre_personnes' => 2,
+            'is_nbre_personnes' => true,
         ]);
 
         Abonnement::create([
@@ -34,6 +36,7 @@ class Seeder1038 extends Seeder
             'sort_order' => 3,
             'abonnement_groupe_id' => 1,
             'nbre_personnes' => 2,
+            'is_nbre_personnes' => true,
         ]);
 
         Abonnement::create([
@@ -43,6 +46,7 @@ class Seeder1038 extends Seeder
             'sort_order' => 4,
             'abonnement_groupe_id' => 1,
             'nbre_personnes' => 2,
+            'is_nbre_personnes' => true,
         ]);
 
         Abonnement::create([
@@ -51,7 +55,8 @@ class Seeder1038 extends Seeder
             'prix' => 'Dès CHF 500.- / saison',
             'sort_order' => 5,
             'abonnement_groupe_id' => 1,
-            'nbre_personnes' => 1,
+            'nbre_personnes' => 2,
+            'is_nbre_personnes' => true,
         ]);                                     
     }
 }

@@ -30,7 +30,7 @@ class AbonnementGroupe extends Model
 
     public $hasMany = [
          'abonnements' => ['DigArt\Spectacles\Models\Abonnement', 
-            'order' => 'debut',
+            'order' => 'sort_order',
             'softDelete' => true],          
     ];     
 
@@ -48,5 +48,14 @@ class AbonnementGroupe extends Model
     public function scopeIsActif($query) 
     {
         return $query->where('is_actif', 1)->whereDate('debut', '<=', Carbon::today()->toDateString());
-    }    
+    }
+
+    public function scopeIsActifAbos($query)
+    {
+        
+        return $query->
+                with(['abonnements' => function ($query) {
+                        $query->isActif();
+                    }]);
+    }
 }
