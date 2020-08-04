@@ -1,0 +1,5 @@
+title: 'Réseau sociaux'
+modelClass: Digart\spectacles\Models\Social
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

@@ -135,3 +135,9 @@
 1.0.46:
     - 'Seed dates de locations'
     - seeder1046.php
+1.0.47:
+    - 'Created table digart_spectacles_socials'
+    - builder_table_create_digart_spectacles_socials.php
+1.0.48:
+    - 'Seed socials'
+    - seeder1048.php

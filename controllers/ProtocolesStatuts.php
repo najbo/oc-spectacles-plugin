@@ -18,6 +18,6 @@ class ProtocolesStatuts extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'parametres-cttr', 'statuts-protocoles');
+        BackendMenu::setContext('Digart.spectacles', 'parametres', 'statuts-protocoles');
     }
 }

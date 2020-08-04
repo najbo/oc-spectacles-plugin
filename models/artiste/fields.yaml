@@ -17,3 +17,112 @@ fields:
         descriptionFrom: description
         type: relation
         emptyOption: '-- Non défini --'
+    is_groupe:
+        label: 'C''est un groupe'
+        span: auto
+        type: switch
+tabs:
+    fields:
+        nom_civil:
+            label: 'Nom civil'
+            span: auto
+            type: text
+            tab: Coordonnées
+        prenom_civil:
+            label: 'Prénom civil'
+            span: auto
+            type: text
+            tab: Coordonnées
+        adresse:
+            label: Adresse
+            size: small
+            span: auto
+            type: textarea
+            tab: Coordonnées
+        email:
+            label: 'Adresse e-mail'
+            span: left
+            type: text
+            tab: Coordonnées
+        telephone:
+            label: Téléphone
+            span: auto
+            type: text
+            tab: Coordonnées
+        hint_rs:
+            span: full
+            path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
+            type: hint
+            tab: 'Réseaux sociaux'
+        liens_socials:
+            label: 'Réseaux sociaux'
+            prompt: 'Ajouter un réseau social'
+            span: full
+            type: repeater
+            tab: 'Réseaux sociaux'
+            form:
+                fields:
+                    social_id:
+                        label: Relation
+                        span: auto
+                        nameFrom: designation
+                        descriptionFrom: description
+                        type: relation
+                    url:
+                        label: 'Adresse URL'
+                        span: auto
+                        type: text
+        hint_bio:
+            span: full
+            path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
+            type: hint
+            tab: Bio
+        bio:
+            label: 'Bio de l''artiste'
+            size: small
+            span: full
+            type: richeditor
+            tab: Bio
+        is_frontend_bio:
+            label: 'Afficher la bio sur le site'
+            span: auto
+            default: 1
+            type: switch
+            comment: 'Bas de la fiche spectacle'
+            tab: Bio
+        remarques:
+            label: 'Remarques et informations internes'
+            size: large
+            span: full
+            type: textarea
+            tab: Informations
+        image:
+            label: 'Image principale'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Images
+        images:
+            label: Images
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Images
+        documents:
+            label: Documents
+            span: auto
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: Documents

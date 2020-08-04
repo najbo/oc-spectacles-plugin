@@ -68,6 +68,9 @@ permissions:
     digart.spectacles.locations.dates:
         tab: 'CTTR - Gestion'
         label: 'Gère les dates des locations'
+    digart.spectacles.socials:
+        tab: 'CTTR - Paramètres'
+        label: 'Gère les différents liens aux réseaux sociaux'
 navigation:
     gestion:
         label: 'Gestion CTTR'
@@ -80,6 +83,18 @@ navigation:
                 icon: icon-building-o
                 permissions:
                     - digart.spectacles.locations
+            abonnements:
+                label: 'Abonnements et groupes'
+                url: digart/spectacles/abonnementsgroupes
+                icon: icon-ticket
+                permissions:
+                    - digart.spectacles.abonnements
+            team:
+                label: Equipe
+                url: digart/spectacles/teams
+                icon: icon-group
+                permissions:
+                    - digart.spectacles.team                    
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles
@@ -88,13 +103,17 @@ navigation:
             spectacles:
                 label: Spectacles
                 url: digart/spectacles/spectacles
-                icon: icon-music
-            side-menu-item:
-                label: Saisons
-                url: digart/spectacles/saisons
-                icon: icon-calendar-o
                 permissions:
-                    - digart.spectacles.saisons
+                    - digart.spectacles.spectacles
+                icon: icon-music
+            artistes:
+                label: Artistes
+                url: digart/spectacles/artistes
+                icon: icon-user
+            agents:
+                label: Agents
+                url: digart/spectacles/agents
+                icon: icon-dollar                
             categories:
                 label: Catégories
                 url: digart/spectacles/categories
@@ -103,16 +122,14 @@ navigation:
                 label: Genres
                 url: digart/spectacles/genres
                 icon: icon-wechat
-            artistes:
-                label: Artistes
-                url: digart/spectacles/artistes
-                icon: icon-user
-            agents:
-                label: Agents
-                url: digart/spectacles/agents
-                icon: icon-dollar
+            side-menu-item:
+                label: Saisons
+                url: digart/spectacles/saisons
+                icon: icon-calendar-o
+                permissions:
+                    - digart.spectacles.saisons                
     communication:
-        label: 'Communication CTTR'
+        label: 'Communication'
         url: digart/spectacles/publications
         icon: icon-newspaper-o
         permissions:
@@ -133,13 +150,13 @@ navigation:
                 permissions:
                     - digart.spectacles.publications.etendues
             frontend:
-                label: 'Contenu web'
+                label: 'Contenu site web'
                 url: digart/spectacles/webs
                 icon: icon-sitemap
                 permissions:
                     - digart.spectacles.web
-    parametres-cttr:
-        label: 'Paramètres CTTR'
+    parametres:
+        label: 'Paramètres'
         url: digart/spectacles/institutions
         icon: icon-wrench
         sideMenu:
@@ -147,33 +164,35 @@ navigation:
                 label: Institutions
                 url: digart/spectacles/institutions
                 icon: icon-institution
+                permissions:
+                    - digart.spectacles.institutions
             lieux:
                 label: Lieux
                 url: digart/spectacles/lieux
                 icon: icon-map-marker
+                permissions:
+                    - digart.spectacles.lieux
             statuts:
                 label: 'Statuts spectacles'
                 url: digart/spectacles/statuts
                 icon: icon-dashboard
+                permissions:
+                    - digart.spectacles.statuts
             statuts-protocoles:
                 label: 'Statuts de protocoles'
                 url: digart/spectacles/protocolesstatuts
                 icon: icon-dashboard
                 permissions:
-                    - pro
+                    - digart.spectacles.pstatuts
             genres-protocoles:
                 label: 'Genres des protocoles'
                 url: digart/spectacles/protocolesgenres
                 icon: icon-puzzle-piece
-            abonnements:
-                label: 'Abonnements et groupes'
-                url: digart/spectacles/abonnementsgroupes
-                icon: icon-ticket
                 permissions:
-                    - digart.spectacles.abonnements
-            team:
-                label: Equipe
-                url: digart/spectacles/teams
-                icon: icon-group
+                    - digart.spectacles.protocoles
+            socials:
+                label: 'Réseaux sociaux'
+                url: digart/spectacles/socials
+                icon: icon-facebook-official
                 permissions:
-                    - digart.spectacles.team
+                    - digart.spectacles.socials

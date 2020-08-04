@@ -1,0 +1,11 @@
+name: 'Réseau sociaux'
+modelClass: Digart\spectacles\Models\Social
+form: $/digart/spectacles/models/social/fields.yaml
+defaultRedirect: digart/spectacles/socials
+create:
+    redirect: 'digart/spectacles/socials/update/:id'
+    redirectClose: digart/spectacles/socials
+update:
+    redirect: digart/spectacles/socials
+    redirectClose: digart/spectacles/socials
+preview: {  }

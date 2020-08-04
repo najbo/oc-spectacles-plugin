@@ -1,13 +1,13 @@
-title: Artistes
-modelClass: Digart\spectacles\Models\Artiste
-list: $/digart/spectacles/models/artiste/columns.yaml
-recordUrl: 'digart/spectacles/artistes/update/:id'
+title: 'Réseau sociaux'
+modelClass: Digart\spectacles\Models\Social
+list: $/digart/spectacles/models/social/columns.yaml
+recordUrl: 'digart/spectacles/socials/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true
 showCheckboxes: true
 defaultSort:
-    column: designation
+    column: sort_order
     direction: asc
 toolbar:
     buttons: list_toolbar

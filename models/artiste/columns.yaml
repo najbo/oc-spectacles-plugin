@@ -1,6 +1,18 @@
 columns:
     designation:
-        label: Désignation
+        label: Artiste
         type: text
         searchable: true
         sortable: true
+    full_name:
+        label: 'Prénom et nom'
+        type: text
+        searchable: true
+        sortable: true
+    agent:
+        label: Agent
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: agent

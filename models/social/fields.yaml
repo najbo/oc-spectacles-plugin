@@ -1,0 +1,23 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    url:
+        label: 'Adresse du réseau'
+        span: auto
+        type: text
+    url_profile:
+        label: 'Adresse pour les profils'
+        span: auto
+        hidden: 1
+        type: text
+    is_actif:
+        label: Actif
+        span: left
+        type: switch
+    icon:
+        label: Icône
+        mode: image
+        span: auto
+        type: mediafinder

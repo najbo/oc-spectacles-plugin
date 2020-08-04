@@ -3,6 +3,8 @@
 use Model;
 use BackendAuth;
 use DigArt\Spectacles\Models\Representation;
+use Digart\spectacles\Models\Social;
+
 /**
  * Model
  */
@@ -16,7 +18,7 @@ class Spectacle extends Model
 
     protected $appends = ['periode_spectacle', 'full_url'];
 
-    protected $jsonable = ['parties'];
+    protected $jsonable = ['parties', 'liens_socials'];
 
     protected $slugs = ['slug' => 'titre_pincipal'];
 
@@ -62,7 +64,11 @@ class Spectacle extends Model
         'categorie' => ['DigArt\Spectacles\Models\Categorie',
                    'key' => 'categorie_id',
                    'order' => 'sort_order'],                               
-        'artiste' => ['DigArt\Spectacles\Models\Artiste'],                     
+        'artiste' => ['DigArt\Spectacles\Models\Artiste'],
+    // Permet d'afficher les réseaux sociaux dans le repeater "Liens réseaux sociaux"
+        'social_id' => ['DigArt\Spectacles\Models\Social',
+                    'key' => 'id',
+                    'scope' => 'isActive']
     ];
 
     public $belongsToMany = [
@@ -86,6 +92,8 @@ class Spectacle extends Model
     ];    
 
 
+
+
     public $hasMany = [
          'representations' => ['DigArt\Spectacles\Models\Representation', 
             'key' => 'spectacle_id', 
@@ -105,10 +113,10 @@ class Spectacle extends Model
     ];     
 
 
-    // Permet de trier par les dates des représentations actives
     public $hasOne = [
+    // Permet de trier par les dates des représentations actives
          'latestSpectacle' => ['DigArt\Spectacles\Models\Representation', 
-            'scope' => 'isActive'],
+            'scope' => 'isActive'],     
     ]; 
 
 
@@ -188,5 +196,16 @@ class Spectacle extends Model
 
     }*/
 
+
+    // Usage depuis TWIG : {{ spectacle.getSocial(artiste.designation)}}
+    // Renvoie le logo des réseaux sociaux du champ repeater de l'artiste
+    public function getSocial($value) {
+        $social = Social::find($value);
+
+        if ($social)
+        {
+            return $social->icon ;
+        }
+    } 
 
 }

@@ -1,7 +1,7 @@
 <?php namespace Digart\spectacles\Models;
 
 use Model;
-
+use Digart\spectacles\Models\Social;
 /**
  * Model
  */
@@ -13,11 +13,26 @@ class Artiste extends Model
 
     protected $dates = ['deleted_at'];
 
+    protected $jsonable = ['liens_socials', 'rs'];
+
+    protected $appends = ['full_name'];
+
 
     /**
      * @var string The database table used by the model.
      */
     public $table = 'digart_spectacles_artistes';
+
+
+    public $attachMany = [
+        'images' => ['System\Models\File', 'public' => true],
+        'documents' => ['System\Models\File', 'public' => true],
+    ];
+
+    public $attachOne = [
+        'image' => ['System\Models\File', 'public' => true],
+    ];
+
 
     /**
      * @var array Validation rules
@@ -30,6 +45,36 @@ class Artiste extends Model
     public $belongsTo = [
         'agent' => ['DigArt\Spectacles\Models\Agent',
                    'key' => 'agent_id',
-                   'order' => 'designation'],                                  
-    ];    
+                   'order' => 'designation'],   
+    // Permet d'afficher les réseaux sociaux dans le repeater "Liens réseaux sociaux"
+                   
+        'social_id' => ['DigArt\Spectacles\Models\Social',
+                'key' => 'id',
+                'scope' => 'isActive']                                                  
+    ];  
+
+
+    // Utilisé pour le bouton dropdown sur le formulaire des artistes > réseaux sociaux
+
+    public function getSocialIdOptions($value, $data)  
+    {
+        $social = Social::isActive();    
+        return $social->lists('designation', 'id');;
+    }    
+
+    public function getFullNameAttribute()
+    {
+        return $this->prenom_civil .' ' . $this->nom_civil;
+    }               
+
+    // Usage depuis TWIG : {{ artiste.getCategoryName(artiste.designation)}}
+    // Renvoie le logo des réseaux sociaux du champ repeater de l'artiste
+    public function getSocial($value) {
+        $social = Social::find($value);
+
+        if ($social)
+        {
+            return $social->icon ;
+        }
+    }    
 }

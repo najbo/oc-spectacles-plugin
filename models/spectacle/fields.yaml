@@ -214,31 +214,28 @@ tabs:
                         span: full
                         size: small
                         type: textarea
-        lien_web:
-            label: 'Site web principal de l''artiste'
-            span: auto
-            type: text
+        liens_socials:
+            label: 'Liens et réseaux sociaux'
+            prompt: 'Ajouter une nouvelle adresse'
+            span: full
+            type: repeater
             tab: 'Réseaux sociaux'
-        lien_youtube:
-            label: 'Lien Youtube'
-            span: auto
-            type: text
-            tab: 'Réseaux sociaux'
-        lien_facebook:
-            label: 'Lien Facebook'
-            span: auto
-            type: text
-            tab: 'Réseaux sociaux'
-        lien_instagram:
-            label: 'Lien Instagram'
-            span: auto
-            type: text
-            tab: 'Réseaux sociaux'
-        lien_twitter:
-            label: 'Lien Twitter'
-            span: auto
-            type: text
-            tab: 'Réseaux sociaux'
+            form:
+                fields:
+                    social_id:
+                        label: 'Liens et réseaux sociaux'
+                        nameFrom: designation
+                        descriptionFrom: description
+                        span: auto
+                        type: relation
+                    url:
+                        label: 'Adresse URL'
+                        span: auto
+                        type: text
+                    designation:
+                        label: 'Désignation du lien'
+                        span: full
+                        type: text
         technique_images:
             label: 'Images pour la technique / scène'
             span: auto
