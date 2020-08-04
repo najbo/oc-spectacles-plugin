@@ -15,5 +15,11 @@ fields:
         type: text
     is_actif:
         label: Actif
+        span: left
+        default: 1
+        type: switch
+    is_frontend:
+        label: 'Visible sur site public'
         span: auto
+        default: 1
         type: switch

@@ -37,6 +37,10 @@ class LocationDate extends Model
         return $query->where('is_actif',1)->whereDate('fin', '>=', Carbon::today()->toDateString())->orderBy('debut');
     }
 
+    public function scopeIsFrontend($query)
+    {
+        return $query->isActif()->where('is_frontend',1);
+    }
 
     // Utilisé pour le tri des locations. Voir relation latestLocationDate
     public function scopeTri($query)
