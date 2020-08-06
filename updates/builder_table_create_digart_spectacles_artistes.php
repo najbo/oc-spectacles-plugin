@@ -25,6 +25,7 @@ class BuilderTableCreateDigartSpectaclesArtistes extends Migration
             $table->text('bio')->nullable();
             $table->boolean('is_frontend_bio')->nullable()->default(1);
             $table->text('remarques')->nullable();
+            $table->text('memo')->nullable();
             $table->text('liens_socials')->nullable();
             $table->text('rs')->nullable();
             $table->boolean('is_groupe')->nullable();

@@ -68,6 +68,40 @@ class BuilderTableCreateDigartSpectaclesWeb extends Migration
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
+
+            $table->string('title_presentation', 255)->nullable();
+            $table->text('txt_presentation')->nullable();
+            $table->text('txt_presentation_main')->nullable();
+
+            $table->string('title_presentation_box1', 255)->nullable();
+            $table->text('txt_presentation_box1')->nullable();
+            $table->string('url_presentation_box1', 255)->nullable();
+            $table->string('url_presentation_box1_texte', 255)->nullable();
+            $table->boolean('is_presentation_box1_url_externe')->nullable(); 
+
+            $table->string('url_presentation', 255)->nullable();
+            $table->string('url_presentation_texte', 255)->nullable();
+            $table->boolean('is_presentation_url_externe')->nullable();
+
+            $table->string('title_dons', 255)->nullable();
+            $table->text('txt_dons')->nullable();
+            $table->text('txt_dons_main')->nullable();
+            $table->text('txt_dons_banque')->nullable();
+            $table->string('url_dons', 255)->nullable();
+            $table->string('url_dons_texte', 255)->nullable();
+            $table->boolean('is_dons_url_externe')->nullable();
+
+            $table->string('title_technique', 255)->nullable();
+            $table->text('txt_technique')->nullable();
+            $table->text('txt_technique_main')->nullable();
+            $table->text('title_technique_materiel')->nullable();
+            $table->text('txt_technique_materiel')->nullable();
+            $table->text('title_technique_highlight')->nullable();
+            $table->text('txt_technique_highlight')->nullable();
+            $table->text('materiel')->nullable();
+            $table->string('url_technique', 255)->nullable();
+            $table->string('url_technique_texte', 255)->nullable();
+            $table->boolean('is_technique_url_externe')->nullable();            
         });
     }
     

@@ -15,7 +15,7 @@ class Web extends Model
 
     protected $appends = [''];
 
-    protected $jsonable = ['timeline', 'sponsors'];
+    protected $jsonable = ['timeline', 'sponsors', 'materiel'];
 
     /**
      * @var string The database table used by the model.
@@ -38,7 +38,10 @@ class Web extends Model
 
     public $attachOne = [
         'location_image' => ['System\Models\File', 'public' => true],
-        'historique_image' => ['System\Models\File', 'public' => true]
+        'historique_image' => ['System\Models\File', 'public' => true],
+
+        'presentation_image' => ['System\Models\File', 'public' => true]
+
     ];
 
 

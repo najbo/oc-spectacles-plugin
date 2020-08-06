@@ -1,0 +1,11 @@
+name: 'Genre de tiers'
+modelClass: Digart\spectacles\Models\TiersGenre
+form: $/digart/spectacles/models/tiersgenre/fields.yaml
+defaultRedirect: digart/spectacles/tiersgenres
+create:
+    redirect: 'digart/spectacles/tiersgenres/update/:id'
+    redirectClose: digart/spectacles/tiersgenres
+update:
+    redirect: digart/spectacles/tiersgenres
+    redirectClose: digart/spectacles/tiersgenres
+preview: {  }

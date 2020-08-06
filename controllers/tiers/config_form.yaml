@@ -1,0 +1,11 @@
+name: Tiers
+modelClass: Digart\spectacles\Models\Tiers
+form: $/digart/spectacles/models/tiers/fields.yaml
+defaultRedirect: digart/spectacles/tiers
+create:
+    redirect: 'digart/spectacles/tiers/update/:id'
+    redirectClose: digart/spectacles/tiers
+update:
+    redirect: digart/spectacles/tiers
+    redirectClose: digart/spectacles/tiers
+preview: {  }

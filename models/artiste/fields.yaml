@@ -93,7 +93,13 @@ tabs:
         remarques:
             label: 'Remarques et informations internes'
             size: large
-            span: full
+            span: left
+            type: textarea
+            tab: Informations
+        memo:
+            label: 'Mémo / habitudes / désirs'
+            span: auto
+            size: large
             type: textarea
             tab: Informations
         image:

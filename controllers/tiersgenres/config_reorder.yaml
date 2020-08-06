@@ -1,0 +1,5 @@
+title: 'Genre de tiers'
+modelClass: Digart\spectacles\Models\TiersGenre
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

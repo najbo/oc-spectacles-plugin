@@ -31,18 +31,18 @@ tabs:
             type: richeditor
             tab: Programme
         title_abonnement:
-            label: 'Titre ABONNEMENTS'
+            label: 'Titre de page'
             span: auto
             type: text
             tab: Abonnements
         txt_abonnement:
-            label: 'Texte ABONNEMENTS'
+            label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Abonnements
         title_historique:
-            label: 'Titre HISTORIQUE'
+            label: 'Titre de page'
             span: auto
             type: text
             tab: Historique
@@ -160,19 +160,94 @@ tabs:
                         imageHeight: '250'
                         span: auto
                         type: mediafinder
+        title_presentation:
+            label: 'Titre de page'
+            span: auto
+            type: text
+            tab: Présentation
+        txt_presentation:
+            label: 'Texte d''introduction'
+            size: large
+            span: left
+            type: richeditor
+            tab: Présentation
+        txt_presentation_main:
+            label: 'Texte principal'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Présentation
+        url_presentation:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            tab: Présentation
+        url_presentation_texte:
+            label: 'Texte bouton'
+            span: auto
+            type: text
+            tab: Présentation
+        is_presentation_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: left
+            type: switch
+            tab: Présentation
+        section7:
+            label: 'Box 1 avec image'
+            span: full
+            type: section
+            tab: Présentation
+        title_presentation_box1:
+            label: Titre
+            span: auto
+            type: text
+            tab: Présentation
+        presentation_image:
+            label: Image
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Présentation
+        txt_presentation_box1:
+            label: Texte
+            size: large
+            span: left
+            type: richeditor
+            tab: Présentation
+        url_presentation_box1:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: left
+            type: text
+            tab: Présentation
+        url_presentation_box1_texte:
+            label: 'Texte bouton'
+            span: auto
+            type: text
+            tab: Présentation
+        is_presentation_box1_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: left
+            type: switch
+            tab: Présentation
         title_equipe:
-            label: 'Titre EQUIPES'
+            label: 'Titre de page'
             span: auto
             type: text
             tab: Equipe
         txt_equipe:
-            label: 'Texte EQUIPES'
+            label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Equipe
         txt_equipe_after:
-            label: 'Texte après'
+            label: 'Texte après les équipes'
             span: auto
             size: large
             type: richeditor
@@ -183,7 +258,7 @@ tabs:
             type: text
             tab: Equipe
         url_equipe_texte:
-            label: Equipe
+            label: 'Texte bouton'
             comment: 'Le texte s''affiche après le texte d''introduction'
             span: auto
             type: text
@@ -306,9 +381,9 @@ tabs:
             tab: Sponsors
         url_sponsor_texte:
             label: Sponsors
-            comment: 'Le texte s''affiche après le texte d''introduction'
-            span: auto
+            span: left
             type: text
+            comment: 'Le texte s''affiche après le texte d''introduction'
             tab: Sponsors
         is_sponsor_url_externe:
             label: 'Ouvrir un nouvel onglet'
@@ -348,3 +423,111 @@ tabs:
                         label: 'Adresse URL du sponsor'
                         span: left
                         type: text
+        title_dons:
+            label: 'Titre de page'
+            span: auto
+            type: text
+            tab: Dons
+        txt_dons:
+            label: 'Texte d''introduction'
+            size: large
+            span: left
+            type: richeditor
+            tab: Dons
+        txt_dons_banque:
+            label: 'Relations bancaire'
+            span: auto
+            size: large
+            type: richeditor
+            tab: Dons
+        url_dons:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            tab: Dons
+        url_dons_texte:
+            label: 'Texte bouton'
+            comment: 'Le texte s''affiche après le texte d''introduction'
+            span: auto
+            type: text
+            tab: Dons
+        is_dons_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: left
+            type: switch
+            tab: Dons
+        title_technique:
+            label: 'Titre de page'
+            span: auto
+            type: text
+            tab: 'Donneés echniques'
+        title_technique_highlight:
+            label: 'Titre Highlight ou complément'
+            span: auto
+            type: text
+            tab: 'Donneés echniques'
+        txt_technique:
+            label: 'Texte d''introduction'
+            size: large
+            span: left
+            type: richeditor
+            tab: 'Donneés echniques'
+        txt_technique_highlight:
+            label: 'Highlight ou complément'
+            span: auto
+            size: large
+            type: richeditor
+            tab: 'Donneés echniques'
+        url_technique:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: auto
+            type: text
+            tab: 'Donneés echniques'
+        url_technique_texte:
+            label: 'Texte bouton'
+            comment: 'Le texte s''affiche après le texte d''introduction'
+            span: auto
+            type: text
+            tab: 'Donneés echniques'
+        is_technique_url_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: left
+            type: switch
+            tab: 'Donneés echniques'
+        section8:
+            label: 'Matériel ou spécificités'
+            span: full
+            type: section
+            tab: 'Donneés echniques'
+        title_technique_materiel:
+            label: Text
+            span: auto
+            type: text
+            tab: 'Donneés echniques'
+        txt_technique_materiel:
+            label: 'Rich editor'
+            size: small
+            span: auto
+            type: richeditor
+            tab: 'Donneés echniques'
+        materiel:
+            label: 'Matériel ou spécificités techniques de la salle'
+            prompt: 'Ajouter un nouvel élément'
+            span: full
+            type: repeater
+            tab: 'Donneés echniques'
+            form:
+                fields:
+                    titre:
+                        label: Titre
+                        span: auto
+                        type: text
+                    quantite:
+                        label: Quantité
+                        span: auto
+                        type: text
+                    complement:
+                        label: Complément
+                        span: full
+                        size: small
+                        type: richeditor

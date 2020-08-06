@@ -59,7 +59,7 @@ class Artiste extends Model
     public function getSocialIdOptions($value, $data)  
     {
         $social = Social::isActive();    
-        return $social->lists('designation', 'id');;
+        return $social->lists('designation', 'id');
     }    
 
     public function getFullNameAttribute()

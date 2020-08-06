@@ -1,0 +1,10 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch

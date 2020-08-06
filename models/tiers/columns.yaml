@@ -1,0 +1,28 @@
+columns:
+    raison_sociale:
+        label: 'Raison sociale'
+        type: text
+        searchable: true
+        sortable: false
+    nom:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: false
+    prenom:
+        label: Prénom
+        type: text
+        searchable: true
+        sortable: false
+    tiers_name:
+        label: 'Nom complet'
+        type: text
+        searchable: false
+        sortable: false
+    gi:
+        label: Genres
+        type: text
+        searchable: true
+        sortable: false
+        select: designation
+        relation: genres

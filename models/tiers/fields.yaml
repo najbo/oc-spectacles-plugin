@@ -1,0 +1,42 @@
+fields:
+    type_id:
+        label: 'Type d''adresse'
+        showSearch: true
+        span: auto
+        type: dropdown
+    raison_sociale:
+        label: 'Raison sociale'
+        span: auto
+        type: text
+    prenom:
+        label: Prénom
+        span: auto
+        type: text
+    nom:
+        label: Nom
+        span: auto
+        type: text
+    genres:
+        label: 'Genres de tiers'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+tabs:
+    fields:
+        telephone:
+            label: 'Numéro de téléphone'
+            span: auto
+            type: text
+            tab: Coordonnées
+        email:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: Coordonnées
+        adresse:
+            label: Adresse
+            size: small
+            span: auto
+            type: textarea
+            tab: Coordonnées

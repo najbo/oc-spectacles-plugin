@@ -71,11 +71,23 @@ permissions:
     digart.spectacles.socials:
         tab: 'CTTR - Paramètres'
         label: 'Gère les différents liens aux réseaux sociaux'
+    digart.spectacles.tiers:
+        tab: 'CTTR - Gestion'
+        label: 'Gère les tiers de l''institution'
+    digart.spectacles.tiers.genres:
+        tab: 'CTTR - Paramètres'
+        label: 'Gère les genres de tiers'
 navigation:
     gestion:
         label: 'Gestion CTTR'
         url: digart/spectacles/locations
         icon: icon-dot-circle-o
+        permissions:
+            - digart.spectacles.locations
+            - digart.spectacles.locations.dates
+            - digart.spectacles.abonnements
+            - digart.spectacles.team
+            - digart.spectacles.contacts
         sideMenu:
             locations:
                 label: 'Location salle'
@@ -94,7 +106,13 @@ navigation:
                 url: digart/spectacles/teams
                 icon: icon-group
                 permissions:
-                    - digart.spectacles.team                    
+                    - digart.spectacles.team
+            tiers:
+                label: Tiers
+                url: digart/spectacles/tiers
+                icon: icon-users
+                permissions:
+                    - digart.spectacles.tiers
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles
@@ -113,7 +131,7 @@ navigation:
             agents:
                 label: Agents
                 url: digart/spectacles/agents
-                icon: icon-dollar                
+                icon: icon-dollar
             categories:
                 label: Catégories
                 url: digart/spectacles/categories
@@ -127,9 +145,9 @@ navigation:
                 url: digart/spectacles/saisons
                 icon: icon-calendar-o
                 permissions:
-                    - digart.spectacles.saisons                
+                    - digart.spectacles.saisons
     communication:
-        label: 'Communication'
+        label: Communication
         url: digart/spectacles/publications
         icon: icon-newspaper-o
         permissions:
@@ -156,7 +174,7 @@ navigation:
                 permissions:
                     - digart.spectacles.web
     parametres:
-        label: 'Paramètres'
+        label: Paramètres
         url: digart/spectacles/institutions
         icon: icon-wrench
         sideMenu:
@@ -196,3 +214,9 @@ navigation:
                 icon: icon-facebook-official
                 permissions:
                     - digart.spectacles.socials
+            genres-tiers:
+                label: 'Genres de tiers'
+                url: digart/spectacles/tiersgenres
+                icon: icon-list-ul
+                permissions:
+                    - digart.spectacles.tiers.genres
