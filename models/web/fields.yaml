@@ -164,45 +164,45 @@ tabs:
             label: 'Titre de page'
             span: auto
             type: text
-            tab: Présentation
+            tab: Café-Théâtre
         txt_presentation:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
-            tab: Présentation
+            tab: Café-Théâtre
         txt_presentation_main:
             label: 'Texte principal'
             size: large
             span: auto
             type: richeditor
-            tab: Présentation
+            tab: Café-Théâtre
         url_presentation:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
-            tab: Présentation
+            tab: Café-Théâtre
         url_presentation_texte:
             label: 'Texte bouton'
             span: auto
             type: text
-            tab: Présentation
+            tab: Café-Théâtre
         is_presentation_url_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
-            tab: Présentation
+            tab: Café-Théâtre
         section7:
             label: 'Box 1 avec image'
             span: full
             type: section
-            tab: Présentation
+            tab: Café-Théâtre
         title_presentation_box1:
             label: Titre
             span: auto
             type: text
-            tab: Présentation
-        presentation_image:
+            tab: Café-Théâtre
+        presentation_box1_image:
             label: Image
             mode: image
             imageWidth: '300'
@@ -213,28 +213,54 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: Présentation
+            tab: Café-Théâtre
         txt_presentation_box1:
             label: Texte
             size: large
             span: left
             type: richeditor
-            tab: Présentation
+            tab: Café-Théâtre
         url_presentation_box1:
             label: 'Adresse URL pour un éventuel bouton'
             span: left
             type: text
-            tab: Présentation
+            tab: Café-Théâtre
         url_presentation_box1_texte:
             label: 'Texte bouton'
             span: auto
             type: text
-            tab: Présentation
+            tab: Café-Théâtre
         is_presentation_box1_url_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
-            tab: Présentation
+            tab: Café-Théâtre
+        section9:
+            label: Images
+            span: full
+            type: section
+            tab: Café-Théâtre
+        presentation_image:
+            label: 'Image principale'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Café-Théâtre
+        presentation_images:
+            label: Images
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'N''oubliez pas d''indiquer un titre et un description pour chaque image.'
+            tab: Café-Théâtre
         title_equipe:
             label: 'Titre de page'
             span: auto
@@ -460,62 +486,62 @@ tabs:
             label: 'Titre de page'
             span: auto
             type: text
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         title_technique_highlight:
             label: 'Titre Highlight ou complément'
             span: auto
             type: text
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         txt_technique:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         txt_technique_highlight:
             label: 'Highlight ou complément'
             span: auto
             size: large
             type: richeditor
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         url_technique:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         url_technique_texte:
             label: 'Texte bouton'
             comment: 'Le texte s''affiche après le texte d''introduction'
             span: auto
             type: text
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         is_technique_url_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         section8:
             label: 'Matériel ou spécificités'
             span: full
             type: section
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         title_technique_materiel:
             label: Text
             span: auto
             type: text
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         txt_technique_materiel:
             label: 'Rich editor'
             size: small
             span: auto
             type: richeditor
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
         materiel:
             label: 'Matériel ou spécificités techniques de la salle'
             prompt: 'Ajouter un nouvel élément'
             span: full
             type: repeater
-            tab: 'Donneés echniques'
+            tab: 'Données techniques'
             form:
                 fields:
                     titre:

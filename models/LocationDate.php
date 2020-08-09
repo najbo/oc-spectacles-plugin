@@ -42,6 +42,15 @@ class LocationDate extends Model
         return $query->isActif()->where('is_frontend',1);
     }
 
+    public function scopeIsLocationFrontend($query)
+    {
+
+        return $query->
+            whereHas('location', function ($query) {
+                $query->where('is_actif','1')->where('is_frontend','1');            
+            });
+    }
+
     // Utilisé pour le tri des locations. Voir relation latestLocationDate
     public function scopeTri($query)
     {
@@ -75,17 +84,5 @@ class LocationDate extends Model
         return $this->debut->format('d.m.Y');
     }
 
-
-
-    public function afterUpdate()
-        {
-
-        #$user = BackendAuth::getUser();
-
-        if($this->user)
-        {
-            \Log::info("Mise à jour de la réservation ".$this->id. ' ' .$this->debut .' par ' .$this->user->first_name); 
-        }
-         
-    }
+    
 }

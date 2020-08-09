@@ -1,0 +1,31 @@
+columns:
+    debut:
+        label: 'Date et heure'
+        type: datetime
+        searchable: true
+        sortable: false
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    statut:
+        label: 'Statut représentation'
+        type: text
+        searchable: true
+        sortable: false
+        select: designation
+        relation: statut
+    lieu:
+        label: Lieu
+        type: text
+        searchable: true
+        select: designation
+        relation: lieu
+    planifications:
+        label: Planifications
+        type: text
+        searchable: true
+        sortable: true
+        relation: planifications
+        useRelationCount: 'yes'

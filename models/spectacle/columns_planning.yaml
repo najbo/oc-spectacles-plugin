@@ -1,0 +1,6 @@
+columns:
+    titre_principal:
+        label: Titre
+        type: text
+        searchable: true
+        sortable: true

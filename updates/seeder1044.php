@@ -10,9 +10,11 @@ class Seeder1044 extends Seeder
         Location::truncate();
 
         Location::create([
-            'loueur' => 'CAPSA SA',
-            'designation' => 'Anniversaire des 50 ans',
-            'interlocuteur' => 'M. André Kraft',
+            'etendue_id' => 1,
+            'societe_id' => 4,
+            'interlocuteur' => 'Monsieur Kraft',
+
+            'designation' => 'Anniversaire des 75 ans',
             'adresse' => '2520 La Neuveville',
             'telephone' => '032 344 99 00',
             'email' => 'kraft@examle.org',
@@ -20,7 +22,8 @@ class Seeder1044 extends Seeder
         ]);
              
         Location::create([
-            'loueur' => 'OFSP',
+            'etendue_id' => 1,
+            'societe_id' => 5,
             'designation' => 'Coronaboom',
             'interlocuteur' => 'M. Dani Koch',
             'adresse' => '3000 Berne',
@@ -31,7 +34,8 @@ class Seeder1044 extends Seeder
         ]);             
                
         Location::create([
-            'loueur' => 'SMAD',
+            'etendue_id' => 1,
+            'societe_id' => 7,  
             'designation' => 'Souper de Noël 2020',
             'interlocuteur' => 'Mme Annelise Hirt',
             'adresse' => '2520 La Neuveville',
@@ -49,6 +53,8 @@ class Seeder1044 extends Seeder
         ]); 
         
         Location::create([
+            'etendue_id' => 1,
+            'societe_id' => 6,            
             'loueur' => 'Phanee de Pool / Escales Prod.',
             'designation' => 'Résidences 2020',
             'interlocuteur' => 'Laurent Diercksen',

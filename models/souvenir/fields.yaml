@@ -1,5 +1,5 @@
 fields:
-    photographe:
+    photographe_libre:
         label: 'Nom du photographe'
         span: auto
         type: text
@@ -11,13 +11,26 @@ fields:
         label: Désignation
         span: auto
         type: text
+    sort_order:
+        label: 'Ordre de tri'
+        span: auto
+        default: '1'
+        type: number
     representation:
         label: 'Représentation liée'
         nameFrom: debut_texte
         descriptionFrom: description
         span: auto
-        type: relation
         emptyOption: '-- Lié au spectacle --'
+        hidden: 1
+        type: relation
+    photographe:
+        label: Tiers
+        nameFrom: full_name
+        descriptionFrom: description
+        span: auto
+        hidden: 1
+        type: relation
 tabs:
     fields:
         photo_principale:
@@ -29,10 +42,10 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: Photos
+            tab: 'Photo principale'
         photos:
             label: Photos
-            span: auto
+            span: full
             mode: image
             useCaption: true
             thumbOptions:

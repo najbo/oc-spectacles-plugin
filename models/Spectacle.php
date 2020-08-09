@@ -104,7 +104,7 @@ class Spectacle extends Model
             'scope' => 'isActive'],            
          'souvenirs' => ['DigArt\Spectacles\Models\Souvenir', 
             'key' => 'spectacle_id', 
-            'order' => '',
+            'order' => 'sort_order',
             'softDelete' => true],
          'protocoles' => ['DigArt\Spectacles\Models\Protocole', 
             'key' => 'spectacle_id', 
@@ -146,6 +146,26 @@ class Spectacle extends Model
                         })->with('latestSpectacle')->get()->sortBy('latestSpectacle.debut');
 
         } 
+
+
+
+    public function scopeIsFrontend($query)
+    {
+
+        return $query->
+            whereHas('statut', function ($query) {
+                $query->where('is_frontend','1');            
+            });
+    }
+
+
+
+    public function scopeAvecSouvenirs($query)
+    {
+
+        return $query->has('souvenirs');
+    }
+
 
 
 
@@ -195,6 +215,22 @@ class Spectacle extends Model
         }
 
     }*/
+
+
+    public function getTotalAlbumsAttribute()
+    {
+        return $this->souvenirs->count();
+    }
+
+    public function getTotalPhotosAttribute()
+        {
+            $total_photos = 0;
+            // loop through each father
+            foreach ($this->souvenirs as $souvenirs) {
+                $total_photos += count($souvenirs->photos);
+            }
+            return $total_photos;
+        }
 
 
     // Usage depuis TWIG : {{ spectacle.getSocial(artiste.designation)}}

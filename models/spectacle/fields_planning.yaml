@@ -1,0 +1,24 @@
+fields:
+    titre_principal:
+        label: Text
+        span: auto
+        disabled: 1
+        readOnly: 1
+        type: text
+tabs:
+    fields:
+        hint_representations:
+            span: full
+            path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Représentations
+        representations:
+            span: full
+            path: field_representations
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Représentations

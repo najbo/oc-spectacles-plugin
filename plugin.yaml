@@ -77,6 +77,15 @@ permissions:
     digart.spectacles.tiers.genres:
         tab: 'CTTR - Paramètres'
         label: 'Gère les genres de tiers'
+    digart.spectacles.fonctions:
+        tab: 'CTTR - Paramètres'
+        label: 'Gère les fonctions des utilisateurs bénévoles'
+    digart.spectacles.societes:
+        tab: 'CTTR - Gestion'
+        label: 'Gère les sociétés et entreprises'
+    digart.spectacles.planification:
+        tab: 'CTTR - Gestion'
+        label: 'Gère la planification des bénévoles'
 navigation:
     gestion:
         label: 'Gestion CTTR'
@@ -88,6 +97,8 @@ navigation:
             - digart.spectacles.abonnements
             - digart.spectacles.team
             - digart.spectacles.contacts
+            - digart.spectacles.societes
+            - digart.spectacles.planification
         sideMenu:
             locations:
                 label: 'Location salle'
@@ -113,17 +124,36 @@ navigation:
                 icon: icon-users
                 permissions:
                     - digart.spectacles.tiers
+            societes:
+                label: Sociétés
+                url: digart/spectacles/societes
+                icon: icon-briefcase
+                permissions:
+                    - digart.spectacles.societes
+            planning:
+                label: 'Planning des bénévoles'
+                url: digart/spectacles/spectaclesplanifications
+                icon: icon-star
+                permissions:
+                    - digart.spectacles.planification
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles
         icon: icon-microphone
+        permissions:
+            - digart.spectacles.spectacles
+            - digart.spectacles.agents
+            - digart.spectacles.artistes
+            - digart.spectacles.categories
+            - digart.spectacles.genres
+            - digart.spectacles.saisons
         sideMenu:
             spectacles:
                 label: Spectacles
                 url: digart/spectacles/spectacles
+                icon: icon-music
                 permissions:
                     - digart.spectacles.spectacles
-                icon: icon-music
             artistes:
                 label: Artistes
                 url: digart/spectacles/artistes
@@ -177,6 +207,15 @@ navigation:
         label: Paramètres
         url: digart/spectacles/institutions
         icon: icon-wrench
+        permissions:
+            - digart.spectacles.institutions
+            - digart.spectacles.lieux
+            - digart.spectacles.statuts
+            - digart.spectacles.pstatuts
+            - digart.spectacles.pgenres
+            - digart.spectacles.socials
+            - digart.spectacles.tiers.genres
+            - digart.spectacles.fonctions
         sideMenu:
             institutions:
                 label: Institutions
@@ -220,3 +259,9 @@ navigation:
                 icon: icon-list-ul
                 permissions:
                     - digart.spectacles.tiers.genres
+            fonctions:
+                label: 'Fonctions utilisateurs'
+                url: digart/spectacles/fonctions
+                icon: icon-unlock-alt
+                permissions:
+                    - digart.spectacles.fonctions

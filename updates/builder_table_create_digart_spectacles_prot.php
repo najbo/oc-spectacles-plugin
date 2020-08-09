@@ -15,6 +15,7 @@ class BuilderTableCreateDigartSpectaclesProt extends Migration
             $table->date('date');
             $table->string('designation', 255)->nullable();
             $table->text('developpement')->nullable();
+            $table->string('tiers_id')->nullable();
             $table->integer('admin_id')->unsigned()->nullable();
             $table->integer('pgenre_id')->nullable()->unsigned();
             $table->integer('pstatut_id')->nullable()->unsigned();

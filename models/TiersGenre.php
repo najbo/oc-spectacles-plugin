@@ -25,4 +25,5 @@ class TiersGenre extends Model
     public $rules = [
         'designation' => 'required',
     ];
+
 }

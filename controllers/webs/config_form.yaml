@@ -8,3 +8,4 @@ create:
 update:
     redirect: digart/spectacles/webs
     redirectClose: digart/spectacles/webs
+preview: {  }

@@ -13,7 +13,7 @@ class Tiers extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $appends = ['tiers_name'];
+    protected $appends = ['tiers_name', 'full_name'];
 
 
     /**
@@ -27,15 +27,29 @@ class Tiers extends Model
     public $rules = [
     ];
 
+
+    public $belongsTo = [
+        'societe' => ['DigArt\Spectacles\Models\Societe'],
+    ];
+
+
     public $belongsToMany = [
         'genres' => [
             'DigArt\Spectacles\Models\TiersGenre',
             'table' => 'digart_spectacles_tiers_genres',
             'key' => 'tiers_id',
             'otherKey' => 'genre_id',
-            'order' => 'sort_order'],
-        
+            'order' => 'sort_order'],  
     ]; 
+
+
+    public function getFullNameAttribute() 
+    {
+
+        return $this->prenom .' ' . $this->nom;
+    }
+
+
 
     public function getTiersNameAttribute() 
     {
@@ -54,5 +68,18 @@ class Tiers extends Model
             1 => 'Privé',
             2 => 'Entreprise'
         );
+    }
+
+    public function scopePhotographes($query)
+    {
+
+        return $query;
+
+        return $query->
+            whereHas('genres', function($q){
+                $q->where('tiers_id', '=', 'xxxx');
+            })->get();
+
+
     }
 }

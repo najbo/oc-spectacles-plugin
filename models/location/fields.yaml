@@ -1,12 +1,47 @@
 fields:
+    etendue_id:
+        label: Etendue
+        showSearch: true
+        span: left
+        type: dropdown
+    societe:
+        label: Société
+        nameFrom: raison_sociale
+        descriptionFrom: complement
+        emptyOption: '-- Aucune société --'
+        span: right
+        type: relation
+        trigger:
+            action: show
+            field: etendue_id
+            condition: 'value[1]'        
+    tiers:
+        label: 'Tiers individuel'
+        nameFrom: full_name
+        descriptionFrom: description
+        span: right
+        type: relation
+        trigger:
+            action: show
+            field: etendue_id
+            condition: 'value[2]'        
     loueur:
         label: 'Contact / tiers'
-        span: auto
+        span: right
         type: text
+        trigger:
+            action: show
+            field: etendue_id
+            condition: 'value[0]'
     designation:
         label: 'Désignation de l''événement'
         span: auto
         type: text
+    interlocuteur:
+        label: Interlocuteur
+        span: auto
+        type: text
+        tab: 'Adresse loueur'         
 tabs:
     fields:
         hint_locations:
@@ -23,32 +58,51 @@ tabs:
                 - update
                 - preview
             type: partial
-            tab: Dates de réservation        
-        interlocuteur:
-            label: Interlocuteur
-            span: auto
-            type: text
-            tab: 'Adresse loueur'
+            tab: 'Dates de réservation'
         adresse:
             label: Adresse
             size: small
             span: auto
             type: textarea
             tab: 'Adresse loueur'
+            trigger:
+                action: show
+                field: etendue_id
+                condition: 'value[]'
         telephone:
             label: 'Numéro de téléphone'
             span: auto
             type: text
             tab: 'Adresse loueur'
+            trigger:
+                action: show
+                field: etendue_id
+                condition: 'value[]'
         email:
             label: 'Adresse e-mail'
             span: auto
             type: text
             tab: 'Adresse loueur'
+            trigger:
+                action: show
+                field: etendue_id
+                condition: 'value[]'
         auteur:
             label: Auteur
             span: auto
             nameFrom: full_name
             descriptionFrom: description
             type: relation
+            tab: Paramètres
+        is_actif:
+            label: Actif
+            span: left
+            default: 1
+            type: switch
+            tab: Paramètres            
+        is_frontend:
+            label: Frontend
+            span: auto
+            default: 1
+            type: switch
             tab: Paramètres

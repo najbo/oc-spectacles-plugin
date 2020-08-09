@@ -40,6 +40,11 @@ class Representation extends Model
     ];    
 
 
+    public $hasMany = [
+        'planifications' => Planification::class
+    ];
+
+
     public function getDebutTexteAttribute() {
         return $this->debut->format('d.m.y H:i');
     }

@@ -8,10 +8,12 @@ use Model;
 class Souvenir extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['deleted_at'];
+
+    # protected $appends = [''];
 
 
     /**
@@ -23,6 +25,7 @@ class Souvenir extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'photographe_libre' => 'required'
     ];
 
 
@@ -37,10 +40,16 @@ class Souvenir extends Model
 
 
     public $belongsTo = [
+        'photographe' => ['DigArt\Spectacles\Models\Tiers',
+                   'scope' => 'photographes'],
+
+   
         'representation' => ['DigArt\Spectacles\Models\Representation',
                    'key' => 'representation_id',
-                   'order' => 'debut'],                 
-                     
+                   'order' => 'debut'],
+
+        'spectacle' => ['DigArt\Spectacles\Models\Spectacle',
+                   'key' => 'spectacle_id'],
     ];    
 
 }

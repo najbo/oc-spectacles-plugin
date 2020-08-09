@@ -1,0 +1,45 @@
+<?php if (count($planifications)): ?>
+    <div class="list-preview list-flush">
+        <div class="control-list">
+            <table class="table data" data-control="rowlink">
+                <thead>
+                    <tr>
+                        <th><span>ID</span></th>
+                        <th><span>Bénévole</span></th>
+                        <th><span>Fonction</span></th>
+                        <th><span>Désignation</span></th>
+                        <th style="width: 10%"><span></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($planifications as $planification): ?>
+                        <tr>
+                            <td>
+                                <?= e($planification->id) ?>
+                            </td>
+                            <td>
+                                <?= e($planification->benevole ? $planification->benevole->name .' '. $planification->benevole->surname : 'Non spécifié') ?>
+                            </td>
+                            <td>
+                                <?= e($planification->fonction ? $planification->fonction->designation : 'Non spécifié') ?>
+                            </td>
+                            <td>
+                                <?= e($planification->designation) ?>
+                            </td>
+                            <td class="nolink text-right">
+                                <a
+                                    href="javascript:;"
+                                    data-request="onDeletePlanification"
+                                    data-request-data="record_id: '<?= $planification->id ?>'"
+                                    data-request-confirm="Effacer cette planification ?"
+                                    class="oc-icon-remove"
+                                    data-toggle="tooltip"
+                                    title="Remove"></a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<?php endif ?>

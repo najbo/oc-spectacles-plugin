@@ -34,13 +34,16 @@ class Web extends Model
 
         'historique_images' => ['System\Models\File', 'public' => true],
         'historique_documents' => ['System\Models\File', 'public' => true],
+
+        'presentation_images' => ['System\Models\File', 'public' => true],
     ];
 
     public $attachOne = [
         'location_image' => ['System\Models\File', 'public' => true],
         'historique_image' => ['System\Models\File', 'public' => true],
 
-        'presentation_image' => ['System\Models\File', 'public' => true]
+        'presentation_image' => ['System\Models\File', 'public' => true],
+        'presentation_box1_image' => ['System\Models\File', 'public' => true]
 
     ];
 
@@ -72,4 +75,6 @@ class Web extends Model
         ];
 
     }    
+
+
 }

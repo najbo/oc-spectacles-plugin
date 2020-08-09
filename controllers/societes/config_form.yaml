@@ -1,0 +1,11 @@
+name: Societé
+modelClass: Digart\spectacles\Models\Societe
+form: $/digart/spectacles/models/societe/fields.yaml
+defaultRedirect: digart/spectacles/societes
+create:
+    redirect: 'digart/spectacles/societes/update/:id'
+    redirectClose: digart/spectacles/societes
+update:
+    redirect: digart/spectacles/societes
+    redirectClose: digart/spectacles/societes
+preview: {  }

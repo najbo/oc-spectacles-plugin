@@ -156,3 +156,21 @@
 1.0.53:
     - 'Seed genres de tiers'
     - seeder1053.php
+1.0.54:
+    - 'Created table digart_spectacles_fonctions'
+    - builder_table_create_digart_spectacles_fonctions.php
+1.0.55:
+    - 'Seed fonctions'
+    - seeder1055.php
+1.0.56:
+    - 'Created table digart_spectacles_user_fct'
+    - builder_table_create_digart_spectacles_user_fct.php
+1.0.57:
+    - 'Created table digart_spectacles_societes'
+    - builder_table_create_digart_spectacles_societes.php
+1.0.58:
+    - 'Seed sociétés'
+    - seeder1058.php
+1.0.59:
+    - 'Created table digart_spectacles_planification'
+    - builder_table_create_digart_spectacles_planification.php

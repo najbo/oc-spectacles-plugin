@@ -1,0 +1,15 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch
+    developpement:
+        label: Développement
+        span: full
+        size: small
+        type: textarea

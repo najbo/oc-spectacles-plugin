@@ -13,12 +13,13 @@ class BuilderTableCreateDigartSpectaclesSouvenirs extends Migration
             $table->increments('id')->unsigned();
             $table->integer('spectacle_id')->unsigned();
             $table->integer('representation_id')->unsigned()->nullable();
-            $table->string('photographe')->nullable();
+            $table->string('photographe_libre')->nullable();
             $table->string('website')->nullable();
             $table->string('email')->nullable();
             $table->string('photographe_id')->nullable();
             $table->string('designation')->nullable();
             $table->text('complement')->nullable();
+            $table->integer('sort_order')->unsigned()->default(1);
             $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

@@ -1,0 +1,33 @@
+<?= Form::open() ?>
+
+    <input type="hidden" name="manage_id" value="<?= $representationId ?>" />
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title">Nouvelle planification de bénévole</h4>
+    </div>
+
+    <div class="modal-body">
+        <?= $planificationFormWidget->render() ?>
+    </div>
+
+    <div class="modal-footer">
+        <button
+            type="submit"
+            data-request="onCreatePlanification"
+            data-request-data="redirect:0"
+            data-hotkey="ctrl+s, cmd+s"
+            data-popup-load-indicator
+            class="btn btn-primary">
+            Créer
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="popup">
+            Annuler
+        </button>
+    </div>
+
+<?= Form::close() ?>

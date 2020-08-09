@@ -1,0 +1,11 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false

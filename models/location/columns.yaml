@@ -1,26 +1,33 @@
 columns:
-    loueur:
+    etendue_texte:
         label: Loueur
         type: text
-        searchable: true
+        searchable: false
         sortable: false
     designation:
         label: Désignation
         type: text
         searchable: true
-        sortable: false
+        sortable: true
     nbre_dates:
         label: Réservations
         type: number
         searchable: false
+        sortable: false       
+    periodes:
+        label: 'Périodes réservation'
+        type: text
+        searchable: false
         sortable: false
+    auteur:
+        label: Auteur
+        type: text
+        searchable: false
+        sortable: false
+        select: concat(first_name, ' ', last_name)
+        relation: auteur        
     is_actif:
         label: Actif
         type: switch
         searchable: true
-        sortable: false
-    periodes:
-        label: Périodes réservation
-        type: text
-        searchable: false
-        sortable: false
+        sortable: true

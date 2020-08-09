@@ -1,0 +1,10 @@
+name: 'Planification des bénévoles'
+modelClass: Digart\spectacles\Models\Spectacle
+form: $/digart/spectacles/models/spectacle/fields_planning.yaml
+defaultRedirect: digart/spectacles/spectaclesplanifications
+create:
+    redirect: 'digart/spectacles/spectaclesplanifications/update/:id'
+    redirectClose: digart/spectacles/spectaclesplanifications
+update:
+    redirect: digart/spectacles/spectaclesplanifications
+    redirectClose: digart/spectacles/spectaclesplanifications

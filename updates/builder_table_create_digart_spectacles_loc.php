@@ -23,8 +23,9 @@ class BuilderTableCreateDigartSpectaclesLoc extends Migration
             $table->text('developpement')->nullable();
             $table->decimal('prix', 6, 2)->nullable();
 
-            $table->integer('tiers_id')->nullable()->unsigned();
             $table->integer('categorie_id')->nullable()->unsigned();
+            $table->integer('tiers_id')->nullable()->unsigned();
+            $table->integer('societe_id')->nullable()->unsigned();
             $table->integer('etendue_id')->nullable()->unsigned();
             $table->integer('institution_id')->nullable()->unsigned();
             $table->integer('lieu_id')->nullable()->unsigned();
@@ -32,6 +33,7 @@ class BuilderTableCreateDigartSpectaclesLoc extends Migration
 
             $table->boolean('is_paye')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
+            $table->boolean('is_frontend')->nullable()->default(1);
 
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

@@ -1,0 +1,12 @@
+title: 'Planification des bénévoles'
+modelClass: Digart\spectacles\Models\Spectacle
+list: $/digart/spectacles/models/spectacle/columns_planning.yaml
+recordUrl: 'digart/spectacles/spectaclesplanifications/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: false
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

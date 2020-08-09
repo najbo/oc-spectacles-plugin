@@ -12,7 +12,11 @@ class BuilderTableCreateDigartSpectaclesTgenres extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('designation', 255);
+            $table->string('code', 15)->nullable();
             $table->integer('sort_order')->nullable()->unsigned();
+            $table->boolean('is_societe')->unsigned()->nullable();
+            $table->boolean('is_tiers')->unsigned()->nullable();
+
             $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

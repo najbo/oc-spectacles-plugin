@@ -1,13 +1,4 @@
 fields:
-    type_id:
-        label: 'Type d''adresse'
-        showSearch: true
-        span: auto
-        type: dropdown
-    raison_sociale:
-        label: 'Raison sociale'
-        span: auto
-        type: text
     prenom:
         label: Prénom
         span: auto
@@ -21,6 +12,13 @@ fields:
         nameFrom: designation
         descriptionFrom: description
         span: auto
+        type: relation
+    societe:
+        label: Relation
+        nameFrom: raison_sociale
+        descriptionFrom: complement
+        span: auto
+        emptyOption: '-- Non lié --'
         type: relation
 tabs:
     fields:

@@ -1,0 +1,14 @@
+<div id="planificationList">
+    <?= $this->makePartial('planification_list', ['planifications' => $model->planifications]) ?>
+</div>
+
+<p>
+    <a
+        href="javascript:;"
+        class="btn btn-secondary oc-icon-plus"
+        data-control="popup"
+        data-handler="onLoadCreatePlanificationForm"
+        data-size="large">
+        Ajouter une planification
+    </a>
+</p>

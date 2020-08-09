@@ -12,7 +12,7 @@ class Location extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $appends = ['locationsDate.test'];
+    protected $appends = ['locationsDate.test', 'etendue_texte'];
 
     /**
      * @var string The database table used by the model.
@@ -27,6 +27,8 @@ class Location extends Model
 
     public $belongsTo = [
         'auteur' => ['\Backend\Models\User'],                   
+        'societe' => ['\DigArt\Spectacles\Models\Societe'],                   
+        'tiers' => ['\DigArt\Spectacles\Models\tiers'],                   
     ];
 
     public $hasMany = [
@@ -52,6 +54,41 @@ class Location extends Model
     }
 
 
+    public function scopeIsFrontend($query)
+    {
+        return $query->where('is_frontend', 1);
+    }
+
+
+    // Indique l'étendue de la location
+    public function getEtendueIdOptions($value, $formData) 
+    {
+        return [
+            '0' => 'Libre',
+            '1' => 'Société',
+            '2' => 'Privé',
+            '3' => 'Interne',
+        ];
+
+    } 
+
+
+    // Indique l'étendue de la location
+    public function getEtendueTexteAttribute() 
+    {
+        if ($this->etendue_id == 1) {
+            return $this->societe->raison_sociale;
+
+        } elseif ($this->etendue_id == 2) {
+            return $this->tiers->full_name;
+
+        } elseif ($this->etendue_id == 3) {
+            return 'Interne';
+
+        } else {
+            return $this->loueur;
+        }   
+    } 
 
     // Renvoie le nombre de réservations sur la liste des locations
     public function getNbreDatesAttribute()
@@ -83,9 +120,9 @@ class Location extends Model
     public function afterUpdate()
         {
 
-        $debut = $this->locationsDate->sortBy('debut')->first()->debut;
-        $fin = $this->locationsDate->sortBy('fin')->last()->fin;
-        \Log::info("$debut. ' / '. Mise à jour de la réservation ".$this->id. ' - ' .$this->designation .' par ' .$this->auteur->first_name); 
+        # $debut = $this->locationsDate->sortBy('debut')->first()->debut;
+        # $fin = $this->locationsDate->sortBy('fin')->last()->fin;
+        # \Log::info("$debut. ' / '. Mise à jour de la réservation ".$this->id. ' - ' .$this->designation .' par ' .$this->auteur->first_name); 
         
     }
 }

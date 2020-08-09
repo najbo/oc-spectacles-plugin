@@ -1,0 +1,18 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    benevole:
+        label: Bénévole
+        nameFrom: name
+        descriptionFrom: surname
+        select: concat(name, ' ', surname)
+        span: auto
+        type: relation
+    fonction:
+        label: Fonction
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation

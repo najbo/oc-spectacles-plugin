@@ -1,0 +1,43 @@
+fields:
+    raison_sociale:
+        label: 'Raison sociale'
+        span: auto
+        type: text
+    complement:
+        label: Complément
+        span: auto
+        type: text
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch
+tabs:
+    fields:
+        adresse:
+            label: Adresse
+            size: small
+            span: auto
+            type: textarea
+            tab: Coordonnées
+        telephone:
+            label: Téléphone
+            span: auto
+            type: text
+            tab: Coordonnées
+        website:
+            label: 'Site web'
+            span: auto
+            type: text
+            tab: Coordonnées
+        email:
+            label: 'Adresse email'
+            span: auto
+            type: text
+            tab: Coordonnées
+        remarques:
+            label: Remarques
+            span: full
+            size: large
+            type: textarea
+            tab: Informations

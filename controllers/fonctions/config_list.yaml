@@ -1,0 +1,15 @@
+title: Fonctions
+modelClass: Digart\spectacles\Models\Fonction
+list: $/digart/spectacles/models/fonction/columns.yaml
+recordUrl: 'digart/spectacles/fonctions/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

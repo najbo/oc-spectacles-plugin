@@ -20,8 +20,10 @@ class BuilderTableCreateDigartSpectaclesTiers extends Migration
             $table->string('website', 255)->nullable();
             $table->text('remarques')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
+            $table->integer('societe_id')->nullable();
             $table->integer('auteur_id')->nullable();
-            $table->integer('type_id');
+            $table->integer('sexe_id')->nullable();
+            #$table->integer('type_id');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

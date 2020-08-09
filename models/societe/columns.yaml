@@ -1,0 +1,16 @@
+columns:
+    raison_sociale:
+        label: 'Raison sociale'
+        type: text
+        searchable: true
+        sortable: true
+    adresse:
+        label: Adresse
+        type: text
+        searchable: true
+        sortable: true
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: true
