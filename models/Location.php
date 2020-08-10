@@ -28,7 +28,7 @@ class Location extends Model
     public $belongsTo = [
         'auteur' => ['\Backend\Models\User'],                   
         'societe' => ['\DigArt\Spectacles\Models\Societe'],                   
-        'tiers' => ['\DigArt\Spectacles\Models\tiers'],                   
+        'tiers' => ['\DigArt\Spectacles\Models\Tiers'],                   
     ];
 
     public $hasMany = [
