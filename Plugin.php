@@ -8,7 +8,7 @@ use Rainlab\User\Controllers\Users as UsersController;
 class Plugin extends PluginBase
 {
 
-public $require = ['rainlabl.user'];
+    # public $require = ['rainlabl.user'];
 
     public function registerComponents()
     {
