@@ -89,7 +89,7 @@ permissions:
 navigation:
     gestion:
         label: 'Gestion CTTR'
-        url: digart/spectacles/locations
+        url: digart/spectacles/spectaclesplanifications
         icon: icon-dot-circle-o
         permissions:
             - digart.spectacles.locations
@@ -105,7 +105,7 @@ navigation:
                 url: digart/spectacles/spectaclesplanifications
                 icon: icon-star
                 permissions:
-                    - digart.spectacles.planification            
+                    - digart.spectacles.planification
             locations:
                 label: 'Location salle'
                 url: digart/spectacles/locations
@@ -136,7 +136,6 @@ navigation:
                 icon: icon-group
                 permissions:
                     - digart.spectacles.team
-
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles
