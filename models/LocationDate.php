@@ -29,7 +29,7 @@ class LocationDate extends Model
     ]; 
 
     public $belongsTo = [
-        'location' => ['DigArt\Spectacles\Models\location'],                  
+        'location' => ['DigArt\Spectacles\Models\Location'],                  
     ];
 
 
