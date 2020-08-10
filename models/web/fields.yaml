@@ -192,6 +192,32 @@ tabs:
             span: left
             type: switch
             tab: Café-Théâtre
+        section9:
+            label: Images
+            span: full
+            type: section
+            tab: Café-Théâtre
+        presentation_image:
+            label: 'Image principale'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Café-Théâtre
+        presentation_images:
+            label: Images
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'N''oubliez pas d''indiquer un titre et un description pour chaque image.'
+            tab: Café-Théâtre            
         section7:
             label: 'Box 1 avec image'
             span: full
@@ -235,32 +261,6 @@ tabs:
             span: left
             type: switch
             tab: Café-Théâtre
-        section9:
-            label: Images
-            span: full
-            type: section
-            tab: Café-Théâtre
-        presentation_image:
-            label: 'Image principale'
-            mode: image
-            useCaption: true
-            thumbOptions:
-                mode: crop
-                extension: auto
-            span: auto
-            type: fileupload
-            tab: Café-Théâtre
-        presentation_images:
-            label: Images
-            mode: file
-            useCaption: true
-            thumbOptions:
-                mode: crop
-                extension: auto
-            span: auto
-            type: fileupload
-            comment: 'N''oubliez pas d''indiquer un titre et un description pour chaque image.'
-            tab: Café-Théâtre
         title_equipe:
             label: 'Titre de page'
             span: auto
@@ -295,7 +295,7 @@ tabs:
             type: switch
             tab: Equipe
         title_location:
-            label: 'Titre LOCATION SALLE'
+            label: 'Titre de page'
             span: auto
             type: text
             tab: 'Location salle'
@@ -379,7 +379,7 @@ tabs:
             type: switch
             tab: 'Location salle'
         title_sponsor:
-            label: 'Titre de la page'
+            label: 'Titre de page'
             span: auto
             type: text
             tab: Sponsors

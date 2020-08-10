@@ -33,16 +33,6 @@ fields:
         type: relation
 tabs:
     fields:
-        photo_principale:
-            label: 'Photo principale'
-            span: auto
-            mode: image
-            useCaption: true
-            thumbOptions:
-                mode: crop
-                extension: auto
-            type: fileupload
-            tab: 'Photo principale'
         photos:
             label: Photos
             span: full
@@ -53,6 +43,16 @@ tabs:
                 extension: auto
             type: fileupload
             tab: Photos
+        photo_principale:
+            label: 'Photo principale'
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Photo principale'
         complement:
             label: Complément
             size: large

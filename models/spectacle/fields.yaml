@@ -170,7 +170,7 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: 'Affiche et images'
+            tab: 'Médias'
         images:
             label: Images
             span: auto
@@ -180,9 +180,9 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: 'Affiche et images'
+            tab: 'Médias'
         documents:
-            label: 'Documents généraux'
+            label: 'Documents publics'
             mode: file
             useCaption: true
             thumbOptions:
@@ -190,11 +190,11 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: 'Documents généraux'
+            tab: 'Médias'
         parties:
             label: Parties
             prompt: 'Ajouter une partie de spectacle'
-            span: auto
+            span: full
             type: repeater
             tab: 'Parties de spectacle'
             form:

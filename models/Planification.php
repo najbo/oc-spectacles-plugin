@@ -29,6 +29,7 @@ class Planification extends Model
 
     public $belongsTo = [
         'benevole' => ['\Rainlab\User\Models\User'],
-        'fonction' => ['\Digart\Spectacles\Models\Fonction']
+        'fonction' => ['\Digart\Spectacles\Models\Fonction'],
+        'representation' => ['\Digart\Spectacles\Models\Representation'],
     ];
 }
