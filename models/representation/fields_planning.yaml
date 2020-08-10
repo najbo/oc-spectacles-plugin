@@ -3,22 +3,28 @@ fields:
         label: 'Date et heure'
         mode: datetime
         span: auto
+        disabled: 0
+        readOnly: 1
         type: datepicker
     designation:
         label: Désignation
         span: auto
+        disabled: 0
+        readOnly: 1
         type: text
     lieu:
         label: 'Lieu de la représentation'
         nameFrom: designation
         descriptionFrom: localite
         span: auto
+        readOnly: 1
         type: relation
     statut:
         label: 'Statut de la représentation'
-        span: auto
         nameFrom: designation
         descriptionFrom: description
+        span: auto
+        readOnly: 1
         type: relation
 tabs:
     fields:
@@ -27,4 +33,3 @@ tabs:
             type: partial
             path: field_plannings
             tab: Planning
-

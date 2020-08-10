@@ -163,11 +163,11 @@ navigation:
                 url: digart/spectacles/agents
                 icon: icon-dollar
             categories:
-                label: Catégories
+                label: 'Catégories de spectacles'
                 url: digart/spectacles/categories
                 icon: icon-tag
             genres:
-                label: Genres
+                label: 'Genres de spectacles'
                 url: digart/spectacles/genres
                 icon: icon-wechat
             side-menu-item:

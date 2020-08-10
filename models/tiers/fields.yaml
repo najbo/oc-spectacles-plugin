@@ -14,7 +14,7 @@ fields:
         span: auto
         type: relation
     societe:
-        label: Relation
+        label: Société
         nameFrom: raison_sociale
         descriptionFrom: complement
         span: auto

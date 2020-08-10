@@ -1,13 +1,9 @@
 fields:
-    designation:
-        label: Désignation
-        span: auto
-        type: text
     benevole:
         label: Bénévole
         nameFrom: name
         descriptionFrom: surname
-        select: concat(name, ' ', surname)
+        select: 'concat(name, '' '', surname)'
         span: auto
         type: relation
     fonction:
@@ -16,3 +12,17 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
+    designation:
+        label: Désignation
+        span: full
+        type: text
+    debut:
+        label: 'Début engagement'
+        mode: datetime
+        span: auto
+        type: datepicker
+    fin:
+        label: 'Fin d''engagement'
+        mode: datetime
+        span: auto
+        type: datepicker
