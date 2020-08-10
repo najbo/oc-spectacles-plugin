@@ -100,24 +100,18 @@ navigation:
             - digart.spectacles.societes
             - digart.spectacles.planification
         sideMenu:
+            planning:
+                label: 'Planning des bénévoles'
+                url: digart/spectacles/spectaclesplanifications
+                icon: icon-star
+                permissions:
+                    - digart.spectacles.planification            
             locations:
                 label: 'Location salle'
                 url: digart/spectacles/locations
                 icon: icon-building-o
                 permissions:
                     - digart.spectacles.locations
-            abonnements:
-                label: 'Abonnements et groupes'
-                url: digart/spectacles/abonnementsgroupes
-                icon: icon-ticket
-                permissions:
-                    - digart.spectacles.abonnements
-            team:
-                label: Equipe
-                url: digart/spectacles/teams
-                icon: icon-group
-                permissions:
-                    - digart.spectacles.team
             tiers:
                 label: Tiers
                 url: digart/spectacles/tiers
@@ -130,12 +124,19 @@ navigation:
                 icon: icon-briefcase
                 permissions:
                     - digart.spectacles.societes
-            planning:
-                label: 'Planning des bénévoles'
-                url: digart/spectacles/spectaclesplanifications
-                icon: icon-star
+            abonnements:
+                label: 'Abonnements et groupes'
+                url: digart/spectacles/abonnementsgroupes
+                icon: icon-ticket
                 permissions:
-                    - digart.spectacles.planification
+                    - digart.spectacles.abonnements
+            team:
+                label: Equipe
+                url: digart/spectacles/teams
+                icon: icon-group
+                permissions:
+                    - digart.spectacles.team
+
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles
