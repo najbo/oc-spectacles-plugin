@@ -63,7 +63,7 @@ class Spectacle extends \Cms\Classes\ComponentBase
             if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
 
             $query = $record->
-                whereHas('represActives')
+                whereHas('represToutes')
                     ->where(function($query) {
                         $query->whereHas('statut', function ($query) {
                                     $query->where('is_frontend','1')->orWhere('is_brouillon', 1);            
@@ -73,7 +73,7 @@ class Spectacle extends \Cms\Classes\ComponentBase
             } else {
 
             $query = $record->
-                whereHas('represActives')
+                whereHas('represToutes')
                     ->where(function($query) {
                         $query->whereHas('statut', function ($query) {
                                     $query->where('is_frontend','1');            

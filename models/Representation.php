@@ -49,6 +49,15 @@ class Representation extends Model
         return $this->debut->format('d.m.y H:i');
     }
 
+    public function getIsDatePasseeAttribute()
+    {
+        if ($this->debut <= now()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // Permet de trier les spectacles par les représentations actives. Utilisé sur programme.htm
     public function scopeIsActive($query) {
 
@@ -71,4 +80,26 @@ class Representation extends Model
         }
     
     }    
+
+    public function scopeIsToutes($query) {
+
+
+        #return $query->where('debut','>=', now())->orderBy('debut');
+        
+        $user = BackendAuth::getUser();
+
+        if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
+            return $query->
+                whereHas('statut', function ($query) {
+                        $query->where('is_frontend','1')->orWhere('is_brouillon', 1);})
+                ->orderBy('debut');
+        } else {
+
+            return $query->
+                whereHas('statut', function ($query) {
+                        $query->where('is_frontend','1');})
+                ->orderBy('debut');
+        }
+    
+    }       
 }
