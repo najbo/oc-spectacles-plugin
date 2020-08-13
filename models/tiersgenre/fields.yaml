@@ -8,3 +8,11 @@ fields:
         span: auto
         default: 1
         type: switch
+    is_tiers:
+        label: 'Personne individuelle (tiers)'
+        span: auto
+        type: switch
+    is_societe:
+        label: Société
+        span: auto
+        type: switch

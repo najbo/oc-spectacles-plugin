@@ -54,6 +54,14 @@ class Artiste extends Model
     ];  
 
 
+    public $belongsToMany = [
+        'spectacles' => [
+            'DigArt\Spectacles\Models\Spectacle',
+            'table' => 'digart_spectacles_spect_art',
+        ],  
+    ]; 
+
+
     // Utilisé pour le bouton dropdown sur le formulaire des artistes > réseaux sociaux
 
     public function getSocialIdOptions($value, $data)  

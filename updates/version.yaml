@@ -174,3 +174,6 @@
 1.0.59:
     - 'Created table digart_spectacles_planification'
     - builder_table_create_digart_spectacles_planification.php
+1.0.60:
+    - 'Created table digart_spectacles_societes_genres'
+    - builder_table_create_digart_spectacles_soc_genres.php

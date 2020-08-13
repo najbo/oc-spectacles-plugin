@@ -13,6 +13,7 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
+        scope: IsTiers
     societe:
         label: Société
         nameFrom: raison_sociale

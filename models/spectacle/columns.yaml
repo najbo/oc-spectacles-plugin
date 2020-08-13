@@ -9,13 +9,6 @@ columns:
         type: text
         searchable: true
         sortable: true
-    statut:
-        label: 'Statut spectacle'
-        type: text
-        searchable: true
-        sortable: true
-        select: designation
-        relation: statut
     artistes:
         label: Artistes
         type: text
@@ -52,7 +45,14 @@ columns:
         relation: representations
         useRelationCount: 'yes'
     periode_spectacle:
-        label: 'Périodes des représentations'
+        label: 'Périodes représentations'
         type: text
         searchable: false
         sortable: false
+    statut:
+        label: 'Statut'
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: statut

@@ -4,8 +4,23 @@ columns:
         type: text
         searchable: true
         sortable: true
-    localite:
-        label: Localité
+    adresse:
+        label: Adresse
         type: text
+        searchable: true
+        sortable: true
+    telephone:
+        label: Téléphone
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: 'Adresse e-mail'
+        type: text
+        searchable: true
+        sortable: true
+    is_actif:
+        label: Actif
+        type: switch
         searchable: true
         sortable: true

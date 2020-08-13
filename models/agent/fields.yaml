@@ -1,17 +1,66 @@
 fields:
     designation:
-        label: Description
+        label: Désignation
         span: auto
         type: text
-    adresse:
-        label: Adresse
+    is_actif:
+        label: Actif
         span: auto
-        type: text
-    npa:
-        label: NPA
-        span: left
-        type: text
-    localite:
-        label: Localité
-        span: auto
-        type: text
+        type: switch
+tabs:
+    fields:
+        adresse:
+            label: Adresse
+            size: small
+            span: auto
+            type: textarea
+            tab: Coordonnées
+        telephone:
+            label: 'Numéro de téléphone'
+            span: auto
+            type: text
+            tab: Coordonnées
+        website:
+            label: 'Site web'
+            span: auto
+            type: text
+            tab: Coordonnées
+        email:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: Coordonnées
+        interlocuteurs:
+            label: Interlocuteurs
+            prompt: 'Ajouter un interlocuteur'
+            span: full
+            type: repeater
+            tab: Interlocuteurs
+            form:
+                fields:
+                    nom:
+                        label: Nom
+                        span: auto
+                        required: 1
+                        type: text
+                    prenom:
+                        label: Prénom
+                        span: auto
+                        type: text
+                    fonction:
+                        label: Fonction
+                        span: auto
+                        type: text
+                    telephone:
+                        label: 'Numéro de téléphone'
+                        span: auto
+                        type: text
+                    email:
+                        label: 'Adresse e-mail'
+                        span: auto
+                        type: text
+                    remarques:
+                        label: Remarques
+                        span: auto
+                        size: small
+                        type: textarea

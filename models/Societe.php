@@ -25,5 +25,14 @@ class Societe extends Model
     public $rules = [
         'raison_sociale' => 'required',
     ];
+
+    public $belongsToMany = [
+        'genres' => [
+            'DigArt\Spectacles\Models\TiersGenre',
+            'table' => 'digart_spectacles_soc_genres',
+            'key' => 'societe_id',
+            'otherKey' => 'genre_id',
+            'order' => 'sort_order'],  
+    ];    
    
 }

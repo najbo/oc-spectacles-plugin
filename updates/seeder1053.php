@@ -9,11 +9,6 @@ class Seeder1053 extends Seeder
     {
         TiersGenre::truncate();
 
-        TiersGenre::create([
-            'designation' => 'Agent',
-            'code' => 'agent',
-            'is_societe' => true,
-        ]);
         
         TiersGenre::create([
             'designation' => 'Abonné',
@@ -38,6 +33,7 @@ class Seeder1053 extends Seeder
         TiersGenre::create([
             'designation' => 'Photographe',
             'code' => 'photograhe',
+            'is_tiers' => true,
         ]);          
     }
 }

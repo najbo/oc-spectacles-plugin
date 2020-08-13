@@ -26,4 +26,22 @@ class TiersGenre extends Model
         'designation' => 'required',
     ];
 
+
+    public function scopeIsActif($query)
+    {
+        return $query->where('is_actif', true);
+    }
+
+
+    // Affich les genres pour les adresses des privés (appelé faussement tiers)
+    public function scopeIsTiers($query)
+    {
+        return $query->where('is_tiers', true);
+    }
+
+
+    public function scopeIsSocietes($query)
+    {
+        return $query->where('is_societe', true);
+    }    
 }

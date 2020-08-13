@@ -14,3 +14,10 @@ columns:
         type: switch
         searchable: true
         sortable: true
+    genre:
+        label: Genres
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: genres

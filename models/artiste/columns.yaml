@@ -16,3 +16,11 @@ columns:
         sortable: true
         select: designation
         relation: agent
+    spectacles:
+        label: Spectacles
+        type: text
+        searchable: true
+        sortable: true
+        #select: titre_principal
+        useRelationCount: 'yes'
+        relation: spectacles

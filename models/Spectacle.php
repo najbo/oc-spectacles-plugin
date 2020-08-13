@@ -64,7 +64,7 @@ class Spectacle extends Model
         'categorie' => ['DigArt\Spectacles\Models\Categorie',
                    'key' => 'categorie_id',
                    'order' => 'sort_order'],                               
-        'artiste' => ['DigArt\Spectacles\Models\Artiste'],
+        //'artiste' => ['DigArt\Spectacles\Models\Artiste'],
     // Permet d'afficher les réseaux sociaux dans le repeater "Liens réseaux sociaux"
         'social_id' => ['DigArt\Spectacles\Models\Social',
                     'key' => 'id',

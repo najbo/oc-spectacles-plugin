@@ -7,6 +7,13 @@ fields:
         label: Complément
         span: auto
         type: text
+    genres:
+        label: 'Genres de sociétés'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+        scope: IsSocietes        
     is_actif:
         label: Actif
         span: auto
