@@ -6,8 +6,10 @@ use DigArt\Spectacles\Models\Societe;
 
 class Seeder1058 extends Seeder
 {
-    public function run()
+
+    public function Run()
     {
+
         Societe::truncate();
 
         Societe::create([

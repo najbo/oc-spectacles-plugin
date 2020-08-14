@@ -3,8 +3,33 @@ fields:
         label: Désignation
         span: auto
         type: text
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: switch
     developpement:
         label: Développement
         span: full
         size: large
         type: textarea
+tabs:
+    fields:
+        is_blog:
+            label: Blog
+            span: auto
+            type: switch
+            comment: 'Affiché sur le site public (frontend)'
+            tab: Etendue
+        is_communication:
+            label: 'Communication page d''accueil'
+            span: auto
+            type: switch
+            comment: 'Affiché sur la page d''accueil (élément unique)'
+            tab: Etendue
+        is_intranet:
+            label: Intranet
+            span: auto
+            type: switch
+            comment: 'Affiché sur la partie réservée aux membres'
+            tab: Etendue
