@@ -13,16 +13,26 @@ tabs:
             disabled: 1
             type: text
             tab: Programme
+        txt_programme_header:
+            label: 'Texte HEADER'
+            size: large
+            span: left
+            type: richeditor
+            tab: Programme
+        section11:
+            label: 'Autres contenus'
+            span: full
+            type: section
+            tab: Programme
         title_programme_mission:
             label: 'Titre MISSION'
             span: auto
             type: text
             tab: Programme
-        txt_programme_header:
-            label: 'Texte HEADER'
-            size: large
+        title_programme_location:
+            label: 'Titre LOCATION'
             span: auto
-            type: richeditor
+            type: text
             tab: Programme
         txt_programme_mission:
             label: 'Texte MISSION'
@@ -30,6 +40,29 @@ tabs:
             span: auto
             type: richeditor
             tab: Programme
+        txt_programme_location:
+            label: 'Texte LOCATION'
+            size: large
+            span: auto
+            type: richeditor
+            tab: Programme
+        url_programme_location:
+            label: 'Adresse URL pour un éventuel bouton'
+            span: right
+            type: text
+            tab: Programme
+        url_programme_location_texte:
+            label: 'Texte du bouton'
+            span: right
+            type: text
+            tab: Programme
+        url_programme_location_is_externe:
+            label: 'Ouvrir un nouvel onglet'
+            span: right
+            type: switch
+            tab: Programme
+
+
         title_abonnement:
             label: 'Titre de page'
             span: auto
@@ -86,7 +119,7 @@ tabs:
             span: auto
             type: text
             tab: Historique
-        is_historique_url_externe:
+        url_historique_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: auto
             type: switch
@@ -187,7 +220,7 @@ tabs:
             span: auto
             type: text
             tab: Café-Théâtre
-        is_presentation_url_externe:
+        url_presentation_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -217,7 +250,7 @@ tabs:
             span: auto
             type: fileupload
             comment: 'N''oubliez pas d''indiquer un titre et un description pour chaque image.'
-            tab: Café-Théâtre            
+            tab: Café-Théâtre
         section7:
             label: 'Box 1 avec image'
             span: full
@@ -256,7 +289,7 @@ tabs:
             span: auto
             type: text
             tab: Café-Théâtre
-        is_presentation_box1_url_externe:
+        url_presentation_box1_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -289,7 +322,7 @@ tabs:
             span: auto
             type: text
             tab: Equipe
-        is_equipe_url_externe:
+        url_equipe_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -362,18 +395,23 @@ tabs:
             span: right
             type: fileupload
             tab: 'Location salle'
+        section10:
+            label: Bouton
+            span: left
+            type: section
+            tab: 'Location salle'
         url_location:
             label: 'Adresse URL pour un éventuel bouton'
-            span: auto
+            span: left
             type: text
             comment: 'Le bouton s''affiche dans la partie de droite'
             tab: 'Location salle'
         url_location_texte:
             label: 'Texte du bouton'
-            span: auto
+            span: left
             type: text
             tab: 'Location salle'
-        is_location_url_externe:
+        url_location_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -411,7 +449,7 @@ tabs:
             type: text
             comment: 'Le texte s''affiche après le texte d''introduction'
             tab: Sponsors
-        is_sponsor_url_externe:
+        url_sponsor_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -477,7 +515,7 @@ tabs:
             span: auto
             type: text
             tab: Dons
-        is_dons_url_externe:
+        url_dons_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -515,7 +553,7 @@ tabs:
             span: auto
             type: text
             tab: 'Données techniques'
-        is_technique_url_externe:
+        url_technique_is_externe:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
