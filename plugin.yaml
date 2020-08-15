@@ -204,7 +204,7 @@ navigation:
                 permissions:
                     - digart.spectacles.web
     parametres:
-        label: Paramètres
+        label: 'Données de base'
         url: digart/spectacles/institutions
         icon: icon-wrench
         permissions:

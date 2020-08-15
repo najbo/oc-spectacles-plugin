@@ -7,13 +7,13 @@ fields:
         type: text
 tabs:
     fields:
-        title_programe_header:
+        programme_header_title:
             label: 'Titre HEADER'
             span: auto
             disabled: 1
             type: text
             tab: Programme
-        txt_programme_header:
+        programme_header_txt:
             label: 'Texte HEADER'
             size: large
             span: left
@@ -24,57 +24,57 @@ tabs:
             span: full
             type: section
             tab: Programme
-        title_programme_mission:
+        programme_mission_title:
             label: 'Titre MISSION'
             span: auto
             type: text
             tab: Programme
-        title_programme_location:
+        programme_location_title:
             label: 'Titre LOCATION'
             span: auto
             type: text
             tab: Programme
-        txt_programme_mission:
+        programme_mission_txt:
             label: 'Texte MISSION'
             size: large
             span: auto
             type: richeditor
             tab: Programme
-        txt_programme_location:
+        programme_location_txt:
             label: 'Texte LOCATION'
             size: large
             span: auto
             type: richeditor
             tab: Programme
-        url_programme_location:
+        programme_location_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: right
             type: text
             tab: Programme
-        url_programme_location_texte:
+        programme_location_url_txt:
             label: 'Texte du bouton'
             span: right
             type: text
             tab: Programme
-        url_programme_location_is_externe:
+        programme_location_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: right
             type: switch
             tab: Programme
 
 
-        title_abonnement:
+        abonnement_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: Abonnements
-        txt_abonnement:
+        abonnement_txt:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Abonnements
-        title_historique:
+        historique_title:
             label: 'Titre de page'
             span: auto
             type: text
@@ -84,19 +84,19 @@ tabs:
             span: full
             type: section
             tab: Historique
-        txt_historique:
+        historique_txt:
             label: 'Texte d''introduction'
             size: small
             span: auto
             type: richeditor
             tab: Historique
-        txt_historique_left:
+        historique_left_txt:
             label: 'Texte principal'
             size: small
             span: left
             type: richeditor
             tab: Historique
-        txt_historique_right:
+        historique_right_txt:
             label: 'Texte colonne de droite'
             span: auto
             size: small
@@ -108,18 +108,18 @@ tabs:
             type: section
             comment: 'Ce bouton apparaît dans la colonne de droit'
             tab: Historique
-        url_historique:
+        historique_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             comment: 'Le bouton s''affiche dans la partie de droite'
             tab: Historique
-        url_historique_texte:
+        historique_url_txt:
             label: 'Texte du bouton'
             span: auto
             type: text
             tab: Historique
-        url_historique_is_externe:
+        historique_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: auto
             type: switch
@@ -193,34 +193,34 @@ tabs:
                         imageHeight: '250'
                         span: auto
                         type: mediafinder
-        title_presentation:
+        presentation_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: Café-Théâtre
-        txt_presentation:
+        presentation_txt:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Café-Théâtre
-        txt_presentation_main:
+        presentation_main_txt:
             label: 'Texte principal'
             size: large
             span: auto
             type: richeditor
             tab: Café-Théâtre
-        url_presentation:
+        presentation_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             tab: Café-Théâtre
-        url_presentation_texte:
+        presentation_url_txt:
             label: 'Texte bouton'
             span: auto
             type: text
             tab: Café-Théâtre
-        url_presentation_is_externe:
+        presentation_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -256,7 +256,7 @@ tabs:
             span: full
             type: section
             tab: Café-Théâtre
-        title_presentation_box1:
+        presentation_box1_title:
             label: Titre
             span: auto
             type: text
@@ -273,66 +273,66 @@ tabs:
             span: auto
             type: fileupload
             tab: Café-Théâtre
-        txt_presentation_box1:
+        presentation_box1_txt:
             label: Texte
             size: large
             span: left
             type: richeditor
             tab: Café-Théâtre
-        url_presentation_box1:
+        presentation_box1_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: left
             type: text
             tab: Café-Théâtre
-        url_presentation_box1_texte:
+        presentation_box1_url_txt:
             label: 'Texte bouton'
             span: auto
             type: text
             tab: Café-Théâtre
-        url_presentation_box1_is_externe:
+        presentation_box1_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
             tab: Café-Théâtre
-        title_equipe:
+        equipe_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: Equipe
-        txt_equipe:
+        equipe_txt:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Equipe
-        txt_equipe_after:
+        equipe_after_txt:
             label: 'Texte après les équipes'
             span: auto
             size: large
             type: richeditor
             tab: Equipe
-        url_equipe:
+        equipe_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             tab: Equipe
-        url_equipe_texte:
+        equipe_url_txt:
             label: 'Texte bouton'
             comment: 'Le texte s''affiche après le texte d''introduction'
             span: auto
             type: text
             tab: Equipe
-        url_equipe_is_externe:
+        equipe_url_txt_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
             tab: Equipe
-        title_location:
+        location_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: 'Location salle'
-        is_show_locations:
+        location_isshow_locations:
             label: 'Afficher les prochaines locations'
             span: auto
             type: switch
@@ -343,21 +343,21 @@ tabs:
             span: full
             type: section
             tab: 'Location salle'
-        txt_location:
+        location_txt:
             label: 'Texte d''introduction'
             size: large
             span: auto
             type: richeditor
             commentAbove: 'Ce texte est inséré après le titre principal'
             tab: 'Location salle'
-        txt_location_left:
+        location_left_txt:
             label: 'Texte principal'
             size: large
             span: left
             type: richeditor
             commentAbove: 'Ce texte est inséré dans la partie principale à gauche'
             tab: 'Location salle'
-        txt_location_right:
+        location_right_txt:
             label: 'Texte informations et prix'
             size: large
             span: auto
@@ -400,56 +400,56 @@ tabs:
             span: left
             type: section
             tab: 'Location salle'
-        url_location:
+        location_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: left
             type: text
             comment: 'Le bouton s''affiche dans la partie de droite'
             tab: 'Location salle'
-        url_location_texte:
+        location_url_txt:
             label: 'Texte du bouton'
             span: left
             type: text
             tab: 'Location salle'
-        url_location_is_externe:
+        location_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
             tab: 'Location salle'
-        title_sponsor:
+        sponsor_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: Sponsors
-        title_sponsor_after:
+        sponsor_after_title:
             label: 'Titre en fin de page'
             span: auto
             type: text
             tab: Sponsors
-        txt_sponsor:
+        sponsor_txt:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Sponsors
-        txt_sponsor_after:
+        sponsor_after_txt:
             label: 'Texte en fin de page'
             size: large
             span: auto
             type: richeditor
             tab: Sponsors
-        url_sponsor:
+        sponsor_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             tab: Sponsors
-        url_sponsor_texte:
+        sponsor_url_txt:
             label: Sponsors
             span: left
             type: text
             comment: 'Le texte s''affiche après le texte d''introduction'
             tab: Sponsors
-        url_sponsor_is_externe:
+        sponsor_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -487,73 +487,73 @@ tabs:
                         label: 'Adresse URL du sponsor'
                         span: left
                         type: text
-        title_dons:
+        dons_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: Dons
-        txt_dons:
+        dons_txt:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: Dons
-        txt_dons_banque:
+        dons_banque:
             label: 'Relations bancaire'
             span: auto
             size: large
             type: richeditor
             tab: Dons
-        url_dons:
+        dons_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             tab: Dons
-        url_dons_texte:
+        dons_url_txt:
             label: 'Texte bouton'
             comment: 'Le texte s''affiche après le texte d''introduction'
             span: auto
             type: text
             tab: Dons
-        url_dons_is_externe:
+        dons_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
             tab: Dons
-        title_technique:
+        technique_title:
             label: 'Titre de page'
             span: auto
             type: text
             tab: 'Données techniques'
-        title_technique_highlight:
+        technique_highlight_title:
             label: 'Titre Highlight ou complément'
             span: auto
             type: text
             tab: 'Données techniques'
-        txt_technique:
+        technique_txt:
             label: 'Texte d''introduction'
             size: large
             span: left
             type: richeditor
             tab: 'Données techniques'
-        txt_technique_highlight:
+        technique_highlight_txt:
             label: 'Highlight ou complément'
             span: auto
             size: large
             type: richeditor
             tab: 'Données techniques'
-        url_technique:
+        technique_url:
             label: 'Adresse URL pour un éventuel bouton'
             span: auto
             type: text
             tab: 'Données techniques'
-        url_technique_texte:
+        technique_url_txt:
             label: 'Texte bouton'
             comment: 'Le texte s''affiche après le texte d''introduction'
             span: auto
             type: text
             tab: 'Données techniques'
-        url_technique_is_externe:
+        technique_url_isexterne:
             label: 'Ouvrir un nouvel onglet'
             span: left
             type: switch
@@ -563,12 +563,12 @@ tabs:
             span: full
             type: section
             tab: 'Données techniques'
-        title_technique_materiel:
+        technique_materiel_title:
             label: Text
             span: auto
             type: text
             tab: 'Données techniques'
-        txt_technique_materiel:
+        technique_materiel_txt:
             label: 'Rich editor'
             size: small
             span: auto

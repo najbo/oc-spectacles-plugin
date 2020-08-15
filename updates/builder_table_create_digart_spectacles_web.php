@@ -14,59 +14,59 @@ class BuilderTableCreateDigartSpectaclesWeb extends Migration
             $table->string('designation')->nullable();
 
           
-            $table->string('title_programe_header', 255)->nullable();
-            $table->text('txt_programme_header')->nullable();
+            $table->string('programme_header_title', 255)->nullable();
+            $table->text('programme_header_txt')->nullable();
 
-            $table->string('title_programme_mission', 255)->nullable();
-            $table->text('txt_programme_mission')->nullable();
-            $table->text('txt_programme_mission_after')->nullable();
-            $table->string('title_programme_location', 255)->nullable();
-            $table->text('txt_programme_location')->nullable();
-            $table->string('url_programme_location', 255)->nullable();
-            $table->string('url_programme_location_texte', 255)->nullable();
-            $table->boolean('url_programme_location_is_externe')->nullable();
+            $table->string('programme_mission_title', 255)->nullable();
+            $table->text('programme_mission_txt')->nullable();
+            $table->text('programme_mission_txt_after')->nullable();
+            $table->string('programme_location_title', 255)->nullable();
+            $table->text('programme_location_txt')->nullable();
+            $table->string('programme_location_url', 255)->nullable();
+            $table->string('programme_location_url_txt', 255)->nullable();
+            $table->boolean('programme_location_url_isexterne')->nullable();
 
-            $table->string('title_abonnement', 255)->nullable();
-            $table->text('txt_abonnement')->nullable();
+            $table->string('abonnement_title', 255)->nullable();
+            $table->text('abonnement_txt')->nullable();
             $table->text('txt_abonnement_after')->nullable();
             $table->string('url_abonnement', 255)->nullable();
             $table->string('url_abonnement_texte', 255)->nullable();
             $table->boolean('url_abonnement_is_externe')->nullable();
 
-            $table->string('title_equipe', 255)->nullable();
-            $table->text('txt_equipe')->nullable();
-            $table->text('txt_equipe_after')->nullable();
-            $table->string('url_equipe', 255)->nullable();
-            $table->string('url_equipe_texte', 255)->nullable();
-            $table->boolean('url_equipe_is_externe')->nullable();
+            $table->string('equipe_title', 255)->nullable();
+            $table->text('equipe_txt')->nullable();
+            $table->text('equipe_after_txt')->nullable();
+            $table->string('equipe_url', 255)->nullable();
+            $table->string('equipe_url_txt', 255)->nullable();
+            $table->boolean('equipe_url_txt_isexterne')->nullable();
 
-            $table->string('title_location', 255)->nullable();
-            $table->text('txt_location')->nullable();
-            $table->text('txt_location_left')->nullable();
-            $table->text('txt_location_right')->nullable();
-            $table->string('url_location', 255)->nullable();
-            $table->string('url_location_texte', 255)->nullable();
-            $table->boolean('url_location_is_externe')->nullable();
-            $table->boolean('is_show_locations')->nullable()->default(1);
+            $table->string('location_title', 255)->nullable();
+            $table->text('location_txt')->nullable();
+            $table->text('location_left_txt')->nullable();
+            $table->text('location_right_txt')->nullable();
+            $table->string('location_url', 255)->nullable();
+            $table->string('location_url_txt', 255)->nullable();
+            $table->boolean('location_url_isexterne')->nullable();
+            $table->boolean('location_isshow_locations')->nullable()->default(1);
             $table->string('doc_location', 255)->nullable();
 
-            $table->string('title_historique', 255)->nullable();
-            $table->text('txt_historique')->nullable();
-            $table->text('txt_historique_left')->nullable();
-            $table->text('txt_historique_right')->nullable();
+            $table->string('historique_title', 255)->nullable();
+            $table->text('historique_txt')->nullable();
+            $table->text('historique_left_txt')->nullable();
+            $table->text('historique_right_txt')->nullable();
             $table->text('timeline')->nullable();
             # $table->text('content')->nullable();
-            $table->string('url_historique', 255)->nullable();
-            $table->string('url_historique_texte', 255)->nullable();
-            $table->boolean('url_historique_is_externe')->nullable();
+            $table->string('historique_url', 255)->nullable();
+            $table->string('historique_url_txt', 255)->nullable();
+            $table->boolean('historique_url_isexterne')->nullable();
 
-            $table->string('title_sponsor', 255)->nullable();
-            $table->string('title_sponsor_after', 255)->nullable();
-            $table->text('txt_sponsor')->nullable();
-            $table->text('txt_sponsor_after')->nullable();
-            $table->string('url_sponsor', 255)->nullable();
-            $table->string('url_sponsor_texte', 255)->nullable();
-            $table->boolean('url_sponsor_is_externe')->nullable();  
+            $table->string('sponsor_title', 255)->nullable();
+            $table->string('sponsor_after_title', 255)->nullable();
+            $table->text('sponsor_txt')->nullable();
+            $table->text('sponsor_after_txt')->nullable();
+            $table->string('sponsor_url', 255)->nullable();
+            $table->string('sponsor_url_txt', 255)->nullable();
+            $table->boolean('sponsor_url_isexterne')->nullable();  
             $table->text('sponsors')->nullable();
                       
             $table->boolean('is_actif')->nullable()->default(1);
@@ -74,39 +74,39 @@ class BuilderTableCreateDigartSpectaclesWeb extends Migration
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
 
-            $table->string('title_presentation', 255)->nullable();
-            $table->text('txt_presentation')->nullable();
-            $table->text('txt_presentation_main')->nullable();
+            $table->string('presentation_title', 255)->nullable();
+            $table->text('presentation_txt')->nullable();
+            $table->text('presentation_main_txt')->nullable();
 
-            $table->string('title_presentation_box1', 255)->nullable();
-            $table->text('txt_presentation_box1')->nullable();
-            $table->string('url_presentation_box1', 255)->nullable();
-            $table->string('url_presentation_box1_texte', 255)->nullable();
-            $table->boolean('url_presentation_box1_is_externe')->nullable(); 
+            $table->string('presentation_box1_title', 255)->nullable();
+            $table->text('presentation_box1_txt')->nullable();
+            $table->string('presentation_box1_url', 255)->nullable();
+            $table->string('presentation_box1_url_txt', 255)->nullable();
+            $table->boolean('presentation_box1_url_isexterne')->nullable(); 
 
-            $table->string('url_presentation', 255)->nullable();
-            $table->string('url_presentation_texte', 255)->nullable();
-            $table->boolean('url_presentation_is_externe')->nullable();
+            $table->string('presentation_url', 255)->nullable();
+            $table->string('presentation_url_txt', 255)->nullable();
+            $table->boolean('presentation_url_isexterne')->nullable();
 
-            $table->string('title_dons', 255)->nullable();
-            $table->text('txt_dons')->nullable();
+            $table->string('dons_title', 255)->nullable();
+            $table->text('dons_txt')->nullable();
             $table->text('txt_dons_main')->nullable();
-            $table->text('txt_dons_banque')->nullable();
-            $table->string('url_dons', 255)->nullable();
-            $table->string('url_dons_texte', 255)->nullable();
-            $table->boolean('url_dons_is_externe')->nullable();
+            $table->text('dons_banque')->nullable();
+            $table->string('dons_url', 255)->nullable();
+            $table->string('dons_url_txt', 255)->nullable();
+            $table->boolean('dons_url_isexterne')->nullable();
 
-            $table->string('title_technique', 255)->nullable();
-            $table->text('txt_technique')->nullable();
+            $table->string('technique_title', 255)->nullable();
+            $table->text('technique_txt')->nullable();
             $table->text('txt_technique_main')->nullable();
-            $table->text('title_technique_materiel')->nullable();
-            $table->text('txt_technique_materiel')->nullable();
-            $table->text('title_technique_highlight')->nullable();
-            $table->text('txt_technique_highlight')->nullable();
+            $table->text('technique_materiel_title')->nullable();
+            $table->text('technique_materiel_txt')->nullable();
+            $table->text('technique_highlight_title')->nullable();
+            $table->text('technique_highlight_txt')->nullable();
             $table->text('materiel')->nullable();
-            $table->string('url_technique', 255)->nullable();
-            $table->string('url_technique_texte', 255)->nullable();
-            $table->boolean('url_technique_is_externe')->nullable();            
+            $table->string('technique_url', 255)->nullable();
+            $table->string('technique_url_txt', 255)->nullable();
+            $table->boolean('technique_url_isexterne')->nullable();            
         });
     }
     
