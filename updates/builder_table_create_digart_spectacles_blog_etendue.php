@@ -18,6 +18,8 @@ class BuilderTableCreateDigartSpectaclesBlogEtendue extends Migration
             $table->boolean('is_blog')->nullable();
             $table->boolean('is_intranet')->nullable();
             $table->boolean('is_communication')->nullable();
+            $table->boolean('is_dashboard')->nullable();
+            $table->boolean('is_system')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

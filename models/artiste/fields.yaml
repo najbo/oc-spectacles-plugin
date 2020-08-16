@@ -17,15 +17,21 @@ fields:
         descriptionFrom: description
         type: relation
         emptyOption: '-- Non défini --'
-    is_groupe:
-        label: 'C''est un groupe'
+    is_actif:
+        label: Actif
         span: auto
+        default: 1
         type: switch
 tabs:
     fields:
+        is_groupe:
+            label: 'C''est un groupe'
+            span: auto
+            type: switch
+            tab: Coordonnées
         nom_civil:
             label: 'Nom civil'
-            span: auto
+            span: left
             type: text
             tab: Coordonnées
         prenom_civil:
@@ -123,12 +129,24 @@ tabs:
             type: fileupload
             tab: Images
         documents:
-            label: Documents
-            span: auto
+            label: 'Documents publics'
             mode: file
             useCaption: true
             thumbOptions:
                 mode: crop
                 extension: auto
+            span: auto
             type: fileupload
+            comment: 'Ces documents sont publié sur le site web'
+            tab: Documents
+        documents_internes:
+            label: 'Documents internes'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'Ces documents ne sont pas publiés sur le site web'
             tab: Documents

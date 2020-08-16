@@ -82,7 +82,8 @@ class Spectacle extends \Cms\Classes\ComponentBase
 
 
             }
-           
+         
+
 
         return $query;
     }

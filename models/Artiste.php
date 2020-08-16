@@ -27,6 +27,7 @@ class Artiste extends Model
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => true],
         'documents' => ['System\Models\File', 'public' => true],
+        'documents_internes' => ['System\Models\File', 'public' => false],
     ];
 
     public $attachOne = [

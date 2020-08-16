@@ -4,3 +4,10 @@ columns:
         type: text
         searchable: true
         sortable: true
+    debut:
+        label: Représentations
+        type: text
+        searchable: true
+        sortable: true
+        select: debut
+        relation: representations
