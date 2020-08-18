@@ -255,7 +255,17 @@ class Spectacle extends Model
         }
 
 
+    public function getImagePixelsAttribute()
+    {
 
+        if ($this->affiche)
+        {
+            $file = $this->affiche->path;
+
+            list($width, $height, $type, $attr) = getimagesize($file);
+            return $width;
+        }
+    }
 
     // Usage depuis TWIG : {{ spectacle.getSocial(artiste.designation)}}
     // Renvoie le logo des réseaux sociaux du champ repeater de l'artiste
@@ -267,5 +277,6 @@ class Spectacle extends Model
             return $social->icon ;
         }
     } 
+
 
 }
