@@ -7,8 +7,8 @@ columns:
     full_name:
         label: 'Prénom et nom'
         type: text
-        searchable: true
-        sortable: true
+        searchable: false
+        sortable: false
     agent:
         label: Agent
         type: text

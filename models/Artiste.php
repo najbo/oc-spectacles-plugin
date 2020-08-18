@@ -66,7 +66,6 @@ class Artiste extends Model
     // Affiche une liste des artistes qui sont venus
     public function scopeAvecSpectacles($query)
     {
-
         return $query->has('spectacles');
     }
     // Utilisé pour le bouton dropdown sur le formulaire des artistes > réseaux sociaux

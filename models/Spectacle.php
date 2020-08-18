@@ -104,7 +104,7 @@ class Spectacle extends Model
             'scope' => 'isActive'],            
          'represToutes' => ['DigArt\Spectacles\Models\Representation', 
             'key' => 'spectacle_id', 
-            'scope' => 'isToutes'],              
+            'scope' => 'isToutes'],                           
          'souvenirs' => ['DigArt\Spectacles\Models\Souvenir', 
             'key' => 'spectacle_id', 
             'order' => 'sort_order',
@@ -220,10 +220,19 @@ class Spectacle extends Model
     }*/
 
 
+    public function getNbreRepresentationsAttribute()
+    {
+        return $this->representations->count();
+    }
+
+
+
     public function getTotalAlbumsAttribute()
     {
         return $this->souvenirs->count();
     }
+
+
 
     public function getTotalPhotosAttribute()
         {
@@ -234,6 +243,8 @@ class Spectacle extends Model
             }
             return $total_photos;
         }
+
+
 
 
     // Usage depuis TWIG : {{ spectacle.getSocial(artiste.designation)}}
