@@ -59,6 +59,11 @@ class Artiste extends Model
         'spectacles' => [
             'DigArt\Spectacles\Models\Spectacle',
             'table' => 'digart_spectacles_spect_art',
+        ],
+        'spectaclesFrontend' => [
+            'DigArt\Spectacles\Models\Spectacle',
+            'table' => 'digart_spectacles_spect_art',
+            'scope' => 'isFrontend',
         ],  
     ]; 
 

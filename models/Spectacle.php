@@ -158,7 +158,7 @@ class Spectacle extends Model
         return $query->
             whereHas('statut', function ($query) {
                 $query->where('is_frontend','1');            
-            });
+            })->whereHas('represToutes');
     }
 
 
@@ -202,6 +202,16 @@ class Spectacle extends Model
         #$this->nom. ' (' .$this->procherole->designation .' de ' . $this->eleve->prenom . ' ' .$this->eleve->nom.')' ;
     } 
 
+    public function getFirstRepresentationAttribute()
+    {
+        return $this->representations()->min('debut');
+    }
+
+
+    public function getLastRepresentationAttribute()
+    {
+        return $this->representations()->max('debut');
+    }
 
     // Renvoie l'URL complète pour accéder à une page de spectacle par le slug
     public function getFullUrlAttribute() {
