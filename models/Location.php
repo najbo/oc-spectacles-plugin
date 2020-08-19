@@ -1,6 +1,7 @@
 <?php namespace Digart\spectacles\Models;
 
 use Model;
+use BackendAuth;
 
 /**
  * Model
@@ -117,12 +118,20 @@ class Location extends Model
     }
 
 
+    // Permet de mettre l'attribut admin_id par défaut à la valeur de l'administrateur connecté
+    public function getAdministrateurActuelAttribute()
+    {
+        if (BackendAuth::check()) {
+           return BackendAuth::getUser()->id;
+        }
+    }
+
+
     public function afterUpdate()
-        {
+    {
 
         # $debut = $this->locationsDate->sortBy('debut')->first()->debut;
         # $fin = $this->locationsDate->sortBy('fin')->last()->fin;
         # \Log::info("$debut. ' / '. Mise à jour de la réservation ".$this->id. ' - ' .$this->designation .' par ' .$this->auteur->first_name); 
-        
     }
 }

@@ -26,6 +26,7 @@ fields:
         nameFrom: full_name
         descriptionFrom: description
         span: auto
+        defaultFrom: administrateur_actuel
         type: relation
     is_actif:
         label: Actif

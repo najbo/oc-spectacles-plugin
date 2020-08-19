@@ -103,4 +103,13 @@ class Publication extends Model
                     $query->where('is_intranet',1);
                 });
     } 
+
+
+    // Permet de mettre l'attribut admin_id par défaut à la valeur de l'administrateur connecté
+    public function getAdministrateurActuelAttribute()
+    {
+        if (BackendAuth::check()) {
+           return BackendAuth::getUser()->id;
+        }
+    }    
 }

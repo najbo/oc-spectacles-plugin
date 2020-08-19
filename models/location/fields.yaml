@@ -93,6 +93,7 @@ tabs:
             nameFrom: full_name
             descriptionFrom: description
             type: relation
+            defaultFrom: administrateur_actuel
             tab: Paramètres
         is_actif:
             label: Actif

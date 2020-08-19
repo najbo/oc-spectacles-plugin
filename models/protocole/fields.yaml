@@ -25,6 +25,7 @@ fields:
         span: auto
         nameFrom: full_name
         descriptionFrom: description
+        defaultFrom: administrateur_actuel
         type: relation
 tabs:
     fields:

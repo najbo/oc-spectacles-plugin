@@ -279,4 +279,13 @@ class Spectacle extends Model
     } 
 
 
+    // Inscrit le backend user connecté dans le champ programmateur
+    public function getAdministrateurActuelAttribute()
+    {
+        if (BackendAuth::check()) {
+           return BackendAuth::getUser()->id;
+        }
+    }
+
+
 }

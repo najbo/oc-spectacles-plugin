@@ -69,6 +69,7 @@ tabs:
             descriptionFrom: description
             type: relation
             emptyOption: '-- Non relevant ou autre --'
+            defaultFrom: administrateur_actuel
             tab: Paramètres
         categorie:
             label: Catégorie

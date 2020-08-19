@@ -52,10 +52,10 @@ class Protocole extends Model
 
 
     // Permet de mettre l'attribut admin_id par défaut à la valeur de l'administrateur connecté
-    public function __construct(array $attributes = array()) {
+    public function getAdministrateurActuelAttribute()
+    {
         if (BackendAuth::check()) {
-            $this->setRawAttributes(['admin_id' => BackendAuth::getUser()->id], true);
-            parent::__construct($attributes);
+           return BackendAuth::getUser()->id;
         }
     }
 
