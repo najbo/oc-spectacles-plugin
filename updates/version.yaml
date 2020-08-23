@@ -148,7 +148,7 @@
     - 'Created table digart_spectacles_societes_genres'
     - builder_table_create_digart_spectacles_soc_genres.php
 1.0.61:
-    - 'Created table digart_spectacles_files'
+    - 'Created table digart_spectacles_files_groups'
     - builder_table_create_digart_spectacles_files_groups.php
 1.0.62:
     - 'Created table digart_spectacles_files_fct'

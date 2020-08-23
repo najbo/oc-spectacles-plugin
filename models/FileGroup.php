@@ -20,7 +20,7 @@ class FileGroup extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_spectacles_filesGrps';
+    public $table = 'digart_spectacles_filesgrps';
 
     /**
      * @var array Validation rules
