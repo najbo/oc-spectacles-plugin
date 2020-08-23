@@ -1,0 +1,5 @@
+title: Groupes de fichiers
+modelClass: Digart\spectacles\Models\FileGroup
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

@@ -4,11 +4,6 @@ columns:
         type: text
         searchable: true
         sortable: true
-    full_name:
-        label: 'Prénom et nom'
-        type: text
-        searchable: false
-        sortable: false
     agent:
         label: Agent
         type: text
@@ -21,6 +16,9 @@ columns:
         type: text
         searchable: true
         sortable: true
-        #select: titre_principal
         useRelationCount: 'yes'
         relation: spectacles
+    membres_liste:
+        label: Membres
+        type: text
+        sortable: false

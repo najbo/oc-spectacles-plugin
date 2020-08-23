@@ -1,0 +1,12 @@
+files:
+    label: Documents
+    emptyMessage: Aucun document pour le moment
+    view:
+        list: $/digart/spectacles/models/file/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/file/fields.yaml
+        title : Gestion des documents
+        showSearch: true   
+

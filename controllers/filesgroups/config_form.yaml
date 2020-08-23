@@ -1,0 +1,10 @@
+name: 'Fichier Intranet'
+modelClass: Digart\spectacles\Models\FileGroup
+form: $/digart/spectacles/models/filegroup/fields.yaml
+defaultRedirect: digart/spectacles/filesgroups
+create:
+    redirect: 'digart/spectacles/filesgroups/update/:id'
+    redirectClose: digart/spectacles/filesgroups
+update:
+    redirect: digart/spectacles/filesgroups
+    redirectClose: digart/spectacles/filesgroups

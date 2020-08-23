@@ -24,37 +24,86 @@ fields:
         type: switch
 tabs:
     fields:
-        is_groupe:
-            label: 'C''est un groupe'
-            span: auto
-            type: switch
-            tab: Coordonnées
-        nom_civil:
-            label: 'Nom civil'
-            span: left
-            type: text
-            tab: Coordonnées
-        prenom_civil:
-            label: 'Prénom civil'
-            span: auto
-            type: text
-            tab: Coordonnées
         adresse:
             label: Adresse
             size: small
             span: auto
             type: textarea
             tab: Coordonnées
-        email:
-            label: 'Adresse e-mail'
+        telephone:
+            label: Téléphone
             span: left
             type: text
             tab: Coordonnées
-        telephone:
-            label: Téléphone
+        email:
+            label: 'Adresse e-mail'
             span: auto
             type: text
             tab: Coordonnées
+        is_groupe:
+            label: 'C''est un groupe'
+            span: auto
+            type: switch
+            tab: Membres            
+        membres:
+            label: Membres
+            prompt: 'Ajouter un nouveau membre'
+            span: full
+            type: repeater
+            tab: Membres
+            form:
+                fields:
+                    nom:
+                        label: Nom
+                        span: auto
+                        type: text
+                    prenom:
+                        label: Prénom
+                        span: auto
+                        type: text
+                    fonction:
+                        label: Fonction
+                        span: auto
+                        type: text
+                    surnom:
+                        label: Surnom
+                        span: auto
+                        type: text
+                    telephone:
+                        label: Téléphone
+                        span: auto
+                        type: text
+                    email:
+                        label: 'Adresse e-mail'
+                        span: auto
+                        type: text
+                    is_actif:
+                        label: Actif
+                        span: auto
+                        default: 1
+                        type: switch
+                    is_frontend:
+                        label: 'Publier le prénom et nom sur le site public'
+                        span: auto
+                        type: switch            
+        hint_bio:
+            span: full
+            path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
+            type: hint
+            tab: Bio
+        bio:
+            label: 'Bio de l''artiste'
+            size: small
+            span: full
+            type: richeditor
+            tab: Bio
+        is_frontend_bio:
+            label: 'Afficher la bio sur le site'
+            span: auto
+            default: 1
+            type: switch
+            comment: 'Bas de la fiche spectacle'
+            tab: Bio
         hint_rs:
             span: full
             path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
@@ -77,25 +126,7 @@ tabs:
                     url:
                         label: 'Adresse URL'
                         span: auto
-                        type: text
-        hint_bio:
-            span: full
-            path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
-            type: hint
-            tab: Bio
-        bio:
-            label: 'Bio de l''artiste'
-            size: small
-            span: full
-            type: richeditor
-            tab: Bio
-        is_frontend_bio:
-            label: 'Afficher la bio sur le site'
-            span: auto
-            default: 1
-            type: switch
-            comment: 'Bas de la fiche spectacle'
-            tab: Bio
+                        type: text            
         remarques:
             label: 'Remarques et informations internes'
             size: large

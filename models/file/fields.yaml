@@ -1,0 +1,25 @@
+fields:
+    designation:
+        label: Text
+        span: auto
+        type: text
+    document:
+        label: Document
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    auteur:
+        label: Auteur
+        nameFrom: full_name
+        descriptionFrom: description
+        span: auto
+        defaultFrom: administrateur_actuel
+        type: relation
+    sort_order:
+        label: 'Order de tri'
+        span: auto
+        type: number

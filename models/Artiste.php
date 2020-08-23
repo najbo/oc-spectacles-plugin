@@ -13,7 +13,7 @@ class Artiste extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $jsonable = ['liens_socials', 'rs'];
+    protected $jsonable = ['membres', 'liens_socials', 'rs'];
 
     protected $appends = ['full_name'];
 
@@ -110,4 +110,20 @@ class Artiste extends Model
             return $social->icon ;
         }
     }    
+
+    public function getMembresListeAttribute()
+    {
+        if ($this->membres)
+        {
+            $valeur = '';
+            # return var_dump($this->membres);
+
+            foreach ($this->membres as $membre)
+                {
+                    $valeur = $valeur . $membre['prenom'].' ' .$membre['nom']. ', ';
+                }
+            $valeur = rtrim($valeur,', ');
+            return $valeur; 
+        }
+    }
 }

@@ -1,0 +1,28 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    fonctions:
+        label: 'Fonctions concernées'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+tabs:
+    fields:
+        hint_documents:
+            span: full
+            path: $/digart/spectacles/models/filegroup/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Documents
+        files:
+            span: full
+            path: field_files
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Documents

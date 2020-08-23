@@ -86,10 +86,13 @@ permissions:
     digart.spectacles.planification:
         tab: 'CTTR - Gestion'
         label: 'Gère la planification des bénévoles'
+    digart.spectacles.files:
+        tab: 'CTTR - Gestion'
+        label: 'Gère les fichiers pour les membres bénévoles sur Intranet'
 navigation:
     gestion:
         label: 'Gestion CTTR'
-        url: digart/spectacles/spectaclesplanifications
+        url: digart/spectacles/representationsplanifications
         icon: icon-dot-circle-o
         permissions:
             - digart.spectacles.locations
@@ -99,6 +102,7 @@ navigation:
             - digart.spectacles.contacts
             - digart.spectacles.societes
             - digart.spectacles.planification
+            - digart.spectacles.files
         sideMenu:
             planning-representations:
                 label: 'Planification bénévoles par représentations'
@@ -136,6 +140,12 @@ navigation:
                 icon: icon-group
                 permissions:
                     - digart.spectacles.team
+            files:
+                label: 'Fichiers Intranet'
+                url: digart/spectacles/filesgroups
+                icon: icon-file-text-o
+                permissions:
+                    - digart.spectacles.files
     spectacles:
         label: Spectacles
         url: digart/spectacles/spectacles

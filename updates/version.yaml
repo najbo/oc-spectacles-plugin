@@ -48,12 +48,6 @@
 1.0.17:
     - 'Created table digart_spectacles_spect_art'
     - builder_table_create_digart_spectacles_spect_art.php
-1.0.18:
-    - 'Seed Artistes'
-    - seeder1018.php
-1.0.19:
-    - 'Seed Agents'
-    - seeder1019.php
 1.0.20:
     - 'Created table digart_spectacles_cat'
     - builder_table_create_digart_spectacles_cat.php
@@ -63,15 +57,9 @@
 1.0.22:
     - 'Created table digart_spectacles_spect_cat'
     - builder_table_create_digart_spectacles_spect_cat.php
-1.0.23:
-    - 'Seed Spectacles'
-    - seeder1023.php
 1.0.24:
     - 'Created table digart_spectacles_souvenirs'
     - builder_table_create_digart_spectacles_souvenirs.php
-1.0.25:
-    - 'Seed représentations'
-    - seeder1025.php
 1.0.26:
     - 'Created table digart_spectacles_prot'
     - builder_table_create_digart_spectacles_prot.php
@@ -96,15 +84,9 @@
 1.0.33:
     - 'Seed étendues du blog et publications'
     - seeder1033.php
-1.0.34:
-    - 'Seed blog posts'
-    - seeder1034.php
 1.0.35:
     - 'Created table digart_spectacles_web'
     - builder_table_create_digart_spectacles_web.php
-1.0.36:
-    - 'Seed contenu statique web'
-    - seeder1036.php
 1.0.37:
     - 'Created table digart_spectacles_abo'
     - builder_table_create_digart_spectacles_abo.php
@@ -126,15 +108,9 @@
 1.0.43:
     - 'Created table digart_spectacles_loc'
     - builder_table_create_digart_spectacles_loc.php
-1.0.44:
-    - 'Seed locations'
-    - seeder1044.php
 1.0.45:
     - 'Created table digart_spectacles_locdates'
     - builder_table_create_digart_spectacles_locdates.php
-1.0.46:
-    - 'Seed dates de locations'
-    - seeder1046.php
 1.0.47:
     - 'Created table digart_spectacles_socials'
     - builder_table_create_digart_spectacles_socials.php
@@ -144,9 +120,6 @@
 1.0.49:
     - 'Created table digart_spectacles_tiers'
     - builder_table_create_digart_spectacles_tiers.php
-1.0.50:
-    - 'Seed tiers'
-    - seeder1050.php
 1.0.51:
     - 'Created table digart_spectacles_tiers_genres'
     - builder_table_create_digart_spectacles_tiers_genres.php
@@ -168,12 +141,18 @@
 1.0.57:
     - 'Created table digart_spectacles_societes'
     - builder_table_create_digart_spectacles_societes.php
-1.0.58:
-    - 'Seed sociétés'
-    - seeder1058.php
 1.0.59:
     - 'Created table digart_spectacles_planification'
     - builder_table_create_digart_spectacles_planification.php
 1.0.60:
     - 'Created table digart_spectacles_societes_genres'
     - builder_table_create_digart_spectacles_soc_genres.php
+1.0.61:
+    - 'Created table digart_spectacles_files'
+    - builder_table_create_digart_spectacles_files_groups.php
+1.0.62:
+    - 'Created table digart_spectacles_files_fct'
+    - builder_table_create_digart_spectacles_files_grps_fct.php
+1.0.63:
+    - 'Created table digart_spectacles_files'
+    - builder_table_create_digart_spectacles_files_2.php

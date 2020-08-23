@@ -1,0 +1,13 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    fonctions_nom:
+        label: Fonctions
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: fonctions

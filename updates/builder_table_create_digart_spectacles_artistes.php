@@ -23,6 +23,7 @@ class BuilderTableCreateDigartSpectaclesArtistes extends Migration
             $table->string('telephone', 255)->nullable();
             $table->integer('agent_id')->nullable()->unsigned();
             $table->text('bio')->nullable();
+            $table->text('membres')->nullable();
             $table->boolean('is_frontend_bio')->nullable()->default(1);
             $table->text('remarques')->nullable();
             $table->text('memo')->nullable();

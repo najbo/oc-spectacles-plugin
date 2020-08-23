@@ -1,0 +1,25 @@
+columns:
+    fichier_nom:
+        label: 'Nom du fichier'
+        type: text
+        searchable: true
+        sortable: false
+        select: file_name
+        relation: document
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    auteur_nom:
+        label: Auteur
+        type: text
+        searchable: true
+        sortable: false
+        select: 'concat(first_name, '' '', last_name)'
+        relation: auteur
+    sort_order:
+        label: Ordre
+        type: number
+        searchable: true
+        sortable: false
