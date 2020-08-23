@@ -20,3 +20,18 @@ fields:
         nameFrom: designation
         descriptionFrom: description
         type: relation
+tabs:
+    fields:
+        is_planning_backend:
+            label: 'Planification des bénévoles possible dans le backend'
+            span: auto
+            default: 0
+            type: switch
+            permissions: 'digart.spectacles.planification'
+            tab: Paramètres
+        is_planning_intranet:
+            label: 'Planification des bénévoles possible dans l''intranet'
+            span: auto
+            type: switch
+            permissions: 'digart.spectacles.planification'
+            tab: Paramètres

@@ -100,9 +100,9 @@ navigation:
             - digart.spectacles.societes
             - digart.spectacles.planification
         sideMenu:
-            planning:
-                label: 'Planning des bénévoles'
-                url: digart/spectacles/spectaclesplanifications
+            planning-representations:
+                label: 'Planification bénévoles par représentations'
+                url: digart/spectacles/representationsplanifications
                 icon: icon-star
                 permissions:
                     - digart.spectacles.planification
@@ -199,7 +199,7 @@ navigation:
                     - digart.spectacles.publications.etendues
             frontend:
                 label: 'Contenu site web'
-                url: digart/spectacles/webs
+                url: cms/themeoptions/update/vermillion_cttr
                 icon: icon-sitemap
                 permissions:
                     - digart.spectacles.web

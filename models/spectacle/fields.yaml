@@ -171,7 +171,7 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: 'Médias'
+            tab: Médias
         images:
             label: Images
             span: auto
@@ -181,7 +181,7 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: 'Médias'
+            tab: Médias
         documents:
             label: 'Documents publics'
             mode: file
@@ -191,7 +191,7 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: 'Médias'
+            tab: Médias
         parties:
             label: Parties
             prompt: 'Ajouter une partie de spectacle'
@@ -299,3 +299,36 @@ tabs:
                 - preview
             type: partial
             tab: Protocoles
+        is_planning_backend:
+            label: 'Planification possible sur le backend'
+            span: auto
+            type: switch
+            permissions: 'digart.spectacles.planification'
+            tab: Planification
+        is_planning_intranet:
+            label: 'Planification possible sur l''intranet'
+            span: auto
+            type: switch
+            permissions: 'digart.spectacles.planification'
+            tab: Planification            
+        hint_planification:
+            span: full
+            path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Planification
+        planifications:
+            span: full
+            path: field_planifications
+            hidden: 0
+            context:
+                - update
+                - preview
+            trigger:
+                action: hide
+                field: is_planning_backend
+                condition: unchecked
+            type: partial
+            permissions: 'digart.spectacles.planification'
+            tab: Planification

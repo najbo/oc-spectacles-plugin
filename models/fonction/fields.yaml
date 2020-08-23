@@ -13,3 +13,11 @@ fields:
         span: full
         size: small
         type: textarea
+    destination:
+        label: 'Disponible pour'
+        options:
+            - Tous
+            - Spectacles
+            - Représentations
+        span: auto
+        type: balloon-selector

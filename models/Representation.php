@@ -41,9 +41,14 @@ class Representation extends Model
 
 
     public $hasMany = [
-        'planifications' => Planification::class
+        'planification_old' => Planification::class
     ];
 
+
+    public $morphMany = [
+        'planifications' => [Planification::class,
+            'name' => 'planifiable']
+    ];
 
     public function getDebutTexteAttribute() {
         return $this->debut->format('d.m.y H:i');
@@ -57,6 +62,20 @@ class Representation extends Model
             return false;
         }
     }
+
+
+    public function getTitrePrincipalAttribute()
+    {
+        return $this->spectacle->titre_principal;
+    }
+
+
+    public function getTitreSecondaireAttribute()
+    {
+        return $this->spectacle->titre_secondaire;
+    }
+
+
 
     // Permet de trier les spectacles par les représentations actives. Utilisé sur programme.htm
     public function scopeIsActive($query) {

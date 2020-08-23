@@ -1,6 +1,36 @@
 columns:
+    benevole:
+        label: Bénévole
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(name, '' '', surname)'
+        relation: benevole
+    fonction:
+        label: Fonction
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: fonction        
     designation:
         label: Désignation
         type: text
+        searchable: true
+        sortable: true
+    
+    debut:
+        label: 'Engagement dès'
+        type: datetime
+        searchable: true
+        sortable: true
+    fin:
+        label: 'Engagement à'
+        type: datetime
+        searchable: true
+        sortable: true
+    is_confirmed:
+        label: Confirmé
+        type: switch
         searchable: true
         sortable: true

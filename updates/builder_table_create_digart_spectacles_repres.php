@@ -24,6 +24,8 @@ class BuilderTableCreateDigartSpectaclesRepres extends Migration
             $table->integer('statut_id')->nullable()->unsigned();
             $table->boolean('is_canceled')->nullable();
             $table->boolean('is_full')->nullable();
+            $table->boolean('is_planning_backend')->default(0);
+            $table->boolean('is_planning_intranet')->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

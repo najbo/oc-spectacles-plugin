@@ -16,13 +16,64 @@ fields:
         label: Désignation
         span: full
         type: text
-    debut:
-        label: 'Début engagement'
-        mode: datetime
+    is_confirmed:
+        label: Confirmé
         span: auto
-        type: datepicker
-    fin:
-        label: 'Fin d''engagement'
-        mode: datetime
+        type: switch
+    is_canceled:
+        label: Annulé
         span: auto
-        type: datepicker
+        type: switch
+tabs:
+    fields:
+        debut:
+            label: 'Début engagement'
+            mode: datetime
+            span: auto
+            type: datepicker
+            tab: informations
+        fin:
+            label: 'Fin d''engagement'
+            mode: datetime
+            span: auto
+            type: datepicker
+            tab: informations
+        remarques:
+            label: Remarques
+            size: small
+            span: full
+            type: textarea
+            tab: informations
+        auteur:
+            label: Auteur
+            nameFrom: full_name
+            descriptionFrom: surname
+            span: auto
+            type: relation
+            defaultFrom: administrateur_actuel
+            tab: Paramètres
+        origine:
+            label: 'Cette saisie a été faite sur :'
+            options:
+                - Intranet
+                - Backend
+            span: auto
+            default: 1
+            type: balloon-selector
+            tab: Paramètres
+        created_at:
+            label: 'Créé le'
+            span: auto
+            readOnly: 0
+            hidden: 0
+            disabled: 1
+            type: text
+            tab: Paramètres
+        updated_at:
+            label: 'Modifié le'
+            span: auto
+            readOnly: 0
+            hidden: 0
+            disabled: 1
+            type: text
+            tab: Paramètres

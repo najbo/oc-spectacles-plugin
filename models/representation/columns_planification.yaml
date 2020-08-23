@@ -1,34 +1,40 @@
 columns:
+    titre:
+        label: Titire
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+        select: titre_principal
+        relation: spectacle
     debut:
         label: 'Date et heure'
         type: datetime
         searchable: true
-        sortable: false
+        sortable: true
     designation:
         label: Désignation
         type: text
         searchable: true
-        sortable: false
+        sortable: true
     statut:
         label: 'Statut représentation'
         type: text
         searchable: true
-        sortable: false
+        sortable: true
         select: designation
         relation: statut
     lieu:
         label: Lieu
         type: text
         searchable: true
+        sortable: true
         select: designation
         relation: lieu
-    is_planning_backend:
-        label: 'Planif. backend'
-        type: switch
+    planifications:
+        label: Planifications
+        type: text
         searchable: true
         sortable: true
-    is_planning_intranet:
-        label: 'Planif. intranet'
-        type: switch
-        searchable: true
-        sortable: true
+        relation: planifications
+        useRelationCount: 'yes'

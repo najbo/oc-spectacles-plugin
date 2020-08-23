@@ -14,6 +14,7 @@ scopes:
         modelClass: DigArt\Spectacles\Models\Artiste
         conditions: id in (select spectacle_id from digart_spectacles_spect_art where artiste_id in (:filtered))
         nameFrom: designation
+        options: trier
     categorie:
         label: Catégorie
         modelClass: DigArt\Spectacles\Models\Categorie

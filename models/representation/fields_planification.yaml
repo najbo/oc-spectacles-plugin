@@ -1,0 +1,47 @@
+fields:
+    titre_principal:
+        label: 'Artiste'
+        type: text
+        disabled: 1
+        span: auto
+    titre_secondaire:
+        label: 'Titre secondaire'
+        type: text
+        disabled: 1
+        span: auto        
+    debut:
+        label: 'Date et heures'
+        mode: datetime
+        span: left
+        disabled: 1
+        type: datepicker
+    designation:
+        label: Désignation
+        span: auto
+        disabled: 1
+        type: text
+    lieu:
+        label: 'Lieu de la représentation'
+        nameFrom: designation
+        descriptionFrom: localite
+        span: auto
+        disabled: 1
+        type: relation
+    statut:
+        label: 'Statut de la représentation'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        disabled: 1
+        type: relation
+tabs:
+    fields:
+        planifications:
+            span: full
+            path: field_planifications
+            context:
+                - update
+                - preview
+            type: partial
+            permissions: 'digart.spectacles.planification'
+            tab: Planification

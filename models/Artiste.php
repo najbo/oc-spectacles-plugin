@@ -73,8 +73,16 @@ class Artiste extends Model
     {
         return $query->has('spectacles');
     }
-    // Utilisé pour le bouton dropdown sur le formulaire des artistes > réseaux sociaux
 
+
+    public function Trier()
+    {
+
+        return $this->where('is_actif',1)->orderBy('designation')->pluck('designation', 'id')->all();
+    }
+
+
+    // Utilisé pour le bouton dropdown sur le formulaire des artistes > réseaux sociaux
     public function getNbreSpectaclesAttribute()
     {
         return $this->spectacles->count();

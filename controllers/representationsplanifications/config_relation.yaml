@@ -1,0 +1,11 @@
+planifications:
+    label: Planifications
+    emptyMessage: Aucune représentation pour le moment
+    view:
+        list: $/digart/spectacles/models/planification/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digart/spectacles/models/planification/fields.yaml
+        title : Planification des bénévoles
+        showSearch: true  

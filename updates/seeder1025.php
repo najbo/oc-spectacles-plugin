@@ -15,6 +15,7 @@ class Seeder1025 extends Seeder
             'debut' => '2020-09-12 20:30:00',
             'lieu_id' => 1,
             'statut_id' => 1,
+            'is_planning_backend' => 1,
         ]); 
         
         Representation::create([
@@ -22,6 +23,7 @@ class Seeder1025 extends Seeder
             'debut' => '2020-09-13 20:30:00',
             'lieu_id' => 1,
             'statut_id' => 2,
+            'is_planning_backend' => 1,
         ]); 
         
         Representation::create([
@@ -29,6 +31,7 @@ class Seeder1025 extends Seeder
             'debut' => '2020-09-19 20:30:00',
             'lieu_id' => 1,
             'statut_id' => 1,
+            'is_planning_backend' => 1,            
         ]); 
         
         Representation::create([

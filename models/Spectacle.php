@@ -123,6 +123,11 @@ class Spectacle extends Model
     ]; 
 
 
+    public $morphMany = [
+        'planifications' => [Planification::class,
+            'name' => 'planifiable']
+    ];
+
     public function next(){
         // get next spectacle
         return Spectacle::where('slug', '>', $this->slug)->orderBy('id','asc')->first();

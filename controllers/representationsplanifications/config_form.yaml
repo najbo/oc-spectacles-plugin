@@ -1,0 +1,10 @@
+name: 'Planification par représentation'
+modelClass: Digart\spectacles\Models\Representation
+form: $/digart/spectacles/models/representation/fields_planification.yaml
+defaultRedirect: digart/spectacles/representationsplanifications
+create:
+    redirect: 'digart/spectacles/representationsplanifications/update/:id'
+    redirectClose: digart/spectacles/representationsplanifications
+update:
+    redirect: digart/spectacles/representationsplanifications
+    redirectClose: digart/spectacles/representationsplanifications

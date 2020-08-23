@@ -26,8 +26,8 @@ class BuilderTableCreateDigartSpectaclesSpect extends Migration
             $table->integer('institution_id')->nullable()->unsigned();
             $table->integer('emplacement_id')->nullable()->unsigned();
             $table->integer('categorie_id')->nullable()->unsigned();
-            $table->boolean('is_planning_possible')->nullable()->default(1);
-            $table->boolean('is_planning_closed')->nullable();
+            $table->boolean('is_planning_backend')->default(0);
+            $table->boolean('is_planning_intranet')->default(0);
 
             $table->boolean('is_reservation')->default(1);
             $table->string('url_reservation',255)->nullable();
