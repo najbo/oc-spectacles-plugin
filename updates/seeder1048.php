@@ -46,7 +46,7 @@ class Seeder1048 extends Seeder
         Social::create([
             'designation' => 'Twitter',
             'url' => 'https://www.twitter.com',
-            'icon' => 'twitter',
+            'icon' => '/Logos/Socials/twitter',
             'iconify' => 'mdi-twitter-box',
         ]);
     

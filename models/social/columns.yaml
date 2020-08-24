@@ -4,6 +4,16 @@ columns:
         type: text
         searchable: true
         sortable: false
+    icon:
+        label: 'Icône (media manager)'
+        type: text
+        searchable: true
+        sortable: false
+    iconify:
+        label: 'Icônes depuis iconify'
+        type: text
+        searchable: true
+        sortable: false
     is_actif:
         label: Actif
         type: switch

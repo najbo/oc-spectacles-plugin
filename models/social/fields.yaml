@@ -19,5 +19,10 @@ fields:
     icon:
         label: Icône
         mode: image
-        span: auto
+        span: left
         type: mediafinder
+    iconify:
+        label: 'Icône (iconify)'
+        span: auto
+        type: text
+        comment: 'Voir : https://iconify.design/icon-sets/mdi/'
