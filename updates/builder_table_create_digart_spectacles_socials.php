@@ -16,6 +16,7 @@ class BuilderTableCreateDigartSpectaclesSocials extends Migration
             $table->string('abreviation', 50)->nullable();
             $table->string('url_profile', 255)->nullable();
             $table->string('icon', 255)->nullable();
+            $table->string('iconify', 255)->nullable();
             $table->integer('sort_order')->nullable()->unsigned();
             $table->timestamp('created_at')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
