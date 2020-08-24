@@ -2,6 +2,7 @@
 
 use Model;
 use BackendAuth;
+use Log;
 
 /**
  * Model
@@ -73,6 +74,15 @@ class Representation extends Model
     public function getTitreSecondaireAttribute()
     {
         return $this->spectacle->titre_secondaire;
+    }
+
+
+    // Retourne la date et l'heure par défaut pour les nouvelles représentations
+    public function getDateHeureDefautAttribute()
+    {
+
+        if (Institution::first())
+            return Institution::first()->default_time;
     }
 
 

@@ -33,6 +33,7 @@ class BuilderTableCreateDigartSpectaclesInstit extends Migration
             $table->string('email_principal', 255)->nullable();
             $table->string('email_reservation', 255)->nullable();
             $table->string('website', 255)->nullable();
+            $table->time('default_time')->nullable();
             $table->boolean('is_defaut')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamp('created_at')->nullable();

@@ -137,33 +137,47 @@ tabs:
             tab: Paramètres
         accroche:
             label: Accroche
-            size: small
-            span: full
-            type: richeditor
-            tab: Accroche
-        remarques_manchette:
-            label: 'Manchette ou phrase choc'
-            size: small
+            size: large
             span: auto
-            type: textarea
-            commentAbove: 'Est affiché sur la page de détail du spectacle'
-            tab: Accroche
+            type: richeditor
+            commentAbove: 'Apparaît sur la page du programme (prochains spectacles)'
+            tab: Textes
+        developpement:
+            label: Développement
+            size: large
+            span: auto
+            type: richeditor
+            commentAbove: 'Apparaît sur la page du spectacle uniquement. Pensez à reprendre une partie de l''accroche au besoin'
+            tab: Textes
         remarques_annonce:
             label: 'Annonce ou information'
-            size: small
+            size: tiny
             span: auto
             placeholder: ''
             type: textarea
             commentAbove: 'Est affiché sur la liste des spectacles et sur la page de détail du spectacle'
-            tab: Accroche
-        developpement:
-            label: Développement
-            size: large
-            span: full
-            type: richeditor
-            tab: Développement
+            tab: Textes        
+        remarques_manchette:
+            label: 'Manchette ou phrase qui percute'
+            size: tiny
+            span: auto
+            type: textarea
+            commentAbove: 'Est affiché sur la page du spectacle uniquement'
+            tab: Textes
         affiche:
             label: 'Affiche principale'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            commentAbove: 'Format 16:9, taille minimale 768 x 432 pixels'
+            tab: Médias
+        images:
+            label: Images
+            commentAbove: 'Format 16:9, taille minimale 768 x 432 pixels'
             span: auto
             mode: image
             useCaption: true
@@ -172,15 +186,10 @@ tabs:
                 extension: auto
             type: fileupload
             tab: Médias
-        images:
-            label: Images
-            span: auto
-            mode: image
-            useCaption: true
-            thumbOptions:
-                mode: crop
-                extension: auto
-            type: fileupload
+        section2:
+            label: Documents
+            span: full
+            type: section
             tab: Médias
         documents:
             label: 'Documents publics'
@@ -203,18 +212,16 @@ tabs:
                     heure:
                         label: 'Heure de début'
                         span: auto
-                        mode: time
-                        format: 'H:i'
-                        type: datepicker
+                        type: text
                     description:
                         label: Description
                         span: auto
                         type: text
                     remarque:
-                        label: Remarque
+                        label: 'Détail ou complément'
                         span: full
                         size: small
-                        type: textarea
+                        type: richeditor
         liens_socials:
             label: 'Liens et réseaux sociaux'
             prompt: 'Ajouter une nouvelle adresse'
@@ -258,16 +265,19 @@ tabs:
             label: 'Entrées réduites'
             span: auto
             type: number
+            permissions: 'digart.spectacles.statistiques'
             tab: Statistiques
         entrees_adulte:
             label: 'Entrées adultes'
             span: auto
             type: number
+            permissions: 'digart.spectacles.statistiques'
             tab: Statistiques
         entrees_abo:
             label: 'Entrées abonnement'
             span: auto
             type: number
+            permissions: 'digart.spectacles.statistiques'
             tab: Statistiques
         hint_souvenirs:
             span: full
@@ -275,6 +285,7 @@ tabs:
             context:
                 - create
             type: hint
+            permissions: 'digart.spectacles.souvenirs'
             tab: Souvenirs
         souvenirs:
             span: full
@@ -283,6 +294,7 @@ tabs:
                 - update
                 - preview
             type: partial
+            permissions: 'digart.spectacles.souvenirs'
             tab: Souvenirs
         hint_protocoles:
             span: full
@@ -290,6 +302,7 @@ tabs:
             context:
                 - create
             type: hint
+            permissions: 'digart.spectacles.protocoles'
             tab: Protocoles
         protocoles:
             span: full
@@ -298,25 +311,27 @@ tabs:
                 - update
                 - preview
             type: partial
+            permissions: 'digart.spectacles.protocoles'
             tab: Protocoles
         is_planning_backend:
-            label: 'Planification possible sur le backend'
+            label: 'Planification de bénévoles possible sur le backend'
             span: auto
             type: switch
-            permissions: 'digart.spectacles.planification'
+            permissions: digart.spectacles.planification
             tab: Planification
         is_planning_intranet:
-            label: 'Planification possible sur l''intranet'
+            label: 'Planification de bénévoles possible sur l''intranet'
             span: auto
             type: switch
-            permissions: 'digart.spectacles.planification'
-            tab: Planification            
+            permissions: digart.spectacles.planification
+            tab: Planification
         hint_planification:
             span: full
             path: $/digart/spectacles/models/spectacle/_hint_onglets.htm
             context:
                 - create
             type: hint
+            permissions: digart.spectacles.planification
             tab: Planification
         planifications:
             span: full
@@ -330,5 +345,5 @@ tabs:
                 field: is_planning_backend
                 condition: unchecked
             type: partial
-            permissions: 'digart.spectacles.planification'
+            permissions: digart.spectacles.planification
             tab: Planification

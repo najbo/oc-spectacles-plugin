@@ -27,20 +27,6 @@ tabs:
             size: small
             type: textarea
             tab: Textes
-        entete:
-            label: 'Entête du site web'
-            size: small
-            span: left
-            hidden: 1
-            type: textarea
-            tab: Textes
-        mission:
-            label: 'Notre mission'
-            size: small
-            span: auto
-            hidden: 1
-            type: textarea
-            tab: Textes
         image_communication:
             label: 'Image liée'
             mode: image
@@ -51,3 +37,9 @@ tabs:
             span: auto
             type: fileupload
             tab: Médias
+        default_time:
+            label: 'Heure par défaut des représentations'
+            mode: time
+            span: auto
+            type: datepicker
+            tab: 'Valeurs par défaut'

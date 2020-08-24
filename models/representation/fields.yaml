@@ -4,6 +4,7 @@ fields:
         mode: datetime
         span: auto
         type: datepicker
+        defaultFrom: date_heure_defaut
     designation:
         label: Désignation
         span: auto

@@ -22,6 +22,9 @@ class Seeder1012 extends Seeder
             'mission' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam est ligula, hendrerit quis feugiat at, placerat sit amet ipsum. Sed varius rhoncus sagittis. Pellentesque sodales blandit augue sed consectetur. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc tempus iaculis magna, vitae hendrerit enim pharetra quis.',
             'reservation' => 'Réservation en ligne, par courrier électronique ou sur le répondeur : 032 751 29 84',
             'is_defaut' => 1,
+            'email_principal' => 'contact@latourderive.ch',
+            'website' => 'https://www.latourderive.ch',
+            'default_time' => '20:30:00',
             'sort_order' => 1,
         ]);
 

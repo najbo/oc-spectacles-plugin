@@ -41,6 +41,9 @@ permissions:
     digart.spectacles.protocoles:
         tab: 'CTTR - Gestion des spectacles'
         label: 'Gère les protocoles des spectacles'
+    digart.spectacles.statistiques:
+        tab: 'CTTR - Gestion des spectacles'
+        label: 'Donne accès aux statistiques des entrées'        
     digart.spectacles.pstatuts:
         tab: 'CTTR - Paramètres'
         label: 'Gère les statuts des protocoles'

@@ -52,6 +52,7 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
+            hidden: true
             tab: 'Photo principale'
         complement:
             label: Complément
