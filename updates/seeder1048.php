@@ -33,7 +33,7 @@ class Seeder1048 extends Seeder
             'designation' => 'Facebook',
             'url' => 'https://www.facebook.com',
             'icon' => '/Logos/Socials/facebook.svg',
-            'iconify' => 'mdi-vimeo',
+            'iconify' => 'mdi-facebook',
         ]);
         
         Social::create([
