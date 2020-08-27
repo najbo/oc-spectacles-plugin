@@ -78,10 +78,14 @@ class Location extends Model
     public function getEtendueTexteAttribute() 
     {
         if ($this->etendue_id == 1) {
-            return $this->societe->raison_sociale;
+            if ($this->societe) {
+                return $this->societe->raison_sociale;
+            }
 
         } elseif ($this->etendue_id == 2) {
-            return $this->tiers->full_name;
+            if ($this->tiers) {
+                return $this->tiers->full_name;
+            }
 
         } elseif ($this->etendue_id == 3) {
             return 'Interne';
