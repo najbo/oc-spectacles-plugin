@@ -24,6 +24,7 @@ class Location extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required',
     ];
 
     public $belongsTo = [

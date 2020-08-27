@@ -30,6 +30,7 @@ fields:
         separator: comma
         customTags: false
         nameFrom: designation
+        #designationFrom: id
         type: taglist
     statut:
         label: 'Statut du spectacle'

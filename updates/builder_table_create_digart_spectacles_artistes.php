@@ -16,6 +16,7 @@ class BuilderTableCreateDigartSpectaclesArtistes extends Migration
             $table->string('prenom_civil', 255)->nullable();
             $table->string('slug', 255)->nullable();
             $table->string('classement', 255)->nullable();
+            $table->string('complement', 255)->nullable();
             $table->text('adresse', 255)->nullable();
             $table->string('lieu', 255)->nullable();
             $table->string('pays', 255)->nullable();

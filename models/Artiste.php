@@ -126,4 +126,11 @@ class Artiste extends Model
             return $valeur; 
         }
     }
+
+
+    // Ne fonctionne pas avec les taglists :
+    public function getArtisteComplementAttribute()
+    {
+        return 'hello';
+    }
 }
