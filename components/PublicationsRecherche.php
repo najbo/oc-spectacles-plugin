@@ -7,6 +7,10 @@ use Digart\Spectacles\Models\Publication as recherchePublication;
 
 class PublicationsRecherche extends \Cms\Classes\ComponentBase
 {
+
+    public $keyword;
+
+    
     public function componentDetails()
     {
         return [

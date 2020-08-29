@@ -10,7 +10,7 @@ scopes:
         conditions: admin_id in (:filtered)
         nameFrom: full_name
     is_actif:
-        label: ACtif
+        label: Actif
         type: switch
         default: 0
         conditions:

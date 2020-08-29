@@ -1,9 +1,4 @@
 columns:
-    debut:
-        label: Du
-        type: date
-        searchable: true
-        sortable: true
     designation:
         label: Titre
         type: text
@@ -16,6 +11,16 @@ columns:
         sortable: true
         select: designation
         relation: etendue
+    debut:
+        label: Du
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: Au
+        type: date
+        searchable: true
+        sortable: true        
     administrateur:
         label: Auteur
         type: text
