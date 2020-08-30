@@ -13,6 +13,7 @@ class Spectacle extends \Cms\Classes\ComponentBase
 {
 
     public $record;
+    public $meta_title;
 
     public function componentDetails()
     {
@@ -84,7 +85,7 @@ class Spectacle extends \Cms\Classes\ComponentBase
             }
          
 
-
+        $this->meta_title = 'hello';
         return $query;
     }
 }

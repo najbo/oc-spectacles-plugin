@@ -24,22 +24,6 @@ fields:
         type: switch
 tabs:
     fields:
-        adresse:
-            label: Adresse
-            size: small
-            span: auto
-            type: textarea
-            tab: Coordonnées
-        telephone:
-            label: Téléphone
-            span: left
-            type: text
-            tab: Coordonnées
-        email:
-            label: 'Adresse e-mail'
-            span: auto
-            type: text
-            tab: Coordonnées
         is_groupe:
             label: 'C''est un groupe'
             span: auto
@@ -85,7 +69,7 @@ tabs:
                     is_frontend:
                         label: 'Publier le prénom et nom sur le site public'
                         span: auto
-                        type: switch            
+                        type: switch                 
         hint_bio:
             span: full
             path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
@@ -127,18 +111,6 @@ tabs:
                         label: 'Adresse URL'
                         span: auto
                         type: text            
-        remarques:
-            label: 'Remarques et informations internes'
-            size: large
-            span: left
-            type: textarea
-            tab: Informations
-        memo:
-            label: 'Mémo / habitudes / désirs'
-            span: auto
-            size: large
-            type: textarea
-            tab: Informations
         image:
             label: 'Image principale'
             mode: image
@@ -181,3 +153,31 @@ tabs:
             type: fileupload
             comment: 'Ces documents ne sont pas publiés sur le site web'
             tab: Documents
+        adresse:
+            label: Adresse
+            size: small
+            span: auto
+            type: textarea
+            tab: Coordonnées
+        telephone:
+            label: Téléphone
+            span: left
+            type: text
+            tab: Coordonnées
+        email:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: Coordonnées
+        remarques:
+            label: 'Remarques et informations internes'
+            size: large
+            span: left
+            type: textarea
+            tab: Informations
+        memo:
+            label: 'Mémo / habitudes / désirs'
+            span: auto
+            size: large
+            type: textarea
+            tab: Informations
