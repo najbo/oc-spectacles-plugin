@@ -10,6 +10,10 @@ fields:
             field: designation
             type: slug
         type: text
+    complement:
+        label: Complément
+        span: auto
+        type: text
     agent:
         label: Agent
         span: auto
@@ -28,7 +32,7 @@ tabs:
             label: 'C''est un groupe'
             span: auto
             type: switch
-            tab: Membres            
+            tab: Membres
         membres:
             label: Membres
             prompt: 'Ajouter un nouveau membre'
@@ -69,7 +73,7 @@ tabs:
                     is_frontend:
                         label: 'Publier le prénom et nom sur le site public'
                         span: auto
-                        type: switch                 
+                        type: switch
         hint_bio:
             span: full
             path: $/digart/spectacles/models/artiste/_hint_ajout_artiste.htm
@@ -110,7 +114,7 @@ tabs:
                     url:
                         label: 'Adresse URL'
                         span: auto
-                        type: text            
+                        type: text
         image:
             label: 'Image principale'
             mode: image

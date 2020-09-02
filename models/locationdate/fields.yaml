@@ -3,6 +3,7 @@ fields:
         label: Début
         mode: datetime
         span: auto
+        comment: 'Pour une journée complète, indiquer 00:00 dans les deux champs heures'
         type: datepicker
     fin:
         label: Fin

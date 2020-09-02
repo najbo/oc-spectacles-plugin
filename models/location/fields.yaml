@@ -14,17 +14,18 @@ fields:
         trigger:
             action: show
             field: etendue_id
-            condition: 'value[1]'        
+            condition: 'value[1]'
     tiers:
         label: 'Tiers individuel'
         nameFrom: full_name
         descriptionFrom: description
+        emptyOption: '-- Aucun tiers --'
         span: right
         type: relation
         trigger:
             action: show
             field: etendue_id
-            condition: 'value[2]'        
+            condition: 'value[2]'
     loueur:
         label: 'Contact / tiers'
         span: right
@@ -41,7 +42,7 @@ fields:
         label: Interlocuteur
         span: auto
         type: text
-        tab: 'Adresse loueur'         
+        tab: 'Adresse loueur'
 tabs:
     fields:
         hint_locations:
@@ -65,28 +66,59 @@ tabs:
             span: auto
             type: textarea
             tab: 'Adresse loueur'
-            trigger:
-                action: show
-                field: etendue_id
-                condition: 'value[]'
         telephone:
             label: 'Numéro de téléphone'
             span: auto
             type: text
             tab: 'Adresse loueur'
-            trigger:
-                action: show
-                field: etendue_id
-                condition: 'value[]'
         email:
             label: 'Adresse e-mail'
             span: auto
             type: text
             tab: 'Adresse loueur'
-            trigger:
-                action: show
-                field: etendue_id
-                condition: 'value[]'
+        prix:
+            label: 'Prix convenu'
+            span: auto
+            type: number
+            tab: Conditions
+        is_facture:
+            label: Facturé
+            span: left
+            type: switch
+            tab: Conditions
+        date_facture:
+            label: 'Date de facture'
+            mode: date
+            span: left
+            type: datepicker
+            tab: Conditions
+        is_paye:
+            label: 'Facture payée'
+            span: left
+            type: switch
+            tab: Conditions
+        date_paiement:
+            label: 'Date de paiement'
+            mode: date
+            span: left
+            type: datepicker
+            tab: Conditions
+        developpement:
+            label: 'Etendue de la location / informations'
+            size: small
+            span: auto
+            type: textarea
+            tab: 'Etendue & documents'
+        documents:
+            label: 'Documents / contrats'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Etendue & documents'
         auteur:
             label: Auteur
             span: auto
@@ -100,7 +132,7 @@ tabs:
             span: left
             default: 1
             type: switch
-            tab: Paramètres            
+            tab: Paramètres
         is_frontend:
             label: Frontend
             span: auto

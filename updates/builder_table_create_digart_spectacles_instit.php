@@ -20,6 +20,8 @@ class BuilderTableCreateDigartSpectaclesInstit extends Migration
             $table->text('mission')->nullable();
             $table->text('reservation')->nullable();
             $table->text('communication')->nullable();
+            $table->text('defaut_prix')->nullable();
+            $table->text('defaut_disposition')->nullable();
             # $table->boolean('is_communication')->nullable();
             # $table->string('communication_titre', 255)->nullable();
             # $table->string('communication_url', 255)->nullable();

@@ -65,9 +65,34 @@ class LocationDate extends Model
         $fin = $this->fin->format('Y-m-d');
 
         if ($debut == $fin) {
-            return ucfirst($this->debut->format('D')). '. <strong>' . $this->debut->format('d.m.y') . '</strong> de '. $this->debut->format('H:i') .' à '. $this->fin->format('H:i');
+            if ($this->debut->format('H:i') == '00:00' && $this->fin->format('H:i') == '00:00')
+            {
+                return ucfirst($this->debut->format('D')). '. <strong>' . $this->debut->format('d.m.y').'</strong>';
+            } else {
+                return ucfirst($this->debut->format('D')). '. <strong>' . $this->debut->format('d.m.y') . '</strong> de '. $this->debut->format('H:i') .' à '. $this->fin->format('H:i');
+            }
         } else {
-            return 'Du '. $this->debut->format('D') . '. <strong>'. $this->debut->format('d.m.y'). '</strong> à '. $this->debut->format('H:i') . '<br/>au '.$this->fin->format('D') . '. <strong>'. $this->fin->format('d.m.y'). '</strong> à '. $this->fin->format('H:i');
+            if ($this->debut->format('H:i') == '00:00' && $this->fin->format('H:i') == '00:00')
+            {
+                return 'Du '. $this->debut->format('D') . '. <strong>'. $this->debut->format('d.m.y'). '</strong> au '.$this->fin->format('D') . '. <strong>'. $this->fin->format('d.m.y'). '</strong>';
+            } else {
+
+                if ($this->debut->format('H:i') !== '00:00') 
+                    {
+                        $heure_debut = ' à '.$this->debut->format('H:i');
+                    } else {
+                        $heure_debut = '';
+                    }
+
+                if ($this->fin->format('H:i') !== '00:00') 
+                    {
+                        $heure_fin = ' à '.$this->fin->format('H:i');
+                    } else {
+                        $heure_fin = '';
+                    }
+
+                return 'Du '. $this->debut->format('D') . '. <strong>'. $this->debut->format('d.m.y'). '</strong>'. $heure_debut . '<br/>au '.$this->fin->format('D') . '. <strong>'. $this->fin->format('d.m.y'). '</strong>' . $heure_fin;
+            }
         }
     }
 

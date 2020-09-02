@@ -31,7 +31,11 @@ class BuilderTableCreateDigartSpectaclesLoc extends Migration
             $table->integer('lieu_id')->nullable()->unsigned();
             $table->integer('auteur_id')->nullable()->unsigned();
 
+            $table->boolean('is_facture')->nullable();
             $table->boolean('is_paye')->nullable();
+            $table->date('date_facture')->nullable();
+            $table->date('date_paiement')->nullable();
+
             $table->boolean('is_actif')->nullable()->default(1);
             $table->boolean('is_frontend')->nullable()->default(1);
 

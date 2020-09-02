@@ -105,6 +105,19 @@ class Publication extends Model
     } 
 
 
+    public function getAccrocheMoreAttribute()
+    {
+        if ($this->accroche)
+        {
+            $accroche = '';
+
+            $accroche = $string = preg_replace('/<p[^>]*>(.*)<\/p[^>]*>/i', '$1', $this->accroche);
+            # $more = '<a href="/blog/detail/'. $this->slug .'" class="text-vermillion-500 uppercase">... [Lire plus]</a>';
+
+            return $accroche;
+        }
+    }
+
     // Permet de mettre l'attribut admin_id par défaut à la valeur de l'administrateur connecté
     public function getAdministrateurActuelAttribute()
     {

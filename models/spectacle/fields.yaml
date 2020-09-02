@@ -93,12 +93,14 @@ tabs:
             size: tiny
             span: auto
             type: textarea
+            defaultFrom: defaut_prix
             tab: Paramètres
         capacite_txt:
             label: 'Capacité totale / disposition'
             size: tiny
             span: auto
             type: textarea
+            defaultFrom: defaut_disposition
             tab: Paramètres
         url_reservation:
             label: 'Lien pour la réservation'

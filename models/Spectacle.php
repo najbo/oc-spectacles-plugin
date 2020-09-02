@@ -142,6 +142,23 @@ class Spectacle extends Model
 
 
 
+    // Retourne les valeurs par défaut de la première institution pour le prix et la disposition
+    public function getDefautDispositionAttribute()
+    {
+
+        if (Institution::first())
+            return Institution::first()->defaut_disposition;
+    }
+
+    public function getDefautPrixAttribute()
+    {
+
+        if (Institution::first())
+            return Institution::first()->defaut_prix;
+    }
+
+
+
 
 
     public function scopeprochainsSpectacles($query) {

@@ -27,6 +27,12 @@ class Location extends Model
         'designation' => 'required',
     ];
 
+
+    public $attachMany = [
+        'documents' => ['System\Models\File', 'public' => false],
+    ];
+
+
     public $belongsTo = [
         'auteur' => ['\Backend\Models\User'],                   
         'societe' => ['\DigArt\Spectacles\Models\Societe'],                   

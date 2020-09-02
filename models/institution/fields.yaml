@@ -43,3 +43,17 @@ tabs:
             span: auto
             type: datepicker
             tab: 'Valeurs par défaut'
+        defaut_prix:
+            label: 'Prix par défaut'
+            size: small
+            span: left
+            type: textarea
+            commentAbove: 'Utilisé pour les nouveaux spectacles'
+            tab: 'Valeurs par défaut'
+        defaut_disposition:
+            label: 'Capacité / disposition par défaut'
+            size: small
+            span: auto
+            type: textarea
+            commentAbove: 'Utilisé pour les nouveaux spectacles'
+            tab: 'Valeurs par défaut'
