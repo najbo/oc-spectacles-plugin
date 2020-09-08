@@ -1,6 +1,13 @@
 <?php
 use Digart\Spectacles\Models\Spectacle;
 
+
+Route::get('api/test', function () {
+	$spectacles = Spectacle::first()->culturoscope_categories;
+
+	return $spectacles;
+});
+
 /*
 A mettre dans fichier de configuration ou base de données:
 

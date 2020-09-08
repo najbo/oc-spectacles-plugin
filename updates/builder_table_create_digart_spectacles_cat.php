@@ -16,6 +16,7 @@ class BuilderTableCreateDigartSpectaclesCategories extends Migration
             $table->string('slug', 255);
             $table->string('color_txt', 10)->nullable();
             $table->string('color_bg', 10)->nullable();
+            $table->string('cltp_cat_id', 5)->nullable(); // Catégorie du Culturoscope
             $table->boolean('is_actif')->nullable()->default(true);
             $table->integer('sort_order')->nullable();
             $table->timestamp('created_at')->nullable();

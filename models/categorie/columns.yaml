@@ -4,3 +4,8 @@ columns:
         type: text
         searchable: true
         sortable: false
+    cltp_cat_id:
+        label: 'Cat. Culturoscope'
+        type: text
+        searchable: true
+        sortable: false

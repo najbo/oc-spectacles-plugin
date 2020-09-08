@@ -30,7 +30,6 @@ fields:
         separator: comma
         customTags: false
         nameFrom: designation
-        #designationFrom: id
         type: taglist
     statut:
         label: 'Statut du spectacle'
@@ -63,15 +62,13 @@ tabs:
             span: auto
             type: relation
             tab: Paramètres
-        administrateur:
-            label: Programmateur
+        lieu:
+            label: Lieu principal
+            nameFrom: designation
+            descriptionFrom:
             span: auto
-            nameFrom: full_name
-            descriptionFrom: description
             type: relation
-            emptyOption: '-- Non relevant ou autre --'
-            defaultFrom: administrateur_actuel
-            tab: Paramètres
+            tab: Paramètres            
         categorie:
             label: Catégorie
             nameFrom: designation
@@ -114,6 +111,15 @@ tabs:
             type: switch
             comment: 'Si activé, reprend le texte de réservation standard de l''institution'
             tab: Paramètres
+        administrateur:
+            label: Programmateur
+            span: auto
+            nameFrom: full_name
+            descriptionFrom: description
+            type: relation
+            emptyOption: '-- Non relevant ou autre --'
+            defaultFrom: administrateur_actuel
+            tab: Paramètres            
         section1:
             label: 'Places disponibles'
             span: full
@@ -159,7 +165,7 @@ tabs:
             placeholder: ''
             type: textarea
             commentAbove: 'Est affiché sur la liste des spectacles et sur la page de détail du spectacle'
-            tab: Textes        
+            tab: Textes
         remarques_manchette:
             label: 'Manchette ou phrase qui percute'
             size: tiny
@@ -268,19 +274,19 @@ tabs:
             label: 'Entrées réduites'
             span: auto
             type: number
-            permissions: 'digart.spectacles.statistiques'
+            permissions: digart.spectacles.statistiques
             tab: Statistiques
         entrees_adulte:
             label: 'Entrées adultes'
             span: auto
             type: number
-            permissions: 'digart.spectacles.statistiques'
+            permissions: digart.spectacles.statistiques
             tab: Statistiques
         entrees_abo:
             label: 'Entrées abonnement'
             span: auto
             type: number
-            permissions: 'digart.spectacles.statistiques'
+            permissions: digart.spectacles.statistiques
             tab: Statistiques
         hint_souvenirs:
             span: full
@@ -288,7 +294,7 @@ tabs:
             context:
                 - create
             type: hint
-            permissions: 'digart.spectacles.souvenirs'
+            permissions: digart.spectacles.souvenirs
             tab: Souvenirs
         souvenirs:
             span: full
@@ -297,7 +303,7 @@ tabs:
                 - update
                 - preview
             type: partial
-            permissions: 'digart.spectacles.souvenirs'
+            permissions: digart.spectacles.souvenirs
             tab: Souvenirs
         hint_protocoles:
             span: full
@@ -305,7 +311,7 @@ tabs:
             context:
                 - create
             type: hint
-            permissions: 'digart.spectacles.protocoles'
+            permissions: digart.spectacles.protocoles
             tab: Protocoles
         protocoles:
             span: full
@@ -314,7 +320,7 @@ tabs:
                 - update
                 - preview
             type: partial
-            permissions: 'digart.spectacles.protocoles'
+            permissions: digart.spectacles.protocoles
             tab: Protocoles
         is_planning_backend:
             label: 'Planification de bénévoles possible sur le backend'

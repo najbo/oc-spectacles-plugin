@@ -63,7 +63,10 @@ class Spectacle extends Model
                    'order' => 'sort_order'],
         'categorie' => ['DigArt\Spectacles\Models\Categorie',
                    'key' => 'categorie_id',
-                   'order' => 'sort_order'],                               
+                   'order' => 'sort_order'],
+        'lieu' => ['DigArt\Spectacles\Models\Lieu',
+                   'key' => 'lieu_id',
+                   'order' => 'sort_order'],                       
         //'artiste' => ['DigArt\Spectacles\Models\Artiste'],
     // Permet d'afficher les réseaux sociaux dans le repeater "Liens réseaux sociaux"
         'social_id' => ['DigArt\Spectacles\Models\Social',
@@ -308,6 +311,7 @@ class Spectacle extends Model
            return BackendAuth::getUser()->id;
         }
     }
+
 
 
 }

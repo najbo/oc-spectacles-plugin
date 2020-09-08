@@ -26,4 +26,33 @@ class Categorie extends Model
         'designation' => 'required',
         'slug' => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:digart_spectacles_cat'],
     ];
+
+
+    public function getCulturoscopeCategoriesAttribute()
+    {
+        $url = 'https://www.culturoscope.ch/api/2.0/events_categories.php?api_key=CS-AFQWpUBJSw';
+        
+        $JSON = file_get_contents($url);
+
+        $data = json_decode($JSON, true);
+
+        $categorie = [];
+
+        foreach($data as $item) {
+            $categorie[$item['event_category_code']] = $item['event_category_title'];
+        }
+        
+        return $categorie;
+    }   
+
+    public function getCltpCatIdOptions()
+    {
+        return $this->culturoscope_categories;
+        /*
+        return [
+                '1' => 'test',
+                '2' => 'toto'
+                    ];
+        */
+    }
 }
