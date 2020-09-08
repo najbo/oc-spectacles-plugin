@@ -32,27 +32,41 @@ class Categorie extends Model
     {
         $url = 'https://www.culturoscope.ch/api/2.0/events_categories.php?api_key=CS-AFQWpUBJSw';
         
-        $JSON = file_get_contents($url);
+        $JSON = @file_get_contents($url);
 
         $data = json_decode($JSON, true);
 
-        $categorie = [];
+        if ($JSON === false)
+        {
+            // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
+            return array(
+                'AN' => 'Animation',
+                'CI' => 'Cirque',
+                'DA' => 'Danse',
+                'EX' => 'Exposition',
+                'LI' => 'Littérature',
+                'MU' => 'Musique',
+                'TH' => 'Théâtre',
+                'PR' => 'Projection',
+                );
 
-        foreach($data as $item) {
-            $categorie[$item['event_category_code']] = $item['event_category_title'];
+        } else {
+            
+            $data = json_decode($JSON, true);
+
+            $categorie = [];
+
+            foreach($data as $item) {
+                $categorie[$item['event_category_code']] = $item['event_category_title'];
+            }
+
+            return $categorie;
         }
-        
-        return $categorie;
+       
     }   
 
     public function getCltpCatIdOptions()
     {
         return $this->culturoscope_categories;
-        /*
-        return [
-                '1' => 'test',
-                '2' => 'toto'
-                    ];
-        */
     }
 }

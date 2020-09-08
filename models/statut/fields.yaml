@@ -3,3 +3,17 @@ fields:
         label: Désignation
         span: auto
         type: text
+tabs:
+    fields:
+        is_cltp:
+            label: 'Transmettre le spectacle au Culturoscope'
+            span: left
+            type: switch
+            tab: Culturoscope
+        cltp_status_id:
+            label: 'Status spectacle pour Culturoscope'
+            emptyOption: '-- Non relevant ou autre --'
+            showSearch: true
+            span: left
+            type: dropdown
+            tab: Culturoscope

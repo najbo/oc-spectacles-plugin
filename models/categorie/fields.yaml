@@ -11,11 +11,11 @@ fields:
             type: slug
         type: text
     cltp_cat_id:
-            label: 'Catégorie du Culturoscope'
-            showSearch: true
-            emptyOption: '-- Non relevant ou autre --'
-            span: auto
-            type: dropdown
+        label: 'Catégorie du Culturoscope'
+        showSearch: true
+        emptyOption: '-- Non relevant ou autre --'
+        span: auto
+        type: dropdown
     is_actif:
         label: Actif
         span: auto

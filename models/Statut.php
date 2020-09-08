@@ -43,4 +43,41 @@ class Statut extends Model
         return $query->where('is_saison',1);
         
     }    
+
+    public function getCulturoscopeStatusAttribute()
+    {
+        $url = 'https://www.culturoscope.ch/api/2.0/events_status.php?api_key=CS-AFQWpUBJSw';
+        
+        $JSON = @file_get_contents($url);
+
+        $data = json_decode($JSON, true);
+
+        if ($JSON === false)
+        {
+            // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
+            return array(
+                'PRIVATE' => 'Publié uniquement dans l\'agenda prévisionnel',
+                'PUBLIC' => 'Publié dans le culturoscoPe et dans l\'agenda prévisionnel',
+                );
+
+        } else {
+            
+            $data = json_decode($JSON, true);
+
+            $status = [];
+
+            foreach($data as $item) {
+                $status[$item['event_status_code']] = $item['event_status_title'];
+            }
+
+            return $status;
+        }
+       
+    }   
+
+    public function getCltpStatusIdOptions()
+    {
+        return $this->culturoscope_status;
+    }
+
 }
