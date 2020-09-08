@@ -63,12 +63,12 @@ tabs:
             type: relation
             tab: Paramètres
         lieu:
-            label: Lieu principal
+            label: 'Lieu principal'
             nameFrom: designation
-            descriptionFrom:
+            descriptionFrom: null
             span: auto
             type: relation
-            tab: Paramètres            
+            tab: Paramètres
         categorie:
             label: Catégorie
             nameFrom: designation
@@ -119,7 +119,12 @@ tabs:
             type: relation
             emptyOption: '-- Non relevant ou autre --'
             defaultFrom: administrateur_actuel
-            tab: Paramètres            
+            tab: Paramètres
+        cltp_flags:
+            label: 'Labels du spectacle pour Culturoscope'
+            span: auto
+            type: checkboxlist
+            tab: Paramètres
         section1:
             label: 'Places disponibles'
             span: full

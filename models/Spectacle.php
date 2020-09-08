@@ -18,7 +18,7 @@ class Spectacle extends Model
 
     protected $appends = ['periode_spectacle', 'full_url'];
 
-    protected $jsonable = ['parties', 'liens_socials'];
+    protected $jsonable = ['parties', 'liens_socials', 'cltp_flags'];
 
     protected $slugs = ['slug' => 'titre_pincipal'];
 
@@ -311,6 +311,46 @@ class Spectacle extends Model
            return BackendAuth::getUser()->id;
         }
     }
+
+
+
+    public function getCulturoscopeFlagsAttribute()
+    {
+        $url = 'https://www.culturoscope.ch/api/2.0/events_flags.php?api_key=CS-AFQWpUBJSw';
+        
+        $JSON = @file_get_contents($url);
+
+        $data = json_decode($JSON, true);
+
+        if ($JSON === false)
+        {
+            // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
+            return array(
+                'CREATION' => 'Artistes régionaux',
+                'YOUNGPUBLIC' => 'Jeune public',
+                );
+
+        } else {
+            
+            $data = json_decode($JSON, true);
+
+            $flags = [];
+
+            foreach($data as $item) {
+                $flags[$item['event_flag_code']] = $item['event_flag_title'];
+            }
+
+            return $flags;
+        }
+       
+    }   
+
+    public function getCltpFlagsOptions()
+    {
+        return $this->culturoscope_flags;
+    }                
+
+
 
 
 

@@ -57,6 +57,8 @@ class BuilderTableCreateDigartSpectaclesSpect extends Migration
             $table->string('lien_youtube', 255)->nullable();
             $table->string('lien_vimeo', 255)->nullable();
 
+            $table->text('cltp_flags')->nullable();
+
 
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

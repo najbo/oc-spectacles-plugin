@@ -36,7 +36,7 @@ class Statut extends Model
     }
 
 
-    // Filtre la liste déroulante sur saisons pour n'afficher que les statuts pour les saisons (is_saison) :
+    // Filtre la liste déroulante sur le formulaire des saisons pour n'afficher que les statuts pour les saisons (is_saison) :
 
     public function scopeSaison($query) {
 
@@ -44,7 +44,7 @@ class Statut extends Model
         
     }    
 
-    public function getCulturoscopeStatusAttribute()
+    public function getCulturoscopeEventStatusAttribute()
     {
         $url = 'https://www.culturoscope.ch/api/2.0/events_status.php?api_key=CS-AFQWpUBJSw';
         
@@ -75,9 +75,47 @@ class Statut extends Model
        
     }   
 
-    public function getCltpStatusIdOptions()
+    public function getCltpEventStatusIdOptions()
     {
-        return $this->culturoscope_status;
+        return $this->culturoscope_event_status;
+    }
+
+
+    public function getCulturoscopeDateStatusAttribute()
+    {
+        $url = 'https://www.culturoscope.ch/api/2.0/events_dates_status.php?api_key=CS-AFQWpUBJSw';
+        
+        $JSON = @file_get_contents($url);
+
+        $data = json_decode($JSON, true);
+
+        if ($JSON === false)
+        {
+            // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
+            return array(
+                'CANCELLED' => 'Annulé',
+                'RESCHEDULDED' => 'Reporté',
+                'SOLDOUT' => 'Complet',
+                );
+
+        } else {
+            
+            $data = json_decode($JSON, true);
+
+            $status = [];
+
+            foreach($data as $item) {
+                $status[$item['event_date_status_code']] = $item['event_date_status_title'];
+            }
+
+            return $status;
+        }
+       
+    }   
+
+    public function getCltpDateStatusIdOptions()
+    {
+        return $this->culturoscope_date_status;
     }
 
 }

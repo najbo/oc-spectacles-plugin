@@ -25,12 +25,8 @@ Route::get('api/culturoscope/{id?}', function ($id = null) {
 
 	$data = [
 	    'api_key' => 'RFKC1TYkrb',
-	    'version' => 'https://jsonfeed.org/version/1',
+	    'version' => '2.0',
 	    'title' => 'Culturoscope API',
-	    'home_page_url' => 'https://laravel-news.com/',
-	    'feed_url' => 'https://laravel-news.com/feed/json',
-	    'icon' => 'https://laravel-news.com/apple-touch-icon.png',
-	    'favicon' => 'https://laravel-news.com/apple-touch-icon.png',
 	    'events' => [],
 	];
 
@@ -38,20 +34,18 @@ Route::get('api/culturoscope/{id?}', function ($id = null) {
 	    $data['events'][$key] = [
 	        'event_id' => $spectacle->id,
 	        'event_title' => $spectacle->titre_principal,
-	        'event_description' => $spectacle->description,
-	        'event_categories' => [
-	            'name' => $spectacle->categorie->designation
-	        ],
-	        'event_status' => $spectacle->statut->designation,
+	        'event_description' => $spectacle->accroche,
+	        'event_categories' => explode(', ', $spectacle->categorie->cltp_cat_id),
+	        'event_status' => $spectacle->statut->cltp_event_status_id,
 
-	        'detail_url' => 'https://laravel-news.com/'.$spectacle->slug,
-	        'image_url' => $spectacle->affiche->path,
+	        'detail_url' => 'https://www.latourderive.ch/spectacle/'.$spectacle->slug,
+	        'image_url' => $spectacle->affiche,
 	        'date_published' => $spectacle->created_at->tz('UTC')->toRfc3339String(),
 	        'date_modified' => $spectacle->updated_at->tz('UTC')->toRfc3339String(),
-	        'venue_name' => $spectacle->institution->designation,
-	        'author' => [
-	            'name' => $spectacle->categorie->designation
-	        ],
+	        'venue_name' => $spectacle->lieu->designation,
+	        'venue_address' => $spectacle->lieu->adresse,
+	        'venue_zip' => $spectacle->lieu->npa,
+	        'venue_city' => $spectacle->lieu->localite,
 	        'event_dates' => [],
 	        'event_flags' => [],
 	    ];

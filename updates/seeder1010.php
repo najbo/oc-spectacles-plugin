@@ -57,17 +57,25 @@ class Seeder1010 extends Seeder
         ]);                            
 
         Statut::create([
+            'designation' => 'Reporté',
+            'is_frontend' => true,
+            'is_reporte' => true,
+            'is_reservable' => false,
+            'sort_order' => 6,
+        ]); 
+
+        Statut::create([
             'designation' => 'Prog. - Souhait',
             'is_frontend' => false,
             'is_prog_souhait' => true,
-            'sort_order' => 6,
+            'sort_order' => 7,
         ]);                                  
 
         Statut::create([
             'designation' => 'Prog. - Confirmé',
             'is_frontend' => false,
             'is_prog_confirme' => true,
-            'sort_order' => 7,
+            'sort_order' => 8,
         ]);          
     }
 }

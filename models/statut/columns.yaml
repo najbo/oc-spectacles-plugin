@@ -4,11 +4,12 @@ columns:
         type: text
         searchable: true
         sortable: false
-    is_cltp:
+    is_event_cltp:
         label: 'Envoyer au Culturoscope'
         type: switch
         searchable: true
-    cltp_status_id:
+        sortable: false
+    cltp_event_status_id:
         label: 'Status spectacle Culturoscope'
         type: text
         searchable: true
