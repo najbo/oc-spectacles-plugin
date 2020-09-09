@@ -4,7 +4,6 @@ use Digart\Spectacles\Models\Spectacle;
 
 Route::get('api/test', function () {
 	$spectacles = Spectacle::first()->culturoscope_categories;
-
 	return $spectacles;
 });
 
@@ -19,7 +18,7 @@ A mettre dans fichier de configuration ou base de données:
 */
 
 
-Route::get('api/culturoscope/{id?}', function ($id = null) {
+Route::get('api/culturoscope', function () {
 
 	$spectacles = Spectacle::get();
 
