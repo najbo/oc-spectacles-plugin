@@ -28,8 +28,8 @@ class BuilderTableCreateDigartSpectaclesStatuts extends Migration
 
             $table->boolean('is_event_cltp')->nullable();
             $table->boolean('is_date_cltp')->nullable();
-            $table->string('cltp_event_status_id', 25);  // Indique le status d'un spectacle pour le Culturoscope
-            $table->string('cltp_date_status_id', 25);  // Indique le status d'une représentation pour le Culturoscope
+            $table->string('cltp_event_status_id', 25)->nullable(); // Indique le status d'un spectacle pour le Culturoscope
+            $table->string('cltp_date_status_id', 25)->nullable();  // Indique le status d'une représentation pour le Culturoscope
 
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

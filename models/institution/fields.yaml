@@ -7,18 +7,6 @@ fields:
         label: Abréviation
         span: auto
         type: text
-    adresse:
-        label: Adresse
-        span: auto
-        type: text
-    npa:
-        label: NPA
-        span: auto
-        type: text
-    localite:
-        label: Localité
-        span: auto
-        type: text
 tabs:
     fields:
         reservation:
@@ -57,3 +45,53 @@ tabs:
             type: textarea
             commentAbove: 'Utilisé pour les nouveaux spectacles'
             tab: 'Valeurs par défaut'
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: Coordonnées
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: Coordonnées
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: Coordonnées
+        section2:
+            label: 'Numéros de téléphone'
+            span: full
+            type: section
+            tab: Coordonnées
+        tel_principal:
+            label: 'Téléphone principal'
+            span: auto
+            type: text
+            tab: Coordonnées
+        tel_administration:
+            label: 'Numéro de téléphone administration'
+            span: auto
+            type: text
+            tab: Coordonnées
+        tel_reservations:
+            label: 'Téléphone pour réservations'
+            span: auto
+            type: text
+            tab: Coordonnées
+        section1:
+            label: 'Adresses e-mail'
+            span: full
+            type: section
+            tab: Coordonnées
+        email_reservation:
+            label: 'Adresse e-mail pour réservations'
+            span: auto
+            type: text
+            tab: Coordonnées
+        email_principal:
+            label: 'Adresse e-mail principal'
+            span: auto
+            type: text
+            tab: Coordonnées

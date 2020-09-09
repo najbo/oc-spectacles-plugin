@@ -161,7 +161,15 @@ class Spectacle extends Model
     }
 
 
-
+    public function getTitreCompletAttribute()
+    {
+        if ($this->titre_secondaire)
+        {
+            return $this->titre_principal .' - ' .$this->titre_secondaire;
+        } else { 
+            return $this->titre_principal;
+        }
+    }
 
 
     public function scopeprochainsSpectacles($query) {

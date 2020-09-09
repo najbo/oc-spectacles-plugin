@@ -21,7 +21,7 @@ A mettre dans fichier de configuration ou base de données:
 
 Route::get('api/culturoscope/{id?}', function ($id = null) {
 
-	$spectacles = Spectacle::limit(20)->get();
+	$spectacles = Spectacle::get();
 
 	$data = [
 	    'api_key' => 'RFKC1TYkrb',
@@ -33,22 +33,37 @@ Route::get('api/culturoscope/{id?}', function ($id = null) {
 	foreach ($spectacles as $key => $spectacle) {
 	    $data['events'][$key] = [
 	        'event_id' => $spectacle->id,
-	        'event_title' => $spectacle->titre_principal,
+	        'event_title' => $spectacle->titre_complet,
 	        'event_description' => $spectacle->accroche,
-	        'event_categories' => explode(', ', $spectacle->categorie->cltp_cat_id),
+	        'event_categories' => array($spectacle->categorie->cltp_cat_id),
 	        'event_status' => $spectacle->statut->cltp_event_status_id,
 
-	        'detail_url' => 'https://www.latourderive.ch/spectacle/'.$spectacle->slug,
-	        'image_url' => $spectacle->affiche,
-	        'date_published' => $spectacle->created_at->tz('UTC')->toRfc3339String(),
-	        'date_modified' => $spectacle->updated_at->tz('UTC')->toRfc3339String(),
+	        'detail_url' =>  Url::to('spectacle').'/'.$spectacle->slug,
+	        'image_url' => $spectacle->affiche->getPath(),
+	        'booking_url' => $spectacle->url_reservation,
+	        'booking_phone' =>  $spectacle->institution->tel_reservations,
+	        'booking_mail' =>  $spectacle->institution->email_reservation,
 	        'venue_name' => $spectacle->lieu->designation,
 	        'venue_address' => $spectacle->lieu->adresse,
 	        'venue_zip' => $spectacle->lieu->npa,
 	        'venue_city' => $spectacle->lieu->localite,
 	        'event_dates' => [],
-	        'event_flags' => [],
+	        'event_flags' => $spectacle->cltp_flags,
+	        #'event_flags' => explode(', ', $spectacle->cltp_flags),
 	    ];
+
+
+	    foreach ($spectacle->representations as $keys => $representation) {
+	    	array(
+	    $data['events'][$key]['event_dates'][$keys] = [ 
+	        'start_date' => $representation->debut->format('Y-m-d H:i'),
+	        'date_status' => $representation->statut->cltp_date_status_id,
+	    ]
+	    	);
+	    }
+
+
+
 	}
 	#$data = Spectacle::get()->toJson();
     return $data ;
