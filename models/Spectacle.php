@@ -202,7 +202,19 @@ class Spectacle extends Model
         return $query->has('souvenirs');
     }
 
+    // Filtre uniquement les spectacles avec affiches (Culturoscope)
+    public function scopeAvecAffiche($query)
+    {
+        return $query->has('affiche');
+    }
 
+    // Filtre uniquement les spectacles avec représentations futures (Culturoscope)
+    public function scopeAvecRepresentations($query)
+    {
+        return $query->whereHas('representations', function ($query) {
+            $query->isActive();
+        });
+    }
 
 
     public function getPeriodeSpectacleAttribute() {

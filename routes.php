@@ -20,7 +20,8 @@ A mettre dans fichier de configuration ou base de données:
 
 Route::get('api/culturoscope', function () {
 
-	$spectacles = Spectacle::get();
+	#$spectacles = Spectacle::get();
+	$spectacles = Spectacle::avecAffiche()->avecRepresentations()->get();
 
 	$data = [
 	    'api_key' => 'RFKC1TYkrb',
