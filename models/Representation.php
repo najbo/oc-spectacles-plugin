@@ -85,6 +85,19 @@ class Representation extends Model
             return Institution::first()->default_time;
     }
 
+    public function scopeIsProchainement($query)
+    {
+        return $query->where('debut','>=', now());
+    }
+
+
+    public function scopeIsStatutRepresentationCulturoscope($query)
+    {
+        return $query->
+                whereHas('statut', function ($query) {
+                    $query->where('is_date_cltp',1);
+                });
+    }
 
 
     // Permet de trier les spectacles par les représentations actives. Utilisé sur programme.htm

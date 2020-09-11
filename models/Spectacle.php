@@ -202,17 +202,33 @@ class Spectacle extends Model
         return $query->has('souvenirs');
     }
 
-    // Filtre uniquement les spectacles avec affiches (Culturoscope)
+    // Pour l'API du Culturoscope, filtre uniquement les spectacles avec affiches
     public function scopeAvecAffiche($query)
     {
         return $query->has('affiche');
     }
 
-    // Filtre uniquement les spectacles avec représentations futures (Culturoscope)
-    public function scopeAvecRepresentations($query)
+
+
+    public function scopeIsStatutSpectacleCulturoscope($query)
     {
-        return $query->whereHas('representations', function ($query) {
-            $query->isActive();
+        return $query->
+            whereHas('statut', function ($query) {
+                $query->where('is_event_cltp', 1);
+        });
+    }
+
+
+    // Filtre uniquement les spectacles avec représentations futures et dont le statut des représentations est publié pour le Culturoscope:
+
+    public function scopeAvecRepresentationsCulturoscope($query)
+    {
+        return $query->
+            with(['representations' => function ($query) {
+                        $query->isProchainement()->isStatutRepresentationCulturoscope();
+                    }])->
+            whereHas('representations', function ($query) {
+                $query->isProchainement()->isStatutRepresentationCulturoscope();
         });
     }
 
