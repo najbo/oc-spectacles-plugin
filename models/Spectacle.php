@@ -352,7 +352,10 @@ class Spectacle extends Model
 
     public function getCulturoscopeFlagsAttribute()
     {
-        $url = 'https://www.culturoscope.ch/api/2.0/events_flags.php?api_key=CS-AFQWpUBJSw';
+
+        $api_key = env('API_KEY_CULTUROSCOPE');
+
+        $url = 'https://www.culturoscope.ch/api/2.0/events_flags.php?api_key='.$api_key;
         
         $JSON = @file_get_contents($url);
 

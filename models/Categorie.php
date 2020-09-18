@@ -30,7 +30,10 @@ class Categorie extends Model
 
     public function getCulturoscopeCategoriesAttribute()
     {
-        $url = 'https://www.culturoscope.ch/api/2.0/events_categories.php?api_key=CS-AFQWpUBJSw';
+        
+        $api_key = env('API_KEY_CULTUROSCOPE');
+
+        $url = 'https://www.culturoscope.ch/api/2.0/events_categories.php?api_key='.$api_key;
         
         $JSON = @file_get_contents($url);
 

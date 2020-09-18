@@ -46,7 +46,9 @@ class Statut extends Model
 
     public function getCulturoscopeEventStatusAttribute()
     {
-        $url = 'https://www.culturoscope.ch/api/2.0/events_status.php?api_key=CS-AFQWpUBJSw';
+        $api_key = env('API_KEY_CULTUROSCOPE');
+
+        $url = 'https://www.culturoscope.ch/api/2.0/events_status.php?api_key='.$api_key;
         
         $JSON = @file_get_contents($url);
 
