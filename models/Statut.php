@@ -44,7 +44,9 @@ class Statut extends Model
         
     }    
 
-    public function getCulturoscopeEventStatusAttribute()
+  
+
+    public function getCltpEventStatusIdOptions()
     {
         $api_key = env('API_KEY_CULTUROSCOPE');
 
@@ -54,7 +56,7 @@ class Statut extends Model
 
         $data = json_decode($JSON, true);
 
-        if ($JSON === false)
+        if (!is_array($data))
         {
             // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
             return array(
@@ -74,24 +76,23 @@ class Statut extends Model
 
             return $status;
         }
-       
-    }   
-
-    public function getCltpEventStatusIdOptions()
-    {
-        return $this->culturoscope_event_status;
     }
 
 
-    public function getCulturoscopeDateStatusAttribute()
+
+
+    public function getCltpDateStatusIdOptions()
     {
-        $url = 'https://www.culturoscope.ch/api/2.0/events_dates_status.php?api_key=CS-AFQWpUBJSw';
+
+        $api_key = env('API_KEY_CULTUROSCOPE');
+
+        $url = 'https://www.culturoscope.ch/api/2.0/events_dates_status.php?api_key='.$api_key;
         
         $JSON = @file_get_contents($url);
 
         $data = json_decode($JSON, true);
 
-        if ($JSON === false)
+        if (!is_array($data))
         {
             // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
             return array(
@@ -109,15 +110,26 @@ class Statut extends Model
             foreach($data as $item) {
                 $status[$item['event_date_status_code']] = $item['event_date_status_title'];
             }
+     
 
             return $status;
         }
-       
-    }   
-
-    public function getCltpDateStatusIdOptions()
-    {
-        return $this->culturoscope_date_status;
     }
+
+
+    // Permet de cacher le champ des tags pour le Culturoscope s'il n'y a pas de clé API_KEY_CULTUROSCOPE définie dans .ENV
+    public function filterFields($fields, $context = null){
+
+        if (! env('API_KEY_CULTUROSCOPE') ) {
+
+              $fields->section_culturoscope_event->hidden = true;
+              $fields->is_event_cltp->hidden = true;
+              $fields->cltp_event_status_id->hidden = true;
+
+              $fields->section_culturoscope_date->hidden = true;
+              $fields->is_date_cltp->hidden = true;
+              $fields->cltp_date_status_id->hidden = true;
+        } 
+    } 
 
 }

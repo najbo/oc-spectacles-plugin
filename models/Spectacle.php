@@ -350,10 +350,13 @@ class Spectacle extends Model
 
 
 
-    public function getCulturoscopeFlagsAttribute()
-    {
+  
 
+    public function getCltpFlagsOptions()
+    {
         $api_key = env('API_KEY_CULTUROSCOPE');
+
+
 
         $url = 'https://www.culturoscope.ch/api/2.0/events_flags.php?api_key='.$api_key;
         
@@ -361,9 +364,11 @@ class Spectacle extends Model
 
         $data = json_decode($JSON, true);
 
-        if ($JSON === false)
+        #dd($JSON);
+
+        if (!is_array($data))
         {
-            // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
+            // Pas de connexion au serveur du Cultursocope ou mauvaise clé ; on affiche alors des valeurs par défaut.
             return array(
                 'CREATION' => 'Artistes régionaux',
                 'YOUNGPUBLIC' => 'Jeune public',
@@ -381,16 +386,18 @@ class Spectacle extends Model
 
             return $flags;
         }
-       
-    }   
-
-    public function getCltpFlagsOptions()
-    {
-        return $this->culturoscope_flags;
     }                
 
 
 
+    // Permet de cacher le champ des tags pour le Culturoscope s'il n'y a pas de clé API_KEY_CULTUROSCOPE définie dans .ENV
+    public function filterFields($fields, $context = null){
+
+        if (!env('API_KEY_CULTUROSCOPE') ) {
+
+              $fields->cltp_flags->hidden = true;
+        } 
+    } 
 
 
 }

@@ -5,7 +5,7 @@ fields:
         type: text
 tabs:
     fields:
-        section1:
+        section_culturoscope_event:
             label: Spectacle
             span: full
             type: section
@@ -26,7 +26,7 @@ tabs:
                 condition: checked
             type: dropdown
             tab: Culturoscope
-        section2:
+        section_culturoscope_date:
             label: Représentation
             span: full
             type: section
