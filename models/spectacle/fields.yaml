@@ -347,6 +347,14 @@ tabs:
             type: hint
             permissions: digart.spectacles.planification
             tab: Planification
+        hint_planification2:
+            span: full
+            path: $/digart/spectacles/models/spectacle/_hint_planification.htm
+            context:
+                - update
+            type: hint
+            permissions: digart.spectacles.planification
+            tab: Planification            
         planifications:
             span: full
             path: field_planifications

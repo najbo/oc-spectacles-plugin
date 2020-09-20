@@ -3,7 +3,7 @@ use Digart\Spectacles\Models\Spectacle;
 
 
 Route::get('api/test', function () {
-	$spectacles = Spectacle::with('protocoles.statut')->get(['id']);
+	$spectacles = Spectacle::get()->sortBy('representations.debut');
 	return $spectacles;
 });
 
