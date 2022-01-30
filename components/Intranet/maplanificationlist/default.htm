@@ -1,0 +1,16 @@
+<h4 class="pb-3">Représentations {{ user.name }} :</h4>
+	<div>
+	    <ul class="list-disc">
+	    {% for planification in planif_representations %}
+	        <li><strong class="font-semibold">
+	            {{ planification.planifiable.debut|date('l d.m.y H:i')|capitalize }} - 
+	        </strong>
+
+	            {{ planification.planifiable.spectacle.titre_principal }} - 
+	            {{ planification.fonction.designation }}
+
+	            {{ planification.designation ? ' | ' ~ planification.designation }}
+	        </li>
+	    {% endfor %}
+	    </ul>
+	</div>

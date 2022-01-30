@@ -17,8 +17,8 @@ class Plugin extends PluginBase
         'Digart\Spectacles\Components\Spectacle' => 'detailProgramme',
         'Digart\Spectacles\Components\Saisons' => 'saisons',
         'Digart\Spectacles\Components\Saison' => 'detailSaison',
-        'Digart\Spectacles\Components\PublicationsRecherche' => 'rechercheDetail'
-
+        'Digart\Spectacles\Components\PublicationsRecherche' => 'rechercheDetail',
+        'Digart\Spectacles\Components\Intranet\MaPlanificationList' => 'maPlanificationList'
         ];
     }
 
