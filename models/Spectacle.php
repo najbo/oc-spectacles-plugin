@@ -143,12 +143,9 @@ class Spectacle extends Model
         return $this->hasOne(Representation::class)->where('debut','>=', now())->orderBy('debut');
     }
 
-
-
     // Retourne les valeurs par défaut de la première institution pour le prix et la disposition
     public function getDefautDispositionAttribute()
     {
-
         if (Institution::first())
             return Institution::first()->defaut_disposition;
     }
@@ -266,6 +263,7 @@ class Spectacle extends Model
     public function getFirstRepresentationAttribute()
     {
         return $this->representations()->min('debut');
+        // return $this->representations->last()->debut;
     }
 
 
