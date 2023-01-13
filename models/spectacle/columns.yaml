@@ -4,11 +4,11 @@ columns:
         type: text
         searchable: true
         sortable: true
-    titre_secondaire:
-        label: 'Titre secondaire'
-        type: text
-        searchable: true
-        sortable: true
+    # titre_secondaire:
+    #     label: 'Titre secondaire'
+    #     type: text
+    #     searchable: true
+    #     sortable: true
     artistes:
         label: Artistes
         type: text

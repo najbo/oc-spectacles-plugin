@@ -272,6 +272,16 @@ class Spectacle extends Model
         return $this->representations()->max('debut');
     }
 
+    public function getIsArchivedAttribute()
+    {
+        if ($this->last_representation < now())
+        {
+            return true;
+        } 
+        return false;
+
+    }
+
     // Renvoie l'URL complète pour accéder à une page de spectacle par le slug
     public function getFullUrlAttribute() {
 
@@ -347,9 +357,6 @@ class Spectacle extends Model
     }
 
 
-
-  
-
     public function getCltpFlagsOptions()
     {
         $api_key = env('API_KEY_CULTUROSCOPE');
@@ -391,9 +398,10 @@ class Spectacle extends Model
     // Permet de cacher le champ des tags pour le Culturoscope s'il n'y a pas de clé API_KEY_CULTUROSCOPE définie dans .ENV
     public function filterFields($fields, $context = null){
 
-        if (!env('API_KEY_CULTUROSCOPE') ) {
+        return;
 
-              $fields->cltp_flags->hidden = true;
+        if (!env('API_KEY_CULTUROSCOPE') ) {
+            $fields->cltp_flags->hidden = true;
         } 
     } 
 

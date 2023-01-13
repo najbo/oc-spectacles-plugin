@@ -2,6 +2,7 @@
 
 use Model;
 use Carbon\Carbon;
+use Log;
 
 /**
  * Model
@@ -67,6 +68,12 @@ class Saison extends Model
             return true;
         }
     }
+
+    public function getSaisonOptions()
+    {
+        Log::info('hello');
+        return Saison::orderBy('debut', 'desc')->lists('designation', 'id');
+    }    
 
 
 }

@@ -9,6 +9,7 @@ scopes:
         modelClass: DigArt\Spectacles\Models\Saison
         conditions: saison_id in (:filtered)
         nameFrom: designation
+        options: getSaisonOptions
     artistes:
         label: Artistes
         modelClass: DigArt\Spectacles\Models\Artiste

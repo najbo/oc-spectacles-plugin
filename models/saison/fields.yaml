@@ -6,6 +6,7 @@ fields:
     slug:
         label: 'URL de la saison'
         span: auto
+        placeholder: 2021-2022
         preset:
             field: designation
             type: slug
