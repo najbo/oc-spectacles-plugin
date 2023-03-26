@@ -97,7 +97,7 @@
     - 'Created table digart_spectacles_abogrp'
     - builder_table_create_digart_spectacles_abogrp.php
 1.0.40:
-    - 'Seed groupes d''abonnements'
+    - "Seed groupes d'abonnements"
     - seeder1040.php
 1.0.41:
     - 'Created table digart_spectacles_team'
@@ -156,3 +156,6 @@
 1.0.63:
     - 'Created table digart_spectacles_files'
     - builder_table_create_digart_spectacles_files_2.php
+1.0.64:
+    - 'Created table digart_spectacles_profiles_users'
+    - builder_table_create_digart_spectacles_profiles_users.php
