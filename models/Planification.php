@@ -37,13 +37,30 @@ class Planification extends Model
 
     public $morphTo = [
         'planifiable' => []
-    ];    
+    ];
 
     // Inscrit le backend user connecté dans le champ programmateur
     public function getAdministrateurActuelAttribute()
     {
         if (BackendAuth::check()) {
-           return BackendAuth::getUser()->id;
+            return BackendAuth::getUser()->id;
         }
-    }    
+    }
+
+    public function scopeWhatModel($query, $model)
+    {
+        return $query->where('planifiable_type', $model);
+    }
+
+    public function scopeBenevole($query, $benevoleId)
+    {
+        return $query->where('benevole_id', $benevoleId);
+    }
+
+    public function scopeNextRepresentations($query)
+    {
+        return $query->whereHas('planifiable', function ($query) {
+                $query->where('debut', '>=', now());
+        });
+    }
 }

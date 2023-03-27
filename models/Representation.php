@@ -1,8 +1,11 @@
-<?php namespace Digart\spectacles\Models;
+<?php
 
-use Model;
+namespace Digart\spectacles\Models;
+
 use BackendAuth;
+use Digart\spectacles\Models\Planification;
 use Log;
+use Model;
 
 /**
  * Model
@@ -32,13 +35,13 @@ class Representation extends Model
     public $belongsTo = [
         'lieu' => ['DigArt\Spectacles\Models\Lieu',
                    'key' => 'lieu_id',
-                   'order' => 'sort_order'],                 
+                   'order' => 'sort_order'],
         'statut' => ['DigArt\Spectacles\Models\Statut',
                    'key' => 'statut_id',
-                   'order' => 'sort_order'],  
+                   'order' => 'sort_order'],
         'spectacle' => ['DigArt\Spectacles\Models\Spectacle',
-                   'key' => 'spectacle_id'],                      
-    ];    
+                   'key' => 'spectacle_id'],
+    ];
 
 
     public $hasMany = [
@@ -51,7 +54,8 @@ class Representation extends Model
             'name' => 'planifiable']
     ];
 
-    public function getDebutTexteAttribute() {
+    public function getDebutTexteAttribute()
+    {
         return $this->debut->format('d.m.y H:i');
     }
 
@@ -81,8 +85,9 @@ class Representation extends Model
     public function getDateHeureDefautAttribute()
     {
 
-        if (Institution::first())
+        if (Institution::first()) {
             return Institution::first()->default_time;
+        }
     }
 
     public function scopeIsProchainement($query)

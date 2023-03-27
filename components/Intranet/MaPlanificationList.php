@@ -39,11 +39,9 @@ class MaPlanificationList extends ComponentBase
     public function representations()
     {
         $user = $this->page->user;
-        
-        $planifications = Planification::where('planifiable_type', Representation::class)->where('benevole_id', $user->id)
-            ->whereHas('planifiable', function ($query) {
-                $query->where('debut', '>=', now());
-            })
+
+        $planifications = Planification::whatModel(Representation::class)->benevole($user->id)
+            ->nextRepresentations()
         ->get()->sortBy('planifiable.debut');
 
         return $planifications;
