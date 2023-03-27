@@ -1,12 +1,14 @@
-<?php namespace Digart\Spectacles\Components\Intranet;
+<?php
 
-use Digart\Spectacles\Models\Planification;
+namespace Digart\Spectacles\Components\Intranet;
 
 use Auth;
-use Log;
 use Carbon\Carbon;
 use Cms\Classes\ComponentBase;
-
+use Digart\spectacles\Models\Planification;
+use Digart\spectacles\Models\Representation;
+use Digart\spectacles\Models\Spectacle;
+use Log;
 
 class MaPlanificationList extends ComponentBase
 {
@@ -24,16 +26,29 @@ class MaPlanificationList extends ComponentBase
     }
 
     public function onRun()
-        {
-            $this->prepareVars();
-        }  
+    {
+        $this->prepareVars();
+    }
         
     protected function prepareVars()
     {
+        $users = $this->page['user'] = Auth::getUser();
+        // $this->page['planif_representations'] = Planification::where('planifiable_type', Representation::class)->where('benevole_id', $user->id)->get()->sortBy('planifiable.debut');
+    }
 
-        $user = $this->page['user'] = Auth::getUser();
-        $this->page['planif_representations'] = Planification::where('planifiable_type', Representation::class)->where('benevole_id',  $user->id)->get()->sortBy('planifiable.debut');
+    public function representations()
+    {
+        $user = $this->page->user;
+        
+        $planifications = Planification::where('planifiable_type', Representation::class)->where('benevole_id', $user->id)
+            ->whereHas('planifiable', function ($query) {
+                $query->where('debut', '>=', now());
+            })
+        ->get()->sortBy('planifiable.debut');
 
-    } 
+        return $planifications;
 
+        $planifications = Planification::where('planifiable_type', Representation::class)->where('benevole_id', $user->id)
+            ->get()->sortBy('planifiable.debut');
+    }
 }

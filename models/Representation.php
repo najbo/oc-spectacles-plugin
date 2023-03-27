@@ -87,7 +87,7 @@ class Representation extends Model
 
     public function scopeIsProchainement($query)
     {
-        return $query->where('debut','>=', now());
+        return $query->where('debut', '>=', now());
     }
 
 
