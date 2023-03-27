@@ -45,8 +45,5 @@ class MaPlanificationList extends ComponentBase
         ->get()->sortBy('planifiable.debut');
 
         return $planifications;
-
-        $planifications = Planification::where('planifiable_type', Representation::class)->where('benevole_id', $user->id)
-            ->get()->sortBy('planifiable.debut');
     }
 }
