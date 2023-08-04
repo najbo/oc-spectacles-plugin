@@ -100,37 +100,34 @@ class Representation extends Model
     {
         return $query->
                 whereHas('statut', function ($query) {
-                    $query->where('is_date_cltp',1);
+                    $query->where('is_date_cltp', 1);
                 });
     }
 
 
-    // Permet de trier les spectacles par les représentations actives. Utilisé sur programme.htm
-    public function scopeIsActive($query) {
+    // Permet de trier les spectacles par les représentations actives. Utilisé sur programme.htm et composant Program.php
 
-
-        #return $query->where('debut','>=', now())->orderBy('debut');
-        
+    public function scopeIsActive($query)
+    {
         $user = BackendAuth::getUser();
 
         if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
             return $query->
                 whereHas('statut', function ($query) {
-                        $query->where('is_frontend','1')->orWhere('is_brouillon', 1);})
-                ->where('debut','>=', now())->orderBy('debut');
+                        $query->where('is_frontend', '1')->orWhere('is_brouillon', 1);
+                })
+                ->where('debut', '>=', now())->orderBy('debut');
         } else {
-
             return $query->
                 whereHas('statut', function ($query) {
-                        $query->where('is_frontend','1');})
-                ->where('debut','>=', now())->orderBy('debut');
+                        $query->where('is_frontend', '1');
+                })
+                ->where('debut', '>=', now())->orderBy('debut');
         }
-    
-    }    
+    }
 
-    public function scopeIsToutes($query) {
-
-
+    public function scopeIsToutes($query)
+    {
         #return $query->where('debut','>=', now())->orderBy('debut');
         
         $user = BackendAuth::getUser();
