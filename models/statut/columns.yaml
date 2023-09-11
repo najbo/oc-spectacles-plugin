@@ -10,7 +10,12 @@ columns:
         searchable: true
         sortable: false
     cltp_event_status_id:
-        label: 'Status spectacle Culturoscope'
+        label: 'Statut spectacle Culturoscope'
         type: text
         searchable: true
         sortable: false
+    cltp_date_status_id:
+        label: 'Statut date Culturoscope'
+        type: text
+        searchable: true
+        sortable: false        
