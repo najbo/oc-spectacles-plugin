@@ -46,5 +46,4 @@ tabs:
                 field: is_date_cltp
                 condition: checked
             type: dropdown
-            type: dropdown
             tab: Culturoscope
