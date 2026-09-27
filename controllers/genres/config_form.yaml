@@ -1,6 +1,6 @@
 name: Genres
 form: $/digart/spectacles/models/genre/fields.yaml
-modelClass: Digart\spectacles\Models\Genre
+modelClass: Digart\Spectacles\Models\Genre
 defaultRedirect: digart/spectacles/genres
 create:
     redirect: 'digart/spectacles/genres/update/:id'

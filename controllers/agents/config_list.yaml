@@ -1,5 +1,5 @@
 list: $/digart/spectacles/models/agent/columns.yaml
-modelClass: Digart\spectacles\Models\Agent
+modelClass: Digart\Spectacles\Models\Agent
 title: Agents
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

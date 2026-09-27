@@ -1,5 +1,5 @@
 name: 'Genre de protocoles'
-modelClass: Digart\spectacles\Models\ProtocoleGenre
+modelClass: Digart\Spectacles\Models\ProtocoleGenre
 form: $/digart/spectacles/models/protocolegenre/fields.yaml
 defaultRedirect: digart/spectacles/protocolesgenres
 create:

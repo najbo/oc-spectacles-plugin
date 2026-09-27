@@ -1,7 +1,7 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
-use Digart\spectacles\Models\Social;
+use Digart\Spectacles\Models\Social;
 /**
  * Model
  */
@@ -44,12 +44,12 @@ class Artiste extends Model
     ];
 
     public $belongsTo = [
-        'agent' => ['DigArt\Spectacles\Models\Agent',
+        'agent' => ['Digart\Spectacles\Models\Agent',
                    'key' => 'agent_id',
                    'order' => 'designation'],   
     // Permet d'afficher les réseaux sociaux dans le repeater "Liens réseaux sociaux"
                    
-        'social_id' => ['DigArt\Spectacles\Models\Social',
+        'social_id' => ['Digart\Spectacles\Models\Social',
                 'key' => 'id',
                 'scope' => 'isActive']                                                  
     ];  
@@ -57,11 +57,11 @@ class Artiste extends Model
 
     public $belongsToMany = [
         'spectacles' => [
-            'DigArt\Spectacles\Models\Spectacle',
+            'Digart\Spectacles\Models\Spectacle',
             'table' => 'digart_spectacles_spect_art',
         ],
         'spectaclesFrontend' => [
-            'DigArt\Spectacles\Models\Spectacle',
+            'Digart\Spectacles\Models\Spectacle',
             'table' => 'digart_spectacles_spect_art',
             'scope' => 'isFrontend',
         ],  

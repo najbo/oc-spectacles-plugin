@@ -1,5 +1,5 @@
 title: 'Planification par représentations'
-modelClass: Digart\spectacles\Models\Representation
+modelClass: Digart\Spectacles\Models\Representation
 list: $/digart/spectacles/models/representation/columns_planification.yaml
 recordUrl: 'digart/spectacles/representationsplanifications/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

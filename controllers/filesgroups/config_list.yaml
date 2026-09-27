@@ -1,5 +1,5 @@
 title: 'Fichier Intranet'
-modelClass: Digart\spectacles\Models\FileGroup
+modelClass: Digart\Spectacles\Models\FileGroup
 list: $/digart/spectacles/models/filegroup/columns.yaml
 recordUrl: 'digart/spectacles/filesgroups/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

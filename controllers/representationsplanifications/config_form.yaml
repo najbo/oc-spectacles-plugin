@@ -1,5 +1,5 @@
 name: 'Planification par représentation'
-modelClass: Digart\spectacles\Models\Representation
+modelClass: Digart\Spectacles\Models\Representation
 form: $/digart/spectacles/models/representation/fields_planification.yaml
 defaultRedirect: digart/spectacles/representationsplanifications
 create:

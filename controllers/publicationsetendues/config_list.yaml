@@ -1,5 +1,5 @@
 title: 'Etendues du blog'
-modelClass: Digart\spectacles\Models\PublicationEtendue
+modelClass: Digart\Spectacles\Models\PublicationEtendue
 list: $/digart/spectacles/models/publicationetendue/columns.yaml
 recordUrl: 'digart/spectacles/publicationsetendues/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

@@ -1,5 +1,5 @@
 title: Groupes de fichiers
-modelClass: Digart\spectacles\Models\FileGroup
+modelClass: Digart\Spectacles\Models\FileGroup
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

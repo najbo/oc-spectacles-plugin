@@ -1,5 +1,5 @@
 title: Institutions
-modelClass: Digart\spectacles\Models\Institution
+modelClass: Digart\Spectacles\Models\Institution
 list: $/digart/spectacles/models/institution/columns.yaml
 recordUrl: 'digart/spectacles/institutions/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

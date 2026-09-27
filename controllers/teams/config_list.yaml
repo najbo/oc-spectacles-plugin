@@ -1,5 +1,5 @@
 title: Team
-modelClass: Digart\spectacles\Models\Team
+modelClass: Digart\Spectacles\Models\Team
 list: $/digart/spectacles/models/team/columns.yaml
 recordUrl: 'digart/spectacles/teams/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

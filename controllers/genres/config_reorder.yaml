@@ -1,5 +1,5 @@
 title: Genres
-modelClass: Digart\spectacles\Models\Genre
+modelClass: Digart\Spectacles\Models\Genre
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

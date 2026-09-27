@@ -5,9 +5,9 @@ namespace Digart\Spectacles\Components\Intranet;
 use Auth;
 use Carbon\Carbon;
 use Cms\Classes\ComponentBase;
-use Digart\spectacles\Models\Planification;
-use Digart\spectacles\Models\Representation;
-use Digart\spectacles\Models\Spectacle;
+use Digart\Spectacles\Models\Planification;
+use Digart\Spectacles\Models\Representation;
+use Digart\Spectacles\Models\Spectacle;
 use Log;
 
 class MaPlanificationList extends ComponentBase

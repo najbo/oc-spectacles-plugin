@@ -1,5 +1,5 @@
 title: Categories
-modelClass: Digart\spectacles\Models\Categorie
+modelClass: Digart\Spectacles\Models\Categorie
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

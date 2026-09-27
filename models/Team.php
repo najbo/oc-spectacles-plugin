@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 
@@ -34,7 +34,7 @@ class Team extends Model
 
 
     public $belongsTo = [
-        'institution' => ['DigArt\Spectacles\Models\Institution',
+        'institution' => ['Digart\Spectacles\Models\Institution',
                    'order' => 'sort_order'],
     ]; 
 

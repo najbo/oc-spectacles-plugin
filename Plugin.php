@@ -1,7 +1,7 @@
-<?php namespace Digart\spectacles;
+<?php namespace Digart\Spectacles;
 
-use Digart\spectacles\Models\Fonction;
-use Digart\spectacles\Models\ProfileUser;
+use Digart\Spectacles\Models\Fonction;
+use Digart\Spectacles\Models\ProfileUser;
 use System\Classes\PluginBase;
 use Rainlab\User\Models\User as UserModel;
 use Rainlab\User\Controllers\Users as UsersController;

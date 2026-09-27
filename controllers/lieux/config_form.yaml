@@ -1,5 +1,5 @@
 name: Lieux
-modelClass: Digart\spectacles\Models\Lieu
+modelClass: Digart\Spectacles\Models\Lieu
 form: $/digart/spectacles/models/lieu/fields.yaml
 defaultRedirect: digart/spectacles/lieux
 create:

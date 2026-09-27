@@ -1,5 +1,5 @@
 name: Institutions
-modelClass: Digart\spectacles\Models\Institution
+modelClass: Digart\Spectacles\Models\Institution
 form: $/digart/spectacles/models/institution/fields.yaml
 defaultRedirect: digart/spectacles/institutions
 create:

@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use BackendAuth;

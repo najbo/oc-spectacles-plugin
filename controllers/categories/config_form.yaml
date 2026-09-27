@@ -1,6 +1,6 @@
 name: Categories
 form: $/digart/spectacles/models/categorie/fields.yaml
-modelClass: Digart\spectacles\Models\Categorie
+modelClass: Digart\Spectacles\Models\Categorie
 defaultRedirect: digart/spectacles/categories
 create:
     redirect: 'digart/spectacles/categories/update/:id'

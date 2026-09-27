@@ -1,5 +1,5 @@
 name: Team
-modelClass: Digart\spectacles\Models\Team
+modelClass: Digart\Spectacles\Models\Team
 form: $/digart/spectacles/models/team/fields.yaml
 defaultRedirect: digart/spectacles/teams
 create:

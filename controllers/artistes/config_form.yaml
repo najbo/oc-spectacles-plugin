@@ -1,6 +1,6 @@
 name: Artistes
 form: $/digart/spectacles/models/artiste/fields.yaml
-modelClass: Digart\spectacles\Models\Artiste
+modelClass: Digart\Spectacles\Models\Artiste
 defaultRedirect: digart/spectacles/artistes
 create:
     redirect: 'digart/spectacles/artistes/update/:id'

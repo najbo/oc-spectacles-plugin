@@ -1,5 +1,5 @@
 title: Societé
-modelClass: Digart\spectacles\Models\Societe
+modelClass: Digart\Spectacles\Models\Societe
 list: $/digart/spectacles/models/societe/columns.yaml
 recordUrl: 'digart/spectacles/societes/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

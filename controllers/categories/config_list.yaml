@@ -1,5 +1,5 @@
 list: $/digart/spectacles/models/categorie/columns.yaml
-modelClass: Digart\spectacles\Models\Categorie
+modelClass: Digart\Spectacles\Models\Categorie
 title: Categories
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

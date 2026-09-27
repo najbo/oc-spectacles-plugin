@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use Carbon\Carbon;
@@ -42,13 +42,13 @@ class Saison extends Model
 
 
     public $belongsTo = [
-        'statut' => ['DigArt\Spectacles\Models\Statut',
+        'statut' => ['Digart\Spectacles\Models\Statut',
                    'key' => 'statut_id',
                    'order' => 'sort_order'],               
     ];
 
     public $hasMany = [
-         'spectacles' => ['DigArt\Spectacles\Models\Spectacle', 
+         'spectacles' => ['Digart\Spectacles\Models\Spectacle', 
             'key' => 'saison_id', 
             'softDelete' => false]
     ];      

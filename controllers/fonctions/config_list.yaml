@@ -1,5 +1,5 @@
 title: Fonctions
-modelClass: Digart\spectacles\Models\Fonction
+modelClass: Digart\Spectacles\Models\Fonction
 list: $/digart/spectacles/models/fonction/columns.yaml
 recordUrl: 'digart/spectacles/fonctions/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

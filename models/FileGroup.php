@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 
@@ -37,7 +37,7 @@ class FileGroup extends Model
 
     public $belongsToMany = [      
         'fonctions' => [
-            'DigArt\Spectacles\Models\Fonction',
+            'Digart\Spectacles\Models\Fonction',
             'table' => 'digart_spectacles_filesgrps_fct',
             'key' => 'filegroup_id',
             'otherKey' => 'fonction_id'],            
@@ -45,7 +45,7 @@ class FileGroup extends Model
 
 
     public $hasMany = [
-         'files' => ['DigArt\Spectacles\Models\File', 
+         'files' => ['Digart\Spectacles\Models\File', 
             'key' => 'filegroup_id', 
             'order' => 'sort_order',
             'softDelete' => true],           

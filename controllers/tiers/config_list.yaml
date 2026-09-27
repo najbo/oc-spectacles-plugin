@@ -1,5 +1,5 @@
 title: Tiers
-modelClass: Digart\spectacles\Models\Tiers
+modelClass: Digart\Spectacles\Models\Tiers
 list: $/digart/spectacles/models/tiers/columns.yaml
 recordUrl: 'digart/spectacles/tiers/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

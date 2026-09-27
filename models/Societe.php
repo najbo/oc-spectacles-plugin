@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 
@@ -28,7 +28,7 @@ class Societe extends Model
 
     public $belongsToMany = [
         'genres' => [
-            'DigArt\Spectacles\Models\TiersGenre',
+            'Digart\Spectacles\Models\TiersGenre',
             'table' => 'digart_spectacles_soc_genres',
             'key' => 'societe_id',
             'otherKey' => 'genre_id',

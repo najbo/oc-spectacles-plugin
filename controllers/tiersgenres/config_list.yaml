@@ -1,5 +1,5 @@
 title: 'Genres de tiers'
-modelClass: Digart\spectacles\Models\TiersGenre
+modelClass: Digart\Spectacles\Models\TiersGenre
 list: $/digart/spectacles/models/tiersgenre/columns.yaml
 recordUrl: 'digart/spectacles/tiersgenres/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

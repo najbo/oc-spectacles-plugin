@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use BackendAuth;
@@ -29,7 +29,7 @@ class LocationDate extends Model
     ]; 
 
     public $belongsTo = [
-        'location' => ['DigArt\Spectacles\Models\Location'],                  
+        'location' => ['Digart\Spectacles\Models\Location'],                  
     ];
 
 

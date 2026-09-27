@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 
@@ -40,15 +40,15 @@ class Souvenir extends Model
 
 
     public $belongsTo = [
-        'photographe' => ['DigArt\Spectacles\Models\Tiers',
+        'photographe' => ['Digart\Spectacles\Models\Tiers',
                    'scope' => 'photographes'],
 
    
-        'representation' => ['DigArt\Spectacles\Models\Representation',
+        'representation' => ['Digart\Spectacles\Models\Representation',
                    'key' => 'representation_id',
                    'order' => 'debut'],
 
-        'spectacle' => ['DigArt\Spectacles\Models\Spectacle',
+        'spectacle' => ['Digart\Spectacles\Models\Spectacle',
                    'key' => 'spectacle_id'],
     ];    
 

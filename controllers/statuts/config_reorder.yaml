@@ -1,5 +1,5 @@
 title: Statuts
-modelClass: Digart\spectacles\Models\Statut
+modelClass: Digart\Spectacles\Models\Statut
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

@@ -1,6 +1,6 @@
 name: Agents
 form: $/digart/spectacles/models/agent/fields.yaml
-modelClass: Digart\spectacles\Models\Agent
+modelClass: Digart\Spectacles\Models\Agent
 defaultRedirect: digart/spectacles/agents
 create:
     redirect: 'digart/spectacles/agents/update/:id'

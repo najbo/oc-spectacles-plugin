@@ -1,5 +1,5 @@
 name: Societé
-modelClass: Digart\spectacles\Models\Societe
+modelClass: Digart\Spectacles\Models\Societe
 form: $/digart/spectacles/models/societe/fields.yaml
 defaultRedirect: digart/spectacles/societes
 create:

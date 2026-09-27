@@ -1,6 +1,6 @@
 name: Fonctions
 form: $/digart/spectacles/models/fonction/fields.yaml
-modelClass: Digart\spectacles\Models\Fonction
+modelClass: Digart\Spectacles\Models\Fonction
 defaultRedirect: digart/spectacles/fonctions
 create:
     redirect: 'digart/spectacles/fonctions/update/:id'

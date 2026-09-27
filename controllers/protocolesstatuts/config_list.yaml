@@ -1,5 +1,5 @@
 title: 'Statuts des protocoles'
-modelClass: Digart\spectacles\Models\ProtocoleStatut
+modelClass: Digart\Spectacles\Models\ProtocoleStatut
 list: $/digart/spectacles/models/protocolestatut/columns.yaml
 recordUrl: 'digart/spectacles/protocolesstatuts/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

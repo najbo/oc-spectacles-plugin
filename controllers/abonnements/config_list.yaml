@@ -1,5 +1,5 @@
 title: Abonnements
-modelClass: Digart\spectacles\Models\Abonnement
+modelClass: Digart\Spectacles\Models\Abonnement
 list: $/digart/spectacles/models/abonnement/columns.yaml
 recordUrl: 'digart/spectacles/abonnements/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

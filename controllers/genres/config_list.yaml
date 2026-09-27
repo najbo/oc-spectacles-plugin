@@ -1,5 +1,5 @@
 title: Genres
-modelClass: Digart\spectacles\Models\Genre
+modelClass: Digart\Spectacles\Models\Genre
 list: $/digart/spectacles/models/genre/columns.yaml
 recordUrl: 'digart/spectacles/genres/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

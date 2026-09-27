@@ -1,5 +1,5 @@
 title: Statuts
-modelClass: Digart\spectacles\Models\Statut
+modelClass: Digart\Spectacles\Models\Statut
 list: $/digart/spectacles/models/statut/columns.yaml
 recordUrl: 'digart/spectacles/statuts/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

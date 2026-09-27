@@ -1,5 +1,5 @@
 title: 'Réseau sociaux'
-modelClass: Digart\spectacles\Models\Social
+modelClass: Digart\Spectacles\Models\Social
 list: $/digart/spectacles/models/social/columns.yaml
 recordUrl: 'digart/spectacles/socials/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

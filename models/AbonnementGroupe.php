@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use Carbon\Carbon;
@@ -29,14 +29,14 @@ class AbonnementGroupe extends Model
     ];
 
     public $hasMany = [
-         'abonnements' => ['DigArt\Spectacles\Models\Abonnement', 
+         'abonnements' => ['Digart\Spectacles\Models\Abonnement', 
             'order' => 'sort_order',
             'softDelete' => true],          
     ];     
 
 
     public $belongsTo = [
-        'institution' => ['DigArt\Spectacles\Models\Institution',
+        'institution' => ['Digart\Spectacles\Models\Institution',
                    'order' => 'sort_order'],
     ]; 
 

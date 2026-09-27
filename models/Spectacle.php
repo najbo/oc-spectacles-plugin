@@ -1,9 +1,9 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use BackendAuth;
-use DigArt\Spectacles\Models\Representation;
-use Digart\spectacles\Models\Social;
+use Digart\Spectacles\Models\Representation;
+use Digart\Spectacles\Models\Social;
 
 /**
  * Model
@@ -53,42 +53,42 @@ class Spectacle extends Model
     public $belongsTo = [
         'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
-        'saison' => ['DigArt\Spectacles\Models\Saison',
+        'saison' => ['Digart\Spectacles\Models\Saison',
                    'key' => 'saison_id'],
-        'institution' => ['DigArt\Spectacles\Models\Institution',
+        'institution' => ['Digart\Spectacles\Models\Institution',
                    'key' => 'institution_id',
                    'order' => 'sort_order'],
-        'statut' => ['DigArt\Spectacles\Models\Statut',
+        'statut' => ['Digart\Spectacles\Models\Statut',
                    'key' => 'statut_id',
                    'order' => 'sort_order'],
-        'categorie' => ['DigArt\Spectacles\Models\Categorie',
+        'categorie' => ['Digart\Spectacles\Models\Categorie',
                    'key' => 'categorie_id',
                    'order' => 'sort_order'],
-        'lieu' => ['DigArt\Spectacles\Models\Lieu',
+        'lieu' => ['Digart\Spectacles\Models\Lieu',
                    'key' => 'lieu_id',
                    'order' => 'sort_order'],
-        //'artiste' => ['DigArt\Spectacles\Models\Artiste'],
+        //'artiste' => ['Digart\Spectacles\Models\Artiste'],
     // Permet d'afficher les réseaux sociaux dans le repeater "Liens réseaux sociaux"
-        'social_id' => ['DigArt\Spectacles\Models\Social',
+        'social_id' => ['Digart\Spectacles\Models\Social',
                     'key' => 'id',
                     'scope' => 'isActive']
     ];
 
     public $belongsToMany = [
         'genres' => [
-            'DigArt\Spectacles\Models\Genre',
+            'Digart\Spectacles\Models\Genre',
             'table' => 'digart_spectacles_spect_genr',
             'key' => 'spectacle_id',
             'otherKey' => 'genre_id',
             'order' => 'designation'],
         'categories' => [
-            'DigArt\Spectacles\Models\Categorie',
+            'Digart\Spectacles\Models\Categorie',
             'table' => 'digart_spectacles_spect_cat',
             'key' => 'spectacle_id',
             'otherKey' => 'categorie_id',
             'order' => 'designation'],
         'artistes' => [
-            'DigArt\Spectacles\Models\Artiste',
+            'Digart\Spectacles\Models\Artiste',
             'table' => 'digart_spectacles_spect_art',
             'key' => 'spectacle_id',
             'otherKey' => 'artiste_id'],
@@ -96,21 +96,21 @@ class Spectacle extends Model
 
 
     public $hasMany = [
-         'representations' => ['DigArt\Spectacles\Models\Representation',
+         'representations' => ['Digart\Spectacles\Models\Representation',
             'key' => 'spectacle_id',
             'order' => 'debut',
             'softDelete' => true],
-         'represActives' => ['DigArt\Spectacles\Models\Representation',
+         'represActives' => ['Digart\Spectacles\Models\Representation',
             'key' => 'spectacle_id',
             'scope' => 'isActive'],
-         'represToutes' => ['DigArt\Spectacles\Models\Representation',
+         'represToutes' => ['Digart\Spectacles\Models\Representation',
             'key' => 'spectacle_id',
             'scope' => 'isToutes'],
-         'souvenirs' => ['DigArt\Spectacles\Models\Souvenir',
+         'souvenirs' => ['Digart\Spectacles\Models\Souvenir',
             'key' => 'spectacle_id',
             'order' => 'sort_order',
             'softDelete' => true],
-         'protocoles' => ['DigArt\Spectacles\Models\Protocole',
+         'protocoles' => ['Digart\Spectacles\Models\Protocole',
             'key' => 'spectacle_id',
             'order' => 'date',
             'softDelete' => true],
@@ -119,7 +119,7 @@ class Spectacle extends Model
 
     public $hasOne = [
     // Permet de trier par les dates des représentations actives
-         'latestSpectacle' => ['DigArt\Spectacles\Models\Representation',
+         'latestSpectacle' => ['Digart\Spectacles\Models\Representation',
             'scope' => 'isActive'],
     ];
 

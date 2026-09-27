@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Updates;
+<?php namespace Digart\Spectacles\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

@@ -1,5 +1,5 @@
 title: 'Groupes d''abonnements'
-modelClass: Digart\spectacles\Models\AbonnementGroupe
+modelClass: Digart\Spectacles\Models\AbonnementGroupe
 nameFrom: titre
 toolbar:
     buttons: reorder_toolbar

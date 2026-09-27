@@ -1,7 +1,7 @@
 scopes:
     statut:
         label: Etendue
-        modelClass: DigArt\Spectacles\Models\PublicationEtendue
+        modelClass: Digart\Spectacles\Models\PublicationEtendue
         conditions: etendue_id in (:filtered)
         nameFrom: designation
     saison:

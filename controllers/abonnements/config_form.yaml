@@ -1,5 +1,5 @@
 name: Abonnements
-modelClass: Digart\spectacles\Models\Abonnement
+modelClass: Digart\Spectacles\Models\Abonnement
 form: $/digart/spectacles/models/abonnement/fields.yaml
 defaultRedirect: digart/spectacles/abonnements
 create:

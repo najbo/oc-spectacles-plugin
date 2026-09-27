@@ -1,5 +1,5 @@
 name: 'Planification des bénévoles'
-modelClass: Digart\spectacles\Models\Spectacle
+modelClass: Digart\Spectacles\Models\Spectacle
 form: $/digart/spectacles/models/spectacle/fields_planning.yaml
 defaultRedirect: digart/spectacles/spectaclesplanifications
 create:

@@ -1,5 +1,5 @@
 title: Team
-modelClass: Digart\spectacles\Models\Team
+modelClass: Digart\Spectacles\Models\Team
 nameFrom: titre
 toolbar:
     buttons: reorder_toolbar

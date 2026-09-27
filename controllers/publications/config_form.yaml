@@ -1,5 +1,5 @@
 name: Publication
-modelClass: Digart\spectacles\Models\Publication
+modelClass: Digart\Spectacles\Models\Publication
 form: $/digart/spectacles/models/publication/fields.yaml
 defaultRedirect: digart/spectacles/publications
 create:

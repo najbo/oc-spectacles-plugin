@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Controllers;
+<?php namespace Digart\Spectacles\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;

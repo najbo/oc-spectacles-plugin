@@ -1,5 +1,5 @@
 title: 'Contenu web'
-modelClass: Digart\spectacles\Models\Web
+modelClass: Digart\Spectacles\Models\Web
 list: $/digart/spectacles/models/web/columns.yaml
 recordUrl: 'digart/spectacles/webs/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'

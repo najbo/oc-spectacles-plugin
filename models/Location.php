@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use BackendAuth;
@@ -35,12 +35,12 @@ class Location extends Model
 
     public $belongsTo = [
         'auteur' => ['\Backend\Models\User'],                   
-        'societe' => ['\DigArt\Spectacles\Models\Societe'],                   
-        'tiers' => ['\DigArt\Spectacles\Models\Tiers'],                   
+        'societe' => ['\Digart\Spectacles\Models\Societe'],                   
+        'tiers' => ['\Digart\Spectacles\Models\Tiers'],                   
     ];
 
     public $hasMany = [
-         'locationsDate' => ['DigArt\Spectacles\Models\LocationDate', 
+         'locationsDate' => ['Digart\Spectacles\Models\LocationDate', 
             'order' => 'debut',
             'softDelete' => true],            
     ]; 
@@ -49,7 +49,7 @@ class Location extends Model
 
     // Permet de trier par les dates réservations des locations (enfants)
     public $hasOne = [
-         'latestdate' => ['DigArt\Spectacles\Models\LocationDate', 
+         'latestdate' => ['Digart\Spectacles\Models\LocationDate', 
             'order' => 'debut'],
     ];
 

@@ -1,5 +1,5 @@
 name: 'Etendues du blog'
-modelClass: Digart\spectacles\Models\PublicationEtendue
+modelClass: Digart\Spectacles\Models\PublicationEtendue
 form: $/digart/spectacles/models/publicationetendue/fields.yaml
 defaultRedirect: digart/spectacles/publicationsetendues
 create:

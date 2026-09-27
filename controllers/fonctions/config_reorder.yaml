@@ -1,5 +1,5 @@
 title: Fonctions
-modelClass: Digart\spectacles\Models\Fonction
+modelClass: Digart\Spectacles\Models\Fonction
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

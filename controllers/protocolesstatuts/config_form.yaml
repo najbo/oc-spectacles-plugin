@@ -1,5 +1,5 @@
 name: 'Statut des protocoles'
-modelClass: Digart\spectacles\Models\ProtocoleStatut
+modelClass: Digart\Spectacles\Models\ProtocoleStatut
 form: $/digart/spectacles/models/protocolestatut/fields.yaml
 defaultRedirect: digart/spectacles/protocolesstatuts
 create:

@@ -1,5 +1,5 @@
 name: 'Genre de tiers'
-modelClass: Digart\spectacles\Models\TiersGenre
+modelClass: Digart\Spectacles\Models\TiersGenre
 form: $/digart/spectacles/models/tiersgenre/fields.yaml
 defaultRedirect: digart/spectacles/tiersgenres
 create:

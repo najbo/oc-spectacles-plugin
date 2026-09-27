@@ -1,9 +1,9 @@
 <?php
 
-namespace Digart\spectacles\Models;
+namespace Digart\Spectacles\Models;
 
 use BackendAuth;
-use Digart\spectacles\Models\Planification;
+use Digart\Spectacles\Models\Planification;
 use Log;
 use Model;
 
@@ -33,13 +33,13 @@ class Representation extends Model
     ];
 
     public $belongsTo = [
-        'lieu' => ['DigArt\Spectacles\Models\Lieu',
+        'lieu' => ['Digart\Spectacles\Models\Lieu',
                    'key' => 'lieu_id',
                    'order' => 'sort_order'],
-        'statut' => ['DigArt\Spectacles\Models\Statut',
+        'statut' => ['Digart\Spectacles\Models\Statut',
                    'key' => 'statut_id',
                    'order' => 'sort_order'],
-        'spectacle' => ['DigArt\Spectacles\Models\Spectacle',
+        'spectacle' => ['Digart\Spectacles\Models\Spectacle',
                    'key' => 'spectacle_id'],
     ];
 

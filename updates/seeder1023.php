@@ -1,7 +1,7 @@
-<?php namespace Digart\spectacles\Updates;
+<?php namespace Digart\Spectacles\Updates;
 
 use Seeder;
-use DigArt\Spectacles\Models\Spectacle;
+use Digart\Spectacles\Models\Spectacle;
 
 class Seeder1023 extends Seeder
 {

@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 
@@ -50,7 +50,7 @@ class Web extends Model
 
     /*
     public $belongsTo = [
-         'page' => ['DigArt\Spectacles\Models\WebPage'  ,
+         'page' => ['Digart\Spectacles\Models\WebPage'  ,
                    'key' => 'page_id'],
     ];
     */

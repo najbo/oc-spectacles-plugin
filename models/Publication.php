@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use BackendAuth;
@@ -46,7 +46,7 @@ class Publication extends Model
     public $belongsTo = [
         'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
-        'etendue' => ['DigArt\Spectacles\Models\PublicationEtendue',
+        'etendue' => ['Digart\Spectacles\Models\PublicationEtendue',
                    'key' => 'etendue_id',
                    'order' => 'sort_order'],                                  
     ];  

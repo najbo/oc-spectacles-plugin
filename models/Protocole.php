@@ -1,4 +1,4 @@
-<?php namespace Digart\spectacles\Models;
+<?php namespace Digart\Spectacles\Models;
 
 use Model;
 use BackendAuth;
@@ -42,10 +42,10 @@ class Protocole extends Model
     public $belongsTo = [
         'administrateur' => ['\Backend\Models\User',
                    'key' => 'admin_id'],
-        'statut' => ['DigArt\Spectacles\Models\ProtocoleStatut',
+        'statut' => ['Digart\Spectacles\Models\ProtocoleStatut',
                    'key' => 'pstatut_id',
                    'order' => 'sort_order'],
-        'genre' => ['DigArt\Spectacles\Models\ProtocoleGenre',
+        'genre' => ['Digart\Spectacles\Models\ProtocoleGenre',
                    'key' => 'pgenre_id',
                    'order' => 'sort_order'],                   
     ];

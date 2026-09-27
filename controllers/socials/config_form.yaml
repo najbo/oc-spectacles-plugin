@@ -1,5 +1,5 @@
 name: 'Réseau sociaux'
-modelClass: Digart\spectacles\Models\Social
+modelClass: Digart\Spectacles\Models\Social
 form: $/digart/spectacles/models/social/fields.yaml
 defaultRedirect: digart/spectacles/socials
 create:

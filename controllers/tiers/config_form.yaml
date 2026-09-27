@@ -1,5 +1,5 @@
 name: Tiers
-modelClass: Digart\spectacles\Models\Tiers
+modelClass: Digart\Spectacles\Models\Tiers
 form: $/digart/spectacles/models/tiers/fields.yaml
 defaultRedirect: digart/spectacles/tiers
 create:
