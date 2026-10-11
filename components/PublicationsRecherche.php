@@ -29,10 +29,20 @@ class PublicationsRecherche extends \Cms\Classes\ComponentBase
 
         $searchTerm = $this->keyword = Request::get('q');
 
+        // On échappe les jokers LIKE saisis par le visiteur
+        $like = '%' . addcslashes((string) $searchTerm, '%_\\') . '%';
+
+        // Les conditions de recherche sont groupées pour que isActif() et isBlog()
+        // s'appliquent aux deux colonnes (sinon le OR laisserait passer les
+        // publications inactives, futures ou de l'intranet).
         $query = recherchePublication
-           ::where('designation', 'LIKE', "%{$searchTerm}%") 
-           ->orWhere('accroche', 'LIKE', "%{$searchTerm}%") 
-           ->isActif()->get();
+            ::where(function ($query) use ($like) {
+                $query->where('designation', 'LIKE', $like)
+                    ->orWhere('accroche', 'LIKE', $like);
+            })
+            ->isActif()
+            ->isBlog()
+            ->get();
         return $query;
 
 
