@@ -11,7 +11,7 @@ use Log;
 class Plugin extends PluginBase
 {
 
-    # public $require = ['rainlabl.user'];
+    public $require = ['RainLab.User'];
 
     public function registerComponents()
     {
@@ -20,8 +20,8 @@ class Plugin extends PluginBase
         'Digart\Spectacles\Components\Spectacle' => 'detailProgramme',
         'Digart\Spectacles\Components\Saisons' => 'saisons',
         'Digart\Spectacles\Components\Saison' => 'detailSaison',
-        'Digart\Spectacles\Components\PublicationsRecherche' => 'rechercheDetail'
-        # 'Digart\Spectacles\Components\Intranet\MaPlanificationList' => 'maPlanificationList'
+        'Digart\Spectacles\Components\PublicationsRecherche' => 'rechercheDetail',
+        'Digart\Spectacles\Components\Intranet\MaPlanificationList' => 'maPlanificationList'
         ];
     }
 

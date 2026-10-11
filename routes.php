@@ -33,8 +33,8 @@ Route::get('api/culturoscope', function () {
         ];
 
         foreach ($spectacles as $key => $spectacle) {
-            $event_categories = array($spectacle->categorie->cltp_cat_id);
-            $event_status = $spectacle->statut->cltp_event_status_id;
+            $event_categories = array_filter([$spectacle->categorie?->cltp_cat_id]);
+            $event_status = $spectacle->statut?->cltp_event_status_id;
             $detail_url = Url::to('spectacle').'/'.$spectacle->slug;
 
             if ( 1 == 1) {
@@ -48,12 +48,12 @@ Route::get('api/culturoscope', function () {
                     'detail_url' =>  $detail_url,
                     'image_url' => $spectacle->affiche->getPath(),
                     'booking_url' => $spectacle->url_reservation,
-                    'booking_phone' =>  $spectacle->institution->tel_reservations,
-                    'booking_mail' =>  $spectacle->institution->email_reservation,
-                    'venue_name' => $spectacle->lieu->designation,
-                    'venue_address' => $spectacle->lieu->adresse,
-                    'venue_zip' => $spectacle->lieu->npa,
-                    'venue_city' => $spectacle->lieu->localite,
+                    'booking_phone' =>  $spectacle->institution?->tel_reservations,
+                    'booking_mail' =>  $spectacle->institution?->email_reservation,
+                    'venue_name' => $spectacle->lieu?->designation,
+                    'venue_address' => $spectacle->lieu?->adresse,
+                    'venue_zip' => $spectacle->lieu?->npa,
+                    'venue_city' => $spectacle->lieu?->localite,
                     'event_dates' => [],
                     'event_flags' => $spectacle->cltp_flags,
                     #'event_flags' => explode(', ', $spectacle->cltp_flags),
@@ -64,7 +64,7 @@ Route::get('api/culturoscope', function () {
                     array(
                         $data['events'][$key]['event_dates'][$keys] = [
                             'start_date' => $representation->debut->format('Y-m-d H:i'),
-                            'date_status' => $representation->statut->cltp_date_status_id,
+                            'date_status' => $representation->statut?->cltp_date_status_id,
                         ]
                     );
                 }
