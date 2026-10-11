@@ -39,7 +39,7 @@ class Categorie extends Model
 
         $data = json_decode($JSON, true);
 
-        if ($JSON === false)
+        if (!is_array($data))
         {
             // Pas de connexion au serveur du Cultursocope ; on affiche alors des valeurs par défaut.
             return array(

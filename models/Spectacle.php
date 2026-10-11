@@ -20,7 +20,7 @@ class Spectacle extends Model
 
     protected $jsonable = ['parties', 'liens_socials', 'cltp_flags'];
 
-    protected $slugs = ['slug' => 'titre_pincipal'];
+    protected $slugs = ['slug' => 'titre_principal'];
 
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => true],
@@ -133,7 +133,7 @@ class Spectacle extends Model
     public function next()
     {
         // get next spectacle
-        return Spectacle::where('slug', '>', $this->slug)->orderBy('id', 'asc')->first();
+        return Spectacle::where('slug', '>', $this->slug)->orderBy('slug', 'asc')->first();
     }
 
     // RETIRÉ : Permet de trier par les représentations actives des spectacles
@@ -353,10 +353,10 @@ class Spectacle extends Model
     {
 
         if ($this->affiche) {
-            $file = $this->affiche->path;
+            // Chemin local du fichier (et non l'URL publique, qui provoquerait une requête HTTP)
+            $size = @getimagesize($this->affiche->getLocalPath());
 
-            list($width, $height, $type, $attr) = getimagesize($file);
-            return $width;
+            return $size ? $size[0] : null;
         }
     }
 

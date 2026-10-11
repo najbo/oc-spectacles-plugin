@@ -106,7 +106,7 @@ class LocationDate extends Model
 
     public function getDateAuAttribute()
     {
-        return $this->debut->format('d.m.Y');
+        return $this->fin->format('d.m.Y');
     }
 
     

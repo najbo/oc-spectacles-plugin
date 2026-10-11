@@ -13,7 +13,7 @@ class Location extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $appends = ['locationsDate.test', 'etendue_texte'];
+    protected $appends = ['etendue_texte'];
 
     /**
      * @var string The database table used by the model.
