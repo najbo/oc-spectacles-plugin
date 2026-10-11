@@ -1,19 +1,11 @@
 <?php namespace Digart\Spectacles\Components;
 
-
-use Event;
-use Cms\Classes\Page;
 use Digart\Spectacles\Models\Spectacle as detailSpectacle;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use BackendAuth;
 
 
 class Spectacle extends \Cms\Classes\ComponentBase
 {
-
-    public $record;
-    public $meta_title;
 
     public function componentDetails()
     {
@@ -33,7 +25,7 @@ class Spectacle extends \Cms\Classes\ComponentBase
                 'default'     => '{{ :slug }}',
                 'type'        => 'string',
           	]
-                
+
 		];
 	}
 
@@ -41,51 +33,36 @@ class Spectacle extends \Cms\Classes\ComponentBase
     // This array becomes available on the page as {{ component.post }}
     public function post()
     {
-
-        # Contexte : (https://xyz.td/programme/spectacle/slug)
-        # Programme = on n'affiche pas les représentations passées
-        # Saison = on affiche les représentations passées
-        #$contexte = $this->param('contexte');
-        if (isset($_GET['archive']))  {
-            $contexte = $_GET['archive'];
-        }
+        # Contexte : (https://xyz.td/spectacle/slug)
 
         $user = BackendAuth::getUser();
 
         $slug = $this->property('slug');
 
-        $record = new detailSpectacle;
+        // On contrôle si un administarteur super_user ou qui a accès au spectacles.preview est connecté. Permet d'afficher les spectacles brouillons.
 
-            # $query = $post->where('slug', $slug)->firstOrFail();
-            
+        if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
 
-            // On contrôle si un administarteur super_user ou qui a accès au spectacles.preview est connecté. Permet d'afficher les spectacles brouillons.
-
-            if ($user && $user->hasAccess('digart.spectacles.spectacles.preview')) {
-
-            $query = $record->
+            $query = detailSpectacle::
                 whereHas('represToutes')
                     ->where(function($query) {
                         $query->whereHas('statut', function ($query) {
-                                    $query->where('is_frontend','1')->orWhere('is_brouillon', 1);            
+                                    $query->where('is_frontend','1')->orWhere('is_brouillon', 1);
                         });
                     })->where('slug', $slug)->first();
 
-            } else {
+        } else {
 
-            $query = $record->
+            $query = detailSpectacle::
                 whereHas('represToutes')
                     ->where(function($query) {
                         $query->whereHas('statut', function ($query) {
-                                    $query->where('is_frontend','1');            
+                                    $query->where('is_frontend','1');
                         });
                     })->where('slug', $slug)->first();
 
+        }
 
-            }
-         
-
-        $this->meta_title = 'hello';
         return $query;
     }
 }
