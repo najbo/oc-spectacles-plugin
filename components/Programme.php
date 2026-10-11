@@ -75,47 +75,5 @@ class Programme extends \Cms\Classes\ComponentBase
         }
 
         return $spectacles;
-
-        ///////////////////////
-        /*
-
-        if ($this->user && $this->user->hasAccess('digart.spectacles.spectacles.preview')) {
-
-            ///// ANCIEN CODE 
-            $c =  Spectacle::whereHas('represActives')
-                ->where(function($query) {
-                    $query->whereHas('statut', function ($query) {
-                                $query->where('is_frontend', '1')->orWhere('is_brouillon', 1);
-                    })->orWhere('statut_id', null);
-                });
-
-        } else {
-
-            $c =  Spectacle::whereHas('represActives')
-                ->where(function($query) {
-                    $query->whereHas('statut', function ($query) {
-                                $query->where('is_frontend', '1');
-                    })->orWhere('statut_id', null);
-                });
-
-        }
-
-        // Tri :
-        $c = $c->with('latestSpectacle')->get()->sortBy('latestSpectacle.debut');
-
-        return $c;
-        */
-
-        #$order = 'desc';
-        #$c = Spectacle::join('digart_spectacles_repres', 'digart_spectacles_repres.spectacle_id', '=', 'digart_spectacles_spect.id')->orderBy('digart_spectacles_repres.debut', $order)->select('digart_spectacles_spect.*')->get();
-
-        //with et where permet de filtrer des données de l'enfant mais de ne pas restreindre l'affichage du parent s'il n'y a pas de résultat
-        // WhereHas permet de filter par un enregistrement enfant.
-
-        #dd($c);
-/*        $query = Db::table('digart_spectacles_spect')->join('digart_spectacles_repres', 'digart_spectacles_spect.id', '=', 'digart_spectacles_repres.spectacle_id')
-            ->orderBy('digart_spectacles_repres.created_at','Desc')
-            ->groupBy('digart_spectacles_spect.id')
-            ->get(); */
     }
 }
