@@ -1,11 +1,6 @@
 <?php
 use Digart\Spectacles\Models\Spectacle;
 
-Route::get('api/test', function () {
-    $spectacles = Spectacle::get()->sortBy('representations.debut');
-    return $spectacles;
-});
-
 /*
 A mettre dans fichier de configuration ou base de données:
 
