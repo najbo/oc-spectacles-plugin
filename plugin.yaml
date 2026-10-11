@@ -43,7 +43,7 @@ permissions:
         label: 'Gère les protocoles des spectacles'
     digart.spectacles.statistiques:
         tab: 'CTTR - Gestion des spectacles'
-        label: 'Donne accès aux statistiques des entrées'        
+        label: 'Donne accès aux statistiques des entrées'
     digart.spectacles.pstatuts:
         tab: 'CTTR - Paramètres'
         label: 'Gère les statuts des protocoles'
@@ -55,16 +55,16 @@ permissions:
         label: 'Gère les entrées des publications'
     digart.spectacles.publications.etendues:
         tab: 'CTTR - Gestion de la communication'
-        label: 'Gère l''étendue des publications des publications'
+        label: "Gère l'étendue des publications des publications"
     digart.spectacles.web:
         tab: 'CTTR - Gestion de la communication'
         label: 'Gère les textes statiques du site web'
     digart.spectacles.abonnements:
         tab: 'CTTR - Paramètres'
-        label: 'Gère les billets et les abonnements de l''institution'
+        label: "Gère les billets et les abonnements de l'institution"
     digart.spectacles.team:
         tab: 'CTTR - Paramètres'
-        label: 'Gère l''équipe pour la partie publique du site'
+        label: "Gère l'équipe pour la partie publique du site"
     digart.spectacles.locations:
         tab: 'CTTR - Gestion'
         label: 'Gère les locations de la salle'
@@ -76,7 +76,7 @@ permissions:
         label: 'Gère les différents liens aux réseaux sociaux'
     digart.spectacles.tiers:
         tab: 'CTTR - Gestion'
-        label: 'Gère les tiers de l''institution'
+        label: "Gère les tiers de l'institution"
     digart.spectacles.tiers.genres:
         tab: 'CTTR - Paramètres'
         label: 'Gère les genres de tiers'
@@ -174,7 +174,7 @@ navigation:
             agents:
                 label: Agents
                 url: digart/spectacles/agents
-                icon: icon-dollar
+                icon: icon-user-secret
             categories:
                 label: 'Catégories de spectacles'
                 url: digart/spectacles/categories
@@ -182,7 +182,7 @@ navigation:
             genres:
                 label: 'Genres de spectacles'
                 url: digart/spectacles/genres
-                icon: icon-wechat
+                icon: icon-bookmark
             side-menu-item:
                 label: Saisons
                 url: digart/spectacles/saisons
@@ -263,7 +263,7 @@ navigation:
             socials:
                 label: 'Réseaux sociaux'
                 url: digart/spectacles/socials
-                icon: icon-facebook-official
+                icon: icon-globe
                 permissions:
                     - digart.spectacles.socials
             genres-tiers:

@@ -17,6 +17,6 @@ class Agents extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'spectacles', 'agents');
+        BackendMenu::setContext('Digart.Spectacles', 'spectacles', 'agents');
     }
 }

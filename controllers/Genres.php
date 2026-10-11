@@ -20,6 +20,6 @@ class Genres extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'spectacles', 'genres');
+        BackendMenu::setContext('Digart.Spectacles', 'spectacles', 'genres');
     }
 }

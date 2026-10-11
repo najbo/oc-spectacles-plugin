@@ -17,6 +17,6 @@ class Saisons extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'spectacles', 'side-menu-item');
+        BackendMenu::setContext('Digart.Spectacles', 'spectacles', 'side-menu-item');
     }
 }

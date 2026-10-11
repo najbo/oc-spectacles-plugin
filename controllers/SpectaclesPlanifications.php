@@ -23,7 +23,7 @@ class SpectaclesPlanifications extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'gestion', 'planning');
+        BackendMenu::setContext('Digart.Spectacles', 'gestion', 'planning');
 
         $this->planificationFormWidget = $this->createRepresentationPlanificationFormWidget();
     }

@@ -18,6 +18,6 @@ class Teams extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'gestion', 'team');
+        BackendMenu::setContext('Digart.Spectacles', 'gestion', 'team');
     }
 }

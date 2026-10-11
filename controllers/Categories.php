@@ -18,6 +18,6 @@ class Categories extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'spectacles', 'categories');
+        BackendMenu::setContext('Digart.Spectacles', 'spectacles', 'categories');
     }
 }

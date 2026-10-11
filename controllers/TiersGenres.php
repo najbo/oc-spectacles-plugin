@@ -18,6 +18,6 @@ class TiersGenres extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'parametres', 'genres-tiers');
+        BackendMenu::setContext('Digart.Spectacles', 'parametres', 'genres-tiers');
     }
 }

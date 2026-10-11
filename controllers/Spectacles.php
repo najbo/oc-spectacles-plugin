@@ -21,6 +21,6 @@ class Spectacles extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'spectacles', 'spectacles');
+        BackendMenu::setContext('Digart.Spectacles', 'spectacles', 'spectacles');
     }
 }

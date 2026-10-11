@@ -17,7 +17,7 @@ class Tiers extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'gestion', 'tiers');
+        BackendMenu::setContext('Digart.Spectacles', 'gestion', 'tiers');
     }
 
     public function listExtendQuery($query)

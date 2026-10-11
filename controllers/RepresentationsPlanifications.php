@@ -21,7 +21,7 @@ class RepresentationsPlanifications extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'gestion', 'planning-representations');
+        BackendMenu::setContext('Digart.Spectacles', 'gestion', 'planning-representations');
     }
 
     public function listExtendQuery($query)

@@ -21,7 +21,7 @@ class Locations extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'gestion', 'locations');
+        BackendMenu::setContext('Digart.Spectacles', 'gestion', 'locations');
     }
 
     public function listExtendQuery($query)

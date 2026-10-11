@@ -17,7 +17,7 @@ class Publications extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'communication', 'actualites');
+        BackendMenu::setContext('Digart.Spectacles', 'communication', 'actualites');
     }
 
     public function listExtendQuery($query)

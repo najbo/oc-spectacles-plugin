@@ -18,6 +18,6 @@ class Statuts extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'parametres', 'statuts');
+        BackendMenu::setContext('Digart.Spectacles', 'parametres', 'statuts');
     }
 }

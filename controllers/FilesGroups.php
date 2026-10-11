@@ -26,6 +26,6 @@ class FilesGroups extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Digart.spectacles', 'gestion', 'files');
+        BackendMenu::setContext('Digart.Spectacles', 'gestion', 'files');
     }
 }
